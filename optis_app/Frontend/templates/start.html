@@ -1,0 +1,44 @@
+<!--Here is the home page. It contains the file upload and download functionality-->
+{% extends 'base.html' %}
+
+{% block head %}
+<title>OPTIS Home</title>
+{% endblock %}
+
+{% block body %}
+  <div class = "contents" style="text-align: center;">
+    <h1>Upload your files and get started now!</h1>
+    <!--This is the upload functionality. It automatically already filters for xes and csv file. However, a warning is added nonetheless for user experience.-->
+      <form action="{{ url_for('upload_file') }}" method="POST" enctype="multipart/form-data" name="upload">
+        <p><input type="file" name="file" accept=".xes,.csv"></p>
+        <p><input type="submit" value="Submit" class="button" style="margin-bottom: 10px;"></p>
+      </form>
+      <h2 style="font-size: 14px">Please input only .xes and .csv files!</h2>
+  </div>
+
+  <div style="text-align: center; margin-top: 60px;">
+    <!--The generate and download functionality. While it is just planned to only be xes and csv files. The type selection is dynamnic and can be changed from main.py-->
+    <h1> Or generate your own event log to immediately try out the app! </h1>
+      <p>Choose in what form to export your event log:</p>
+      <form action="{{ url_for('download', current_time = current_time) }}" method="get" name="downloadType" id="downloadType"> 
+        <select name="selectType" id="fileType" method="get" form="downloadType" action="{{ url_for('download', current_time = current_time) }}">
+          {% for type in file_types %}
+            <option value= "{{type}}"> export as .{{type}} </option>
+          {% endfor %}
+        </select>
+
+        <div>
+            <p>Please input the desired simulation period: </p>
+            <label for="startTime">Start Date and Time:</label>
+            <input type="datetime-local" name="startTime" id="startTime" max="{{ current_time }}">
+          
+            <label for="endTime">End Date and Time:</label>
+            <input type="datetime-local" name="endTime" id="endTime" max="{{ current_time }}">
+        </div>
+        
+        <div style = "text-align: center;">
+          <button type="submit" class="button" form="downloadType" value="exportType"> Generate an event log! </button>
+        </div>
+      </form>
+  </div>
+{% endblock %}

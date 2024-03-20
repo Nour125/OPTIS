@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eventlog module &mdash; OPTIS 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="petrinet module" href="petrinet.html" />
+    <link rel="prev" title="environment module" href="environment.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            OPTIS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Backend</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="businessprocess.html">businessprocess module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="case.html">case module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dqn.html">dqn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment.html">environment module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">eventlog module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#eventlog.add_end_event"><code class="docutils literal notranslate"><span class="pre">add_end_event()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eventlog.add_start_event"><code class="docutils literal notranslate"><span class="pre">add_start_event()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eventlog.convert_to_dataframe"><code class="docutils literal notranslate"><span class="pre">convert_to_dataframe()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eventlog.export_to_csv"><code class="docutils literal notranslate"><span class="pre">export_to_csv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eventlog.export_to_xes"><code class="docutils literal notranslate"><span class="pre">export_to_xes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eventlog.format_check"><code class="docutils literal notranslate"><span class="pre">format_check()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eventlog.generate_event_log"><code class="docutils literal notranslate"><span class="pre">generate_event_log()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eventlog.get_active_cases"><code class="docutils literal notranslate"><span class="pre">get_active_cases()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eventlog.get_case_information"><code class="docutils literal notranslate"><span class="pre">get_case_information()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eventlog.get_state"><code class="docutils literal notranslate"><span class="pre">get_state()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eventlog.show_active_cases"><code class="docutils literal notranslate"><span class="pre">show_active_cases()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="petrinet.html">petrinet module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qagent.html">qagent module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simplesimmodel.html">simplesimmodel module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OPTIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Backend</a></li>
+      <li class="breadcrumb-item active">eventlog module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/eventlog.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-eventlog">
+<span id="eventlog-module"></span><h1>eventlog module<a class="headerlink" href="#module-eventlog" title="Permalink to this heading"></a></h1>
+<p>Event Log Generator for our simulation model.</p>
+<p>The module includes the following functions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>add_start_event(process, event_id, case_id, activity, start_timestamp) - add an event to the event log of a process simulation</p></li>
+<li><p>add_end_event(process, event_id, end_timestamp) - add the final timestamp to an event in the event log of a process simulation</p></li>
+<li><p>export_to_csv(process, file_path) - export an event log to .csv</p></li>
+<li><p>export_to_xes(process, file_path) - export an event log to .xes</p></li>
+<li><p>convert_to_dataframe(name) - convert an event log to a pandas dataframe</p></li>
+<li><p>format_check(name) - check if the format of a csv/xes file is the same as the event logs we use in the simulation model</p></li>
+<li><p>get_active_cases(name) - get the case-ids of all the active cases in an event log</p></li>
+<li><p>show_active_cases(name) - get the case-ids and traces of all the active cases in an event log</p></li>
+<li><p>get_state(case_id, name) - get the state of a single case form an event log</p></li>
+<li><p>generate_event_log(time) - generate an event log from a process simulation</p></li>
+</ul>
+</div></blockquote>
+<dl class="py function">
+<dt class="sig sig-object py" id="eventlog.add_end_event">
+<span class="sig-prename descclassname"><span class="pre">eventlog.</span></span><span class="sig-name descname"><span class="pre">add_end_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">process</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/eventlog.html#add_end_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#eventlog.add_end_event" title="Permalink to this definition"></a></dt>
+<dd><p>Add the end of an event to the event log of a process.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>event_id<span class="classifier">int</span></dt><dd><p>the unique id of the event</p>
+</dd>
+<dt>duartion<span class="classifier">float</span></dt><dd><p>the complete duration of the event</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eventlog.add_start_event">
+<span class="sig-prename descclassname"><span class="pre">eventlog.</span></span><span class="sig-name descname"><span class="pre">add_start_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">process</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">case_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/eventlog.html#add_start_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#eventlog.add_start_event" title="Permalink to this definition"></a></dt>
+<dd><p>Add the start of an event to the event log of a process.</p>
+<section id="id1">
+<h2>Parameters<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>event_id<span class="classifier">int</span></dt><dd><p>the unique id of the event</p>
+</dd>
+<dt>case_id<span class="classifier">int</span></dt><dd><p>the unique case-id of a case</p>
+</dd>
+<dt>activity<span class="classifier">str</span></dt><dd><p>the name of the activity</p>
+</dd>
+<dt>start<span class="classifier">float</span></dt><dd><p>the relative start time of the event</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eventlog.convert_to_dataframe">
+<span class="sig-prename descclassname"><span class="pre">eventlog.</span></span><span class="sig-name descname"><span class="pre">convert_to_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/eventlog.html#convert_to_dataframe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#eventlog.convert_to_dataframe" title="Permalink to this definition"></a></dt>
+<dd><p>Convert the event log file of a process simulation to a pandas dataframe.</p>
+<section id="id2">
+<h2>Parameters<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>name<span class="classifier">str</span></dt><dd><p>name of the event log file</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>pandas.DataFrame</dt><dd><p>the converted event log</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eventlog.export_to_csv">
+<span class="sig-prename descclassname"><span class="pre">eventlog.</span></span><span class="sig-name descname"><span class="pre">export_to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">process</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/eventlog.html#export_to_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#eventlog.export_to_csv" title="Permalink to this definition"></a></dt>
+<dd><p>Export the event log of a process simulation to .csv.</p>
+<section id="id3">
+<h2>Parameters<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>process<span class="classifier">businessprocess.BusinessProcess</span></dt><dd><p>the process which was simulated</p>
+</dd>
+<dt>file_path<span class="classifier">str</span></dt><dd><p>where the .csv file should be saved</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eventlog.export_to_xes">
+<span class="sig-prename descclassname"><span class="pre">eventlog.</span></span><span class="sig-name descname"><span class="pre">export_to_xes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">process</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/eventlog.html#export_to_xes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#eventlog.export_to_xes" title="Permalink to this definition"></a></dt>
+<dd><p>Export the event log of a process simulation to .xes.</p>
+<section id="id4">
+<h2>Parameters<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>process<span class="classifier">businessprocess.BusinessProcess</span></dt><dd><p>the process which was simulated</p>
+</dd>
+<dt>file_path<span class="classifier">str</span></dt><dd><p>where the .xes file should be saved</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eventlog.format_check">
+<span class="sig-prename descclassname"><span class="pre">eventlog.</span></span><span class="sig-name descname"><span class="pre">format_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/eventlog.html#format_check"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#eventlog.format_check" title="Permalink to this definition"></a></dt>
+<dd><p>Check whether an event log has exactly the attributes and contents which an event log 
+generated from the simulation model should have.</p>
+<section id="id5">
+<h2>Parameters<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>name<span class="classifier">str</span></dt><dd><p>name of the event log file</p>
+</dd>
+</dl>
+</section>
+<section id="id6">
+<h2>Returns<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>bool</dt><dd><p>whether the format is right or not</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eventlog.generate_event_log">
+<span class="sig-prename descclassname"><span class="pre">eventlog.</span></span><span class="sig-name descname"><span class="pre">generate_event_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_timestamp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/eventlog.html#generate_event_log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#eventlog.generate_event_log" title="Permalink to this definition"></a></dt>
+<dd><p>Generate an event log from the simulation model and export it to .csv and .xes</p>
+<section id="id7">
+<h2>Parameters<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>start_timestamp<span class="classifier">datetime</span></dt><dd><p>the start date and time of the simulation</p>
+</dd>
+<dt>time<span class="classifier">int</span></dt><dd><p>the time units for which the simulation is supposed to run</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eventlog.get_active_cases">
+<span class="sig-prename descclassname"><span class="pre">eventlog.</span></span><span class="sig-name descname"><span class="pre">get_active_cases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/eventlog.html#get_active_cases"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#eventlog.get_active_cases" title="Permalink to this definition"></a></dt>
+<dd><p>Get a list of the cases which are active in the event log.
+(Note: a case is “active” if there are at least 2 more activities until it’s finished.)</p>
+<section id="id8">
+<h2>Parameters<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>name<span class="classifier">str</span></dt><dd><p>name of the event log file</p>
+</dd>
+</dl>
+</section>
+<section id="id9">
+<h2>Returns<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>list of int</dt><dd><p>a list of the case-ids of the active cases</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eventlog.get_case_information">
+<span class="sig-prename descclassname"><span class="pre">eventlog.</span></span><span class="sig-name descname"><span class="pre">get_case_information</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">case_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/eventlog.html#get_case_information"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#eventlog.get_case_information" title="Permalink to this definition"></a></dt>
+<dd><p>Generate an event log from the simulation model and export it to .csv and .xes</p>
+<section id="id10">
+<h2>Parameters<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>case_id<span class="classifier">int</span></dt><dd><p>the case-id of a case in the event log</p>
+</dd>
+<dt>name<span class="classifier">str</span></dt><dd><p>name of the event log file</p>
+</dd>
+</dl>
+</section>
+<section id="id11">
+<h2>Returns<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>pandas.DataFrame</dt><dd><p>a dataframe containing all the events that happened for a certain case</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eventlog.get_state">
+<span class="sig-prename descclassname"><span class="pre">eventlog.</span></span><span class="sig-name descname"><span class="pre">get_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">case_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/eventlog.html#get_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#eventlog.get_state" title="Permalink to this definition"></a></dt>
+<dd><p>Get the state of a case in an event log (Note: matches the state defined in environment)</p>
+<section id="id12">
+<h2>Parameters<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>case_id<span class="classifier">int</span></dt><dd><p>the case-id of a case in the event log</p>
+</dd>
+<dt>name<span class="classifier">str</span></dt><dd><p>name of the event log file</p>
+</dd>
+</dl>
+</section>
+<section id="id13">
+<h2>Returns<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>collections.OrderedDict of {str<span class="classifier">list of int, str</span><span class="classifier">int, str</span><span class="classifier">list of int}</span></dt><dd><p>the state of the case</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eventlog.show_active_cases">
+<span class="sig-prename descclassname"><span class="pre">eventlog.</span></span><span class="sig-name descname"><span class="pre">show_active_cases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/eventlog.html#show_active_cases"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#eventlog.show_active_cases" title="Permalink to this definition"></a></dt>
+<dd><p>Get a list of the traces of the cases which are active in the event log.</p>
+<section id="id14">
+<h2>Parameters<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>name<span class="classifier">str</span></dt><dd><p>name of the event log file</p>
+</dd>
+</dl>
+</section>
+<section id="id15">
+<h2>Returns<a class="headerlink" href="#id15" title="Permalink to this heading"></a></h2>
+<p>list of tuple of (int, list of str)</p>
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="environment.html" class="btn btn-neutral float-left" title="environment module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="petrinet.html" class="btn btn-neutral float-right" title="petrinet module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, OPTIS Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

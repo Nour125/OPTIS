@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>businessprocess module &mdash; OPTIS 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="case module" href="case.html" />
+    <link rel="prev" title="Backend" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            OPTIS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Backend</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">businessprocess module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#businessprocess.BusinessProcess"><code class="docutils literal notranslate"><span class="pre">BusinessProcess</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.arrange_custom_order"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.arrange_custom_order()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.arrange_standard_order"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.arrange_standard_order()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.attempt_delivery_a"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.attempt_delivery_a()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.attempt_delivery_b"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.attempt_delivery_b()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.attempt_delivery_c"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.attempt_delivery_c()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.is_valid"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.is_valid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.manufacture_a"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.manufacture_a()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.manufacture_b"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.manufacture_b()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.order_completed"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.order_completed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.pack_a"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.pack_a()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.pack_b"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.pack_b()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.pack_c"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.pack_c()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.pick_from_stock_a"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.pick_from_stock_a()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.pick_from_stock_b"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.pick_from_stock_b()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.pick_from_stock_c"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.pick_from_stock_c()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#businessprocess.BusinessProcess.place_order"><code class="docutils literal notranslate"><span class="pre">BusinessProcess.place_order()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="case.html">case module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dqn.html">dqn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment.html">environment module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventlog.html">eventlog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="petrinet.html">petrinet module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qagent.html">qagent module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simplesimmodel.html">simplesimmodel module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OPTIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Backend</a></li>
+      <li class="breadcrumb-item active">businessprocess module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/businessprocess.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-businessprocess">
+<span id="businessprocess-module"></span><h1>businessprocess module<a class="headerlink" href="#module-businessprocess" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">businessprocess.</span></span><span class="sig-name descname"><span class="pre">BusinessProcess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ressources</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent a Business Process</p>
+<hr class="docutils" />
+<section id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>env<span class="classifier">simpy.Environment</span></dt><dd><p>an environment for the simulation of the process</p>
+</dd>
+<dt>system = simpy.Resource</dt><dd><p>the number of the resources of this type the process has</p>
+</dd>
+<dt>order_taker<span class="classifier">simpy.Resource</span></dt><dd><p>the number of the resources of this type the process has</p>
+</dd>
+<dt>stock_handler_a<span class="classifier">simpy.Resource</span></dt><dd><p>the number of the resources of this type the process has</p>
+</dd>
+<dt>stock_handler_b<span class="classifier">simpy.Resource</span></dt><dd><p>the number of the resources of this type the process has</p>
+</dd>
+<dt>stock_handler_c<span class="classifier">simpy.Resource</span></dt><dd><p>the number of the resources of this type the process has</p>
+</dd>
+<dt>manufacturer_a<span class="classifier">simpy.Resource</span></dt><dd><p>the number of the resources of this type the process has</p>
+</dd>
+<dt>manufacturer_b<span class="classifier">simpy.Resource</span></dt><dd><p>the number of the resources of this type the process has</p>
+</dd>
+<dt>packer_a<span class="classifier">simpy.Resource</span></dt><dd><p>the number of the resources of this type the process has</p>
+</dd>
+<dt>packer_b<span class="classifier">simpy.Resource</span></dt><dd><p>the number of the resources of this type the process has</p>
+</dd>
+<dt>packer_c<span class="classifier">simpy.Resource</span></dt><dd><p>the number of the resources of this type the process has</p>
+</dd>
+<dt>delivery_service_a<span class="classifier">simpy.Resource</span></dt><dd><p>the number of the resources of this type the process has</p>
+</dd>
+<dt>delivery_service_b<span class="classifier">simpy.Resource</span></dt><dd><p>the number of the resources of this type the process has</p>
+</dd>
+<dt>delivery_service_c<span class="classifier">simpy.Resource</span></dt><dd><p>the number of the resources of this type the process has</p>
+</dd>
+<dt>active_cases<span class="classifier">list of int</span></dt><dd><p>a list containing the case-ids of all the currently active cases</p>
+</dd>
+<dt>case_objects = list of case.Case</dt><dd><p>a list containing all the case objects created in the process</p>
+</dd>
+<dt>flag<span class="classifier">bool</span></dt><dd><p>indicates whether the process is currently controlled by a RL-agent</p>
+</dd>
+<dt>case_id<span class="classifier">int</span></dt><dd><p>if a RL-agent controls the process, this varable saves the case-id of the currently controlled case</p>
+</dd>
+<dt>next<span class="classifier">int</span></dt><dd><p>if a RL-agent controls the process, this varaiable saves what the next action the agent chose is</p>
+</dd>
+<dt>done_cases<span class="classifier">set of case.Case</span></dt><dd><p>if a RL-agent controls the process, this set saves all the done cases of the agent</p>
+</dd>
+<dt>event_log_flag<span class="classifier">bool</span></dt><dd><p>if we’re using the process to generate an event log by simulating it, this flag is set to true</p>
+</dd>
+<dt>event_log<span class="classifier">dict of {int</span><span class="classifier">dict of {str</span><span class="classifier">int}, dict of {str</span><span class="classifier">str}, dict of {str: float}, dict of {str, float}}</span></dt><dd><p>if the event_log_flag is set to true, we save the events of the process to this variable,
+an event includes it’s case-id, activity, start timestamp and end timestamp</p>
+</dd>
+<dt>event_counter<span class="classifier">int</span></dt><dd><p>a counter for the number of events which happened (useful when adding a new event to the event_log)</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>place_order()</dt><dd><p>executes the activity by yielding a timeout with a certain duration</p>
+</dd>
+<dt>arrange_standard_order()</dt><dd><p>executes the activity by yielding a timeout with a certain duration</p>
+</dd>
+<dt>arrange_custom_order()</dt><dd><p>executes the activity by yielding a timeout with a certain duration</p>
+</dd>
+<dt>pick_from_stock_a()</dt><dd><p>executes the activity by yielding a timeout with a certain duration</p>
+</dd>
+<dt>pick_from_stock_b()</dt><dd><p>executes the activity by yielding a timeout with a certain duration</p>
+</dd>
+<dt>pick_from_stock_c()</dt><dd><p>executes the activity by yielding a timeout with a certain duration</p>
+</dd>
+<dt>manufacture_a()</dt><dd><p>executes the activity by yielding a timeout with a certain duration</p>
+</dd>
+<dt>manufacture_b()</dt><dd><p>executes the activity by yielding a timeout with a certain duration</p>
+</dd>
+<dt>pack_a()</dt><dd><p>executes the activity by yielding a timeout with a certain duration</p>
+</dd>
+<dt>pack_b()</dt><dd><p>executes the activity by yielding a timeout with a certain duration</p>
+</dd>
+<dt>pack_c()</dt><dd><p>executes the activity by yielding a timeout with a certain duration</p>
+</dd>
+<dt>attempt_delivery_a()</dt><dd><p>executes the activity by yielding a timeout with a certain duration</p>
+</dd>
+<dt>attempt_delivery_b()</dt><dd><p>executes the activity by yielding a timeout with a certain duration</p>
+</dd>
+<dt>attempt_delivery_c()</dt><dd><p>executes the activity by yielding a timeout with a certain duration</p>
+</dd>
+<dt>order_completed()</dt><dd><p>executes the activity by yielding a timeout with a certain duration</p>
+</dd>
+<dt>is_valid(event, action, case_obj)</dt><dd><p>checks whether the next action after a certain event in a case is valid</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.arrange_custom_order">
+<span class="sig-name descname"><span class="pre">arrange_custom_order</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.arrange_custom_order"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.arrange_custom_order" title="Permalink to this definition"></a></dt>
+<dd><p>Executes the activity “arrange custom order” by yielding a timeout in the interval of 20 to 30 time units.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.arrange_standard_order">
+<span class="sig-name descname"><span class="pre">arrange_standard_order</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.arrange_standard_order"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.arrange_standard_order" title="Permalink to this definition"></a></dt>
+<dd><p>Executes the activity “arrange standard order” by yielding a timeout in the interval of 10 to 15 time units.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.attempt_delivery_a">
+<span class="sig-name descname"><span class="pre">attempt_delivery_a</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.attempt_delivery_a"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.attempt_delivery_a" title="Permalink to this definition"></a></dt>
+<dd><p>Executes the activity “attempt delivery A” by yielding a timeout in the interval of 720 to 1440 time units.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.attempt_delivery_b">
+<span class="sig-name descname"><span class="pre">attempt_delivery_b</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.attempt_delivery_b"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.attempt_delivery_b" title="Permalink to this definition"></a></dt>
+<dd><p>Executes the activity “attempt delivery B” by yielding a timeout in the interval of 1440 to 2160 time units.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.attempt_delivery_c">
+<span class="sig-name descname"><span class="pre">attempt_delivery_c</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.attempt_delivery_c"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.attempt_delivery_c" title="Permalink to this definition"></a></dt>
+<dd><p>Executes the activity “attempt delivery C” by yielding a timeout in the interval of 1440 to 2880 time units.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.is_valid">
+<span class="sig-name descname"><span class="pre">is_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">case_obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.is_valid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.is_valid" title="Permalink to this definition"></a></dt>
+<dd><p>Checks whether the next action after a certain event in a case is valid based on the predefined process flow.</p>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>event<span class="classifier">int</span></dt><dd><p>the current event of the case</p>
+</dd>
+<dt>action<span class="classifier">int</span></dt><dd><p>an encoded activity</p>
+</dd>
+<dt>case_obj: case.Case</dt><dd><p>the case for which we’re doing the check</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>bool</dt><dd><p>whether the action is valid or not</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.manufacture_a">
+<span class="sig-name descname"><span class="pre">manufacture_a</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.manufacture_a"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.manufacture_a" title="Permalink to this definition"></a></dt>
+<dd><p>Executes the activity “manufacture A” by yielding a timeout in the interval of 240 to 360 time units.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.manufacture_b">
+<span class="sig-name descname"><span class="pre">manufacture_b</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.manufacture_b"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.manufacture_b" title="Permalink to this definition"></a></dt>
+<dd><p>Executes the activity “manufacture B” by yielding a timeout in the interval of 360 to 480 time units.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.order_completed">
+<span class="sig-name descname"><span class="pre">order_completed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.order_completed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.order_completed" title="Permalink to this definition"></a></dt>
+<dd><p>Executes the activity “order completed” by yielding a timeout of 1 time unit.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.pack_a">
+<span class="sig-name descname"><span class="pre">pack_a</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.pack_a"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.pack_a" title="Permalink to this definition"></a></dt>
+<dd><p>Executes the activity “pack A” by yielding a timeout in the interval of 10 to 20 time units.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.pack_b">
+<span class="sig-name descname"><span class="pre">pack_b</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.pack_b"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.pack_b" title="Permalink to this definition"></a></dt>
+<dd><p>Executes the activity “pack B” by yielding a timeout in the interval of 15 to 30 time units.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.pack_c">
+<span class="sig-name descname"><span class="pre">pack_c</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.pack_c"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.pack_c" title="Permalink to this definition"></a></dt>
+<dd><p>Executes the activity “pack C” by yielding a timeout in the interval of 25 to 50 time units.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.pick_from_stock_a">
+<span class="sig-name descname"><span class="pre">pick_from_stock_a</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.pick_from_stock_a"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.pick_from_stock_a" title="Permalink to this definition"></a></dt>
+<dd><p>Executes the activity “pick from stock A” by yielding a timeout in the interval of 10 to 40 time units.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.pick_from_stock_b">
+<span class="sig-name descname"><span class="pre">pick_from_stock_b</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.pick_from_stock_b"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.pick_from_stock_b" title="Permalink to this definition"></a></dt>
+<dd><p>Executes the activity “pick from stock B” by yielding a timeout in the interval of 20 to 60 time units.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.pick_from_stock_c">
+<span class="sig-name descname"><span class="pre">pick_from_stock_c</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.pick_from_stock_c"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.pick_from_stock_c" title="Permalink to this definition"></a></dt>
+<dd><p>Executes the activity “pick from stock C” by yielding a timeout in the interval of 30 to 80 time units.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="businessprocess.BusinessProcess.place_order">
+<span class="sig-name descname"><span class="pre">place_order</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/businessprocess.html#BusinessProcess.place_order"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#businessprocess.BusinessProcess.place_order" title="Permalink to this definition"></a></dt>
+<dd><p>Executes the activity “place order” by yielding a timeout of 2 time units.</p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="Backend" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="case.html" class="btn btn-neutral float-right" title="case module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, OPTIS Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

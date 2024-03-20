@@ -1,0 +1,14 @@
+<!--Here is the About Us page. It contains information about the project's creators.-->
+{% extends 'base.html' %}
+
+{% block head %}
+<title>About us</title>
+{% endblock %}
+
+{% block body %}
+<div class="contents" style='text-align:center'>
+    <h1>This is a project from the Chair of Process and Data Science from RWTH Aachen University</h1>
+    <img src="{{url_for('static',filename='OPTIS_team.jpg')}}" alt="The team" style="max-width: 50%; border: solid 20px rgb(230,241,250);"> <br>
+    <h2>by: Aleksandra Dimitrova, Paula Hermenau, Geno Jayadi, Ahmad Mannoun  </h2>
+</div>
+{% endblock %}

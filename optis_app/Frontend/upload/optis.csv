@@ -1,0 +1,43 @@
+CaseID,Activity,StartTimestamp,EndTimestamp
+0,place order,0.0,2.0
+1,place order,2.0,4.0
+2,place order,4.0,6.0
+0,arrange custom order,6.0,31.0
+1,arrange standard order,6.0,20.0
+2,arrange custom order,6.0,28.0
+3,place order,10.0,12.0
+3,arrange standard order,12.0,24.0
+4,place order,20.0,22.0
+1,pick from stock A,22.0,56.0
+4,arrange standard order,22.0,36.0
+3,pick from stock B,24.0,52.0
+2,manufacture B,28.0,
+5,place order,30.0,32.0
+0,manufacture B,32.0,
+5,arrange standard order,32.0,45.0
+4,pick from stock A,36.0,57.0
+6,place order,40.0,42.0
+6,arrange standard order,42.0,52.0
+7,place order,50.0,52.0
+3,pack B,52.0,72.0
+6,pick from stock C,52.0,
+7,arrange custom order,52.0,81.0
+1,pack B,56.0,74.0
+5,pick from stock A,56.0,77.0
+4,pack B,57.0,83.0
+8,place order,60.0,62.0
+8,arrange custom order,62.0,86.0
+9,place order,70.0,72.0
+3,attempt delivery A,72.0,
+9,arrange custom order,72.0,92.0
+1,attempt delivery A,74.0,
+5,pack A,77.0,97.0
+10,place order,80.0,82.0
+7,manufacture B,82.0,
+10,arrange custom order,82.0,
+4,attempt delivery C,83.0,
+8,manufacture B,86.0,
+11,place order,90.0,92.0
+9,manufacture B,92.0,
+11,arrange standard order,92.0,
+5,attempt delivery C,97.0,

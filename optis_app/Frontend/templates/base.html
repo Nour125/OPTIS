@@ -1,0 +1,61 @@
+<!--
+  The base of the website. Includes: Navigation bar, warning flash, and also the head of the site.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <link rel="icon" href="{{url_for('static',filename='optisicon.ico')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta
+    name="description"
+    content="The web app for OPTIS"
+  />
+  {% block head %}
+  
+  {% endblock %}
+</head>
+<body>
+  {% block main %}
+    <noscript>Please enable javascript to use the app.</noscript>
+    <div class="topnav">
+      <div class="logo">
+        <a>OPTIS</a>
+      </div>
+      <div class="right-links">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('info') }}">Info</a>
+        <a href="{{ url_for('aboutus') }}">About Us</a>
+      </div>
+      <!--
+        <a href="login.html" class="right" style="float:right"> Login </a>
+        <a href="signup.html" class="right" style="float:right"> Sign Up </a>
+      -->
+    </div> 
+  {% endblock %}
+
+  <div class="contents">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class=flashes>
+      {% for message in messages %}
+        <div style="text-align:center;">
+          <a class="warning">{{ message }}</a>
+        </div>
+      {% endfor %}
+      </div>
+    {% endif %}
+    {% endwith %}
+  </div>
+  
+  {% block body %}
+  
+  {% endblock %}
+
+    
+</body>
+</html>

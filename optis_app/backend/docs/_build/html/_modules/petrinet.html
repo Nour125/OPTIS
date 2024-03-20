@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>petrinet &mdash; OPTIS 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            OPTIS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Backend</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OPTIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">petrinet</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for petrinet</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Petri-Net Generator</span>
+
+<span class="sd">The module includes the following functions:</span>
+
+<span class="sd">    * generate_petri_net() - generates a petri-net represenation of the business process</span>
+<span class="sd">    * process_petri_net(): saves the process&#39;s petri-net as a png so that it can be used as a static image</span>
+<span class="sd">    * decorate_petri_net(case, name) - exports a .png of a petri-net with the case trace colored  </span>
+<span class="sd">    * decorate_petri_net_with_rec(case, rec, name) - exports a .png of a petri-net with the case trace and the recommendation colored</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">pm4py</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">import</span> <span class="nn">eventlog</span>
+<span class="kn">import</span> <span class="nn">simplesimmodel</span> <span class="k">as</span> <span class="nn">simmodel</span>
+
+
+<div class="viewcode-block" id="generate_petri_net"><a class="viewcode-back" href="../petrinet.html#petrinet.generate_petri_net">[docs]</a><span class="k">def</span> <span class="nf">generate_petri_net</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generates a petri-net represenation of the business process from a static event log.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    PetriNet</span>
+<span class="sd">        the net</span>
+<span class="sd">    Marking</span>
+<span class="sd">        the initial marking</span>
+<span class="sd">    Marking</span>
+<span class="sd">        the final marking</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># we use an existing event log to create a petri net for our process</span>
+    <span class="c1"># dataframe = pd.read_csv(r&#39;Frontend/static/eventlog.csv&#39;, sep=&#39;,&#39;) #docker</span>
+    <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;static/eventlog.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> <span class="c1">#local</span>
+    <span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;StartTimestamp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;StartTimestamp&#39;</span><span class="p">])</span>
+    
+    <span class="c1"># Sort the event log by case ID and start timestamp, and get only finished cases</span>
+    <span class="n">dataframe</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;CaseID&#39;</span><span class="p">,</span> <span class="s1">&#39;StartTimestamp&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">dataframe</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">900</span><span class="p">)</span>
+    
+    <span class="c1"># format and convert to a pm4py event log</span>
+    <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">format_dataframe</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">case_id</span><span class="o">=</span><span class="s1">&#39;CaseID&#39;</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="s1">&#39;Activity&#39;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="s1">&#39;StartTimestamp&#39;</span><span class="p">)</span>
+    <span class="n">event_log</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">convert_to_event_log</span><span class="p">(</span><span class="n">dataframe</span><span class="p">)</span>
+
+    <span class="c1"># discover the petri-net </span>
+    <span class="n">net</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">,</span> <span class="n">final_marking</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">discover_petri_net_inductive</span><span class="p">(</span><span class="n">event_log</span><span class="p">)</span>
+    
+    <span class="c1"># print(net)</span>
+    <span class="c1"># pm4py.view_petri_net(net, initial_marking, final_marking)</span>
+
+    <span class="k">return</span> <span class="n">net</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">,</span> <span class="n">final_marking</span> </div>
+
+<div class="viewcode-block" id="process_petri_net"><a class="viewcode-back" href="../petrinet.html#petrinet.process_petri_net">[docs]</a><span class="k">def</span> <span class="nf">process_petri_net</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Function which we use to create the business process&#39;s petri-net and save it as a png so we can use it as a static image</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">net</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">,</span> <span class="n">final_marking</span>  <span class="o">=</span> <span class="n">generate_petri_net</span><span class="p">()</span>
+    <span class="n">decoration</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">places</span><span class="p">:</span>
+        <span class="n">decoration</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">p</span><span class="p">:</span> <span class="p">{}})</span>
+        <span class="n">decoration</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="s2">&quot;white&quot;</span><span class="p">})</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">transitions</span><span class="p">:</span>
+        <span class="n">decoration</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">t</span><span class="p">:</span> <span class="p">{}})</span>
+        <span class="n">decoration</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="s2">&quot;white&quot;</span><span class="p">})</span>
+    <span class="n">pm4py</span><span class="o">.</span><span class="n">save_vis_petri_net</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">,</span> <span class="n">final_marking</span><span class="p">,</span> <span class="n">bgcolor</span> <span class="o">=</span> <span class="s2">&quot;#E6F1FA&quot;</span><span class="p">,</span> <span class="n">decorations</span> <span class="o">=</span> <span class="n">decoration</span><span class="p">,</span> <span class="n">file_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;static/process_net.png&quot;</span><span class="p">)</span> <span class="c1">#local</span></div>
+
+<div class="viewcode-block" id="decorate_petri_net"><a class="viewcode-back" href="../petrinet.html#petrinet.decorate_petri_net">[docs]</a><span class="k">def</span> <span class="nf">decorate_petri_net</span><span class="p">(</span><span class="n">case</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Exports a .png of a petri-net with the trace of the case colored.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    case : int</span>
+<span class="sd">        case-id of a case in the event log</span>
+<span class="sd">    name : str</span>
+<span class="sd">        name of the event log file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># we generate a petri-net and find the state of the case (more specifically the trace)</span>
+    <span class="n">net</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">,</span> <span class="n">final_marking</span> <span class="o">=</span> <span class="n">generate_petri_net</span><span class="p">()</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">eventlog</span><span class="o">.</span><span class="n">get_state</span><span class="p">(</span><span class="n">case</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="n">events</span> <span class="o">=</span> <span class="n">state</span><span class="p">[</span><span class="s1">&#39;case&#39;</span><span class="p">]</span>
+    
+    <span class="c1"># we map each activity that appears in the trace from a number to the anme of the activity</span>
+    <span class="n">event_names</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">event_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">simmodel</span><span class="o">.</span><span class="n">map_number_to_activity</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+
+    <span class="n">decoration</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># we assign color to each transition with an activity name from the ones we extracted form the trace</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">transitions</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">label</span><span class="p">)</span> <span class="ow">in</span> <span class="n">event_names</span><span class="p">:</span>    
+            <span class="n">decoration</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">t</span><span class="p">:</span> <span class="p">{}})</span>
+            <span class="n">decoration</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="s2">&quot;#0072BC&quot;</span><span class="p">})</span>
+            <span class="n">decoration</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;label&quot;</span><span class="p">:</span><span class="n">t</span><span class="o">.</span><span class="n">label</span><span class="p">})</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">decoration</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">t</span><span class="p">:</span> <span class="p">{}})</span>
+            <span class="n">decoration</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="s2">&quot;white&quot;</span><span class="p">})</span>
+            <span class="n">decoration</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;label&quot;</span><span class="p">:</span><span class="n">t</span><span class="o">.</span><span class="n">label</span><span class="p">})</span>
+    
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">places</span><span class="p">:</span>
+        <span class="n">decoration</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">p</span><span class="p">:</span> <span class="p">{}})</span>
+        <span class="n">decoration</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="s2">&quot;white&quot;</span><span class="p">})</span>
+
+
+    <span class="c1"># pm4py.view_petri_net(net, initial_marking, final_marking, decorations = decoration)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;made petrinet&quot;</span><span class="p">)</span>
+    <span class="c1"># pm4py.save_vis_petri_net(net, initial_marking, final_marking, decorations = decoration, file_path = r&quot;Frontend/static/preview_net.png&quot;) #docker</span>
+    <span class="n">pm4py</span><span class="o">.</span><span class="n">save_vis_petri_net</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">,</span> <span class="n">final_marking</span><span class="p">,</span> <span class="n">bgcolor</span> <span class="o">=</span> <span class="s2">&quot;#E6F1FA&quot;</span><span class="p">,</span> <span class="n">decorations</span> <span class="o">=</span> <span class="n">decoration</span><span class="p">,</span> <span class="n">file_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;static/preview_net.png&quot;</span><span class="p">)</span> <span class="c1">#local</span></div>
+
+<div class="viewcode-block" id="decorate_petri_net_with_rec"><a class="viewcode-back" href="../petrinet.html#petrinet.decorate_petri_net_with_rec">[docs]</a><span class="k">def</span> <span class="nf">decorate_petri_net_with_rec</span><span class="p">(</span><span class="n">case</span><span class="p">,</span> <span class="n">rec</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Exports a .png of a petri-net in which the trace of the case is colored in one color and the recommended activity in another.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    case : int</span>
+<span class="sd">        case-id of a case in the event log</span>
+<span class="sd">    rec : int</span>
+<span class="sd">        the recommended activity</span>
+<span class="sd">    name : str</span>
+<span class="sd">        name of the event log file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">net</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">,</span> <span class="n">final_marking</span> <span class="o">=</span> <span class="n">generate_petri_net</span><span class="p">()</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">eventlog</span><span class="o">.</span><span class="n">get_state</span><span class="p">(</span><span class="n">case</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="n">events</span> <span class="o">=</span> <span class="n">state</span><span class="p">[</span><span class="s1">&#39;case&#39;</span><span class="p">]</span>
+    
+    <span class="n">event_names</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">events</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">event_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">simmodel</span><span class="o">.</span><span class="n">map_number_to_activity</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+
+    <span class="n">decoration</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">rec_name</span> <span class="o">=</span><span class="n">simmodel</span><span class="o">.</span><span class="n">map_number_to_activity</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">transitions</span><span class="p">:</span>
+        <span class="c1"># print(str(t.label))</span>
+        <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">label</span><span class="p">)</span> <span class="ow">in</span> <span class="n">event_names</span><span class="p">:</span>    
+            <span class="n">decoration</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">t</span><span class="p">:</span> <span class="p">{}})</span>
+            <span class="n">decoration</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="s2">&quot;#0072BC&quot;</span><span class="p">})</span>
+            <span class="n">decoration</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;label&quot;</span><span class="p">:</span><span class="n">t</span><span class="o">.</span><span class="n">label</span><span class="p">})</span>
+        <span class="k">elif</span> <span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">label</span><span class="p">)</span> <span class="o">==</span> <span class="n">rec_name</span><span class="p">:</span>
+            <span class="n">decoration</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">t</span><span class="p">:</span> <span class="p">{}})</span>
+            <span class="n">decoration</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="s2">&quot;#00bc4b&quot;</span><span class="p">})</span>
+            <span class="n">decoration</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;label&quot;</span><span class="p">:</span><span class="n">t</span><span class="o">.</span><span class="n">label</span><span class="p">})</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">decoration</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">t</span><span class="p">:</span> <span class="p">{}})</span>
+            <span class="n">decoration</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="s2">&quot;white&quot;</span><span class="p">})</span>
+            <span class="n">decoration</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;label&quot;</span><span class="p">:</span><span class="n">t</span><span class="o">.</span><span class="n">label</span><span class="p">})</span>
+
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">places</span><span class="p">:</span>
+        <span class="n">decoration</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">p</span><span class="p">:</span> <span class="p">{}})</span>
+        <span class="n">decoration</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="s2">&quot;white&quot;</span><span class="p">})</span>
+
+    <span class="c1"># pm4py.view_petri_net(net, initial_marking, final_marking, decorations = decoration)</span>
+    <span class="c1"># pm4py.save_vis_petri_net(net, initial_marking, final_marking, decorations = decoration, file_path = r&quot;Frontend/static/net.png&quot;) #docker</span>
+    <span class="n">pm4py</span><span class="o">.</span><span class="n">save_vis_petri_net</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">,</span> <span class="n">final_marking</span><span class="p">,</span> <span class="n">bgcolor</span> <span class="o">=</span> <span class="s2">&quot;#E6F1FA&quot;</span><span class="p">,</span> <span class="n">decorations</span> <span class="o">=</span> <span class="n">decoration</span><span class="p">,</span> <span class="n">file_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;static/net.png&quot;</span><span class="p">)</span> <span class="c1">#local</span>
+    <span class="k">return</span> <span class="n">rec_name</span></div>
+
+<span class="c1"># decorate_petri_net(646, 7, &quot;eventlog.csv&quot;)</span>
+<span class="n">process_petri_net</span><span class="p">()</span>
+
+
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, OPTIS Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{%block head%}
+<title>Login Page</title>
+{%endblock%}
+
+{%block body%}
+<div style="text-align: center;">
+    <h1>Please enter your username and password</h1>
+    <form>
+        <label for="username">Username:</label><br>
+        <input type="text"><br>
+        <label for="password">Password:</label><br>
+        <input type="text"><br>
+        <input type="submit" value="submit" class="button"><br>
+    </form>
+</div>
+{%endblock%}

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<log xes.version="1849-2016" xes.features="nested-attributes" xmlns="http://www.xes-standard.org/">
+	<trace>
+		<event>
+			<string key="Activity" value="place order" />
+			<string key="StartTimestamp" value="2023-07-08 10:07" />
+			<string key="EndTimestamp" value="2023-07-08 10:09" />
+			<int key="CaseID" value="0" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="place order" />
+			<string key="StartTimestamp" value="2023-07-08 10:09" />
+			<string key="EndTimestamp" value="2023-07-08 10:09" />
+			<int key="CaseID" value="1" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="place order" />
+			<string key="StartTimestamp" value="2023-07-08 10:11" />
+			<string key="EndTimestamp" value="2023-07-08 10:09" />
+			<int key="CaseID" value="2" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="arrange standard order" />
+			<string key="StartTimestamp" value="2023-07-08 10:13" />
+			<string key="EndTimestamp" value="2023-07-08 10:18" />
+			<int key="CaseID" value="0" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="arrange custom order" />
+			<string key="StartTimestamp" value="2023-07-08 10:13" />
+			<string key="EndTimestamp" value="2023-07-08 10:30" />
+			<int key="CaseID" value="1" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="arrange custom order" />
+			<string key="StartTimestamp" value="2023-07-08 10:13" />
+			<string key="EndTimestamp" value="2023-07-08 10:27" />
+			<int key="CaseID" value="2" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="place order" />
+			<string key="StartTimestamp" value="2023-07-08 10:21" />
+			<string key="EndTimestamp" value="2023-07-08 10:09" />
+			<int key="CaseID" value="3" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="arrange custom order" />
+			<string key="StartTimestamp" value="2023-07-08 10:23" />
+			<string key="EndTimestamp" value="2023-07-08 10:30" />
+			<int key="CaseID" value="3" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="pick from stock A" />
+			<string key="StartTimestamp" value="2023-07-08 10:24" />
+			<string key="EndTimestamp" value="2023-07-08 10:36" />
+			<int key="CaseID" value="0" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="place order" />
+			<string key="StartTimestamp" value="2023-07-08 10:33" />
+			<string key="EndTimestamp" value="2023-07-08 10:09" />
+			<int key="CaseID" value="4" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="manufacture A" />
+			<string key="StartTimestamp" value="2023-07-08 10:35" />
+			<string key="EndTimestamp" value=" " />
+			<int key="CaseID" value="2" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="arrange standard order" />
+			<string key="StartTimestamp" value="2023-07-08 10:35" />
+			<string key="EndTimestamp" value="2023-07-08 10:22" />
+			<int key="CaseID" value="4" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="manufacture A" />
+			<string key="StartTimestamp" value="2023-07-08 10:36" />
+			<string key="EndTimestamp" value=" " />
+			<int key="CaseID" value="1" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="place order" />
+			<string key="StartTimestamp" value="2023-07-08 10:45" />
+			<string key="EndTimestamp" value="2023-07-08 10:09" />
+			<int key="CaseID" value="5" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="manufacture B" />
+			<string key="StartTimestamp" value="2023-07-08 10:47" />
+			<string key="EndTimestamp" value=" " />
+			<int key="CaseID" value="3" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="arrange custom order" />
+			<string key="StartTimestamp" value="2023-07-08 10:47" />
+			<string key="EndTimestamp" value="2023-07-08 10:29" />
+			<int key="CaseID" value="5" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="pick from stock B" />
+			<string key="StartTimestamp" value="2023-07-08 10:50" />
+			<string key="EndTimestamp" value=" " />
+			<int key="CaseID" value="4" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="pack B" />
+			<string key="StartTimestamp" value="2023-07-08 10:53" />
+			<string key="EndTimestamp" value="2023-07-08 10:36" />
+			<int key="CaseID" value="0" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="place order" />
+			<string key="StartTimestamp" value="2023-07-08 10:59" />
+			<string key="EndTimestamp" value="2023-07-08 10:09" />
+			<int key="CaseID" value="6" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="arrange custom order" />
+			<string key="StartTimestamp" value="2023-07-08 11:01" />
+			<string key="EndTimestamp" value=" " />
+			<int key="CaseID" value="6" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="manufacture B" />
+			<string key="StartTimestamp" value="2023-07-08 11:09" />
+			<string key="EndTimestamp" value=" " />
+			<int key="CaseID" value="5" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="place order" />
+			<string key="StartTimestamp" value="2023-07-08 11:11" />
+			<string key="EndTimestamp" value="2023-07-08 10:09" />
+			<int key="CaseID" value="7" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="attempt delivery B" />
+			<string key="StartTimestamp" value="2023-07-08 11:13" />
+			<string key="EndTimestamp" value=" " />
+			<int key="CaseID" value="0" />
+		</event>
+	</trace>
+	<trace>
+		<event>
+			<string key="Activity" value="arrange custom order" />
+			<string key="StartTimestamp" value="2023-07-08 11:13" />
+			<string key="EndTimestamp" value=" " />
+			<int key="CaseID" value="7" />
+		</event>
+	</trace>
+</log>

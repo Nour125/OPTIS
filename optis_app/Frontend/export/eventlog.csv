@@ -1,0 +1,3886 @@
+CaseID,Activity,StartTimestamp,EndTimestamp
+0,place order,0.0,2.0
+1,place order,2.0,4.0
+2,place order,4.0,6.0
+0,arrange standard order,6.0,21.0
+1,arrange custom order,6.0,31.0
+2,arrange standard order,6.0,18.0
+3,place order,10.0,12.0
+3,arrange standard order,12.0,23.0
+2,pick from stock A,18.0,46.0
+4,place order,20.0,22.0
+0,pick from stock B,22.0,46.0
+4,arrange custom order,22.0,44.0
+3,pick from stock B,23.0,82.0
+5,place order,30.0,32.0
+1,manufacture A,32.0,292.0
+5,arrange standard order,32.0,47.0
+6,place order,40.0,42.0
+6,arrange standard order,42.0,56.0
+4,manufacture B,44.0,416.0
+2,pack B,46.0,64.0
+0,pack B,46.0,72.0
+5,pick from stock B,47.0,73.0
+7,place order,50.0,52.0
+7,arrange standard order,52.0,67.0
+6,pick from stock A,56.0,90.0
+8,place order,60.0,62.0
+8,arrange standard order,62.0,77.0
+2,attempt delivery C,64.0,2507.0
+9,place order,70.0,72.0
+0,attempt delivery A,72.0,825.0
+9,arrange standard order,72.0,86.0
+5,pack A,73.0,93.0
+7,pick from stock B,73.0,98.0
+8,pick from stock A,77.0,102.0
+10,place order,80.0,82.0
+3,pack B,82.0,97.0
+10,arrange standard order,82.0,93.0
+11,place order,90.0,92.0
+6,pack A,92.0,111.0
+9,pick from stock A,92.0,120.0
+11,arrange standard order,92.0,107.0
+5,attempt delivery C,93.0,2908.0
+10,pick from stock B,93.0,134.0
+3,attempt delivery B,97.0,1772.0
+7,pack C,98.0,138.0
+12,place order,100.0,102.0
+8,pack B,102.0,120.0
+12,arrange custom order,102.0,123.0
+11,pick from stock A,107.0,132.0
+13,place order,110.0,112.0
+6,attempt delivery A,112.0,1181.0
+13,arrange standard order,112.0,123.0
+14,place order,120.0,122.0
+9,pack C,122.0,172.0
+8,attempt delivery A,122.0,1486.0
+14,arrange standard order,122.0,135.0
+12,manufacture B,123.0,515.0
+13,pick from stock A,123.0,155.0
+15,place order,130.0,132.0
+11,pack A,132.0,152.0
+15,arrange standard order,132.0,147.0
+10,pack B,134.0,153.0
+14,pick from stock B,135.0,161.0
+7,attempt delivery B,138.0,2170.0
+16,place order,140.0,142.0
+16,arrange custom order,142.0,171.0
+15,pick from stock B,147.0,181.0
+17,place order,150.0,152.0
+11,attempt delivery B,152.0,2291.0
+17,arrange standard order,152.0,165.0
+10,attempt delivery B,153.0,2121.0
+13,pack C,155.0,187.0
+18,place order,160.0,162.0
+14,pack B,162.0,185.0
+18,arrange standard order,162.0,177.0
+17,pick from stock A,165.0,192.0
+19,place order,170.0,172.0
+16,manufacture B,172.0,535.0
+9,attempt delivery A,172.0,970.0
+19,arrange standard order,172.0,185.0
+18,pick from stock B,177.0,228.0
+20,place order,180.0,182.0
+15,pack C,182.0,225.0
+20,arrange standard order,182.0,193.0
+14,attempt delivery B,185.0,2077.0
+19,pick from stock A,185.0,206.0
+13,attempt delivery C,187.0,1867.0
+17,pack B,192.0,220.0
+20,pick from stock B,193.0,218.0
+19,pack A,206.0,216.0
+19,attempt delivery B,216.0,2227.0
+20,pack B,218.0,246.0
+17,attempt delivery C,220.0,1943.0
+15,attempt delivery B,225.0,1764.0
+18,pack C,228.0,256.0
+20,attempt delivery B,246.0,2068.0
+18,attempt delivery B,256.0,1846.0
+21,place order,280.0,282.0
+21,arrange custom order,282.0,302.0
+22,place order,290.0,292.0
+1,pack C,292.0,336.0
+22,arrange custom order,292.0,320.0
+23,place order,300.0,302.0
+21,manufacture A,302.0,609.0
+23,arrange custom order,302.0,325.0
+24,place order,310.0,312.0
+24,arrange custom order,312.0,338.0
+25,place order,320.0,322.0
+22,manufacture B,322.0,732.0
+25,arrange standard order,322.0,334.0
+23,manufacture B,325.0,701.0
+26,place order,330.0,332.0
+26,arrange custom order,332.0,352.0
+25,pick from stock B,334.0,390.0
+1,attempt delivery B,336.0,2187.0
+24,manufacture A,338.0,584.0
+27,place order,340.0,342.0
+27,arrange standard order,342.0,353.0
+28,place order,350.0,352.0
+26,manufacture A,352.0,612.0
+28,arrange custom order,352.0,382.0
+27,pick from stock A,353.0,386.0
+29,place order,360.0,362.0
+29,arrange standard order,362.0,374.0
+30,place order,370.0,372.0
+30,arrange custom order,372.0,399.0
+29,pick from stock B,374.0,420.0
+31,place order,380.0,382.0
+28,manufacture A,382.0,642.0
+31,arrange custom order,382.0,408.0
+27,pack A,386.0,406.0
+32,place order,390.0,392.0
+25,pack C,392.0,435.0
+32,arrange custom order,392.0,419.0
+33,place order,400.0,402.0
+33,arrange custom order,402.0,431.0
+27,attempt delivery C,406.0,2386.0
+34,place order,410.0,412.0
+34,arrange standard order,412.0,423.0
+4,pack B,416.0,431.0
+32,manufacture B,419.0,835.0
+35,place order,420.0,422.0
+29,pack C,422.0,471.0
+35,arrange standard order,422.0,435.0
+34,pick from stock B,423.0,461.0
+36,place order,430.0,432.0
+4,attempt delivery A,432.0,1295.0
+36,arrange custom order,432.0,460.0
+25,attempt delivery B,435.0,2408.0
+35,pick from stock C,435.0,496.0
+37,place order,440.0,442.0
+37,arrange standard order,442.0,456.0
+38,place order,450.0,452.0
+38,arrange custom order,452.0,481.0
+37,pick from stock A,456.0,466.0
+39,place order,460.0,462.0
+36,manufacture B,462.0,928.0
+34,pack A,462.0,472.0
+39,arrange standard order,462.0,476.0
+37,pack C,466.0,513.0
+40,place order,470.0,472.0
+29,attempt delivery B,472.0,2167.0
+34,attempt delivery B,472.0,2249.0
+40,arrange standard order,472.0,485.0
+39,pick from stock B,476.0,533.0
+40,pick from stock C,485.0,558.0
+35,pack A,496.0,516.0
+37,attempt delivery B,513.0,2018.0
+12,pack B,515.0,539.0
+35,attempt delivery B,516.0,2272.0
+39,pack C,533.0,579.0
+16,pack A,535.0,550.0
+12,attempt delivery C,539.0,2465.0
+16,attempt delivery C,550.0,2498.0
+40,pack C,558.0,602.0
+41,place order,570.0,572.0
+41,arrange standard order,572.0,584.0
+39,attempt delivery A,579.0,1419.0
+42,place order,580.0,582.0
+42,arrange custom order,582.0,611.0
+24,pack C,584.0,609.0
+30,manufacture A,584.0,930.0
+41,pick from stock B,584.0,620.0
+43,place order,590.0,592.0
+43,arrange custom order,592.0,617.0
+44,place order,600.0,602.0
+40,attempt delivery B,602.0,2491.0
+44,arrange custom order,602.0,624.0
+21,pack B,609.0,626.0
+31,manufacture A,609.0,954.0
+24,attempt delivery A,609.0,1402.0
+45,place order,610.0,612.0
+42,manufacture B,612.0,982.0
+26,pack B,612.0,635.0
+33,manufacture A,612.0,899.0
+45,arrange standard order,612.0,625.0
+43,manufacture B,617.0,990.0
+46,place order,620.0,622.0
+41,pack B,622.0,643.0
+46,arrange custom order,622.0,648.0
+44,manufacture B,624.0,1090.0
+45,pick from stock B,625.0,666.0
+21,attempt delivery B,626.0,2084.0
+47,place order,630.0,632.0
+47,arrange standard order,632.0,642.0
+26,attempt delivery B,635.0,2599.0
+48,place order,640.0,642.0
+28,pack B,642.0,658.0
+38,manufacture A,642.0,946.0
+47,pick from stock C,642.0,683.0
+48,arrange custom order,642.0,672.0
+41,attempt delivery A,643.0,1640.0
+49,place order,650.0,652.0
+49,arrange standard order,652.0,665.0
+28,attempt delivery A,658.0,1943.0
+50,place order,660.0,662.0
+50,arrange custom order,662.0,687.0
+49,pick from stock B,665.0,703.0
+45,pack C,666.0,696.0
+51,place order,670.0,672.0
+48,manufacture B,672.0,1080.0
+51,arrange standard order,672.0,685.0
+52,place order,680.0,682.0
+52,arrange custom order,682.0,702.0
+47,pack B,683.0,699.0
+51,pick from stock C,685.0,721.0
+50,manufacture B,687.0,1122.0
+53,place order,690.0,692.0
+53,arrange standard order,692.0,703.0
+45,attempt delivery C,696.0,2783.0
+47,attempt delivery C,699.0,2394.0
+54,place order,700.0,702.0
+23,pack A,702.0,720.0
+54,arrange custom order,702.0,731.0
+49,pack B,703.0,718.0
+53,pick from stock B,703.0,723.0
+55,place order,710.0,712.0
+55,arrange custom order,712.0,737.0
+49,attempt delivery A,718.0,1613.0
+56,place order,720.0,722.0
+23,attempt delivery B,722.0,2526.0
+51,pack A,722.0,740.0
+56,arrange custom order,722.0,746.0
+53,pack C,723.0,769.0
+57,place order,730.0,732.0
+22,pack C,732.0,780.0
+57,arrange standard order,732.0,743.0
+55,manufacture B,737.0,1111.0
+58,place order,740.0,742.0
+51,attempt delivery B,742.0,2293.0
+58,arrange standard order,742.0,756.0
+57,pick from stock A,743.0,762.0
+56,manufacture B,746.0,1197.0
+59,place order,750.0,752.0
+59,arrange custom order,752.0,774.0
+58,pick from stock A,756.0,770.0
+60,place order,760.0,762.0
+57,pack A,762.0,782.0
+60,arrange standard order,762.0,774.0
+53,attempt delivery B,769.0,2864.0
+58,pack C,770.0,812.0
+60,pick from stock C,774.0,819.0
+22,attempt delivery C,780.0,2440.0
+57,attempt delivery C,782.0,2576.0
+58,attempt delivery B,812.0,2796.0
+60,pack C,819.0,854.0
+0,order completed,825.0,826.0
+32,pack B,835.0,859.0
+60,attempt delivery A,854.0,1979.0
+32,attempt delivery B,859.0,2811.0
+61,place order,860.0,862.0
+61,arrange custom order,862.0,884.0
+62,place order,870.0,872.0
+62,arrange standard order,872.0,886.0
+63,place order,880.0,882.0
+63,arrange custom order,882.0,902.0
+61,manufacture B,884.0,1362.0
+62,pick from stock B,886.0,934.0
+64,place order,890.0,892.0
+64,arrange custom order,892.0,919.0
+33,pack C,899.0,936.0
+46,manufacture A,899.0,1255.0
+65,place order,900.0,902.0
+63,manufacture B,902.0,1376.0
+65,arrange standard order,902.0,914.0
+66,place order,910.0,912.0
+66,arrange custom order,912.0,932.0
+65,pick from stock A,914.0,925.0
+67,place order,920.0,922.0
+67,arrange standard order,922.0,933.0
+65,pack A,925.0,941.0
+36,pack A,928.0,943.0
+64,manufacture B,928.0,1403.0
+68,place order,930.0,932.0
+30,pack C,932.0,976.0
+52,manufacture A,932.0,1262.0
+68,arrange standard order,932.0,943.0
+67,pick from stock A,933.0,970.0
+33,attempt delivery B,936.0,2408.0
+69,place order,940.0,942.0
+65,attempt delivery C,942.0,3111.0
+62,pack A,942.0,960.0
+69,arrange standard order,942.0,957.0
+36,attempt delivery A,943.0,2208.0
+68,pick from stock B,943.0,991.0
+38,pack B,946.0,968.0
+54,manufacture A,946.0,1272.0
+70,place order,950.0,952.0
+70,arrange custom order,952.0,978.0
+31,pack B,954.0,977.0
+59,manufacture A,954.0,1313.0
+69,pick from stock C,957.0,991.0
+71,place order,960.0,962.0
+62,attempt delivery B,962.0,2792.0
+71,arrange standard order,962.0,973.0
+38,attempt delivery A,968.0,1876.0
+72,place order,970.0,972.0
+67,pack A,972.0,982.0
+72,arrange standard order,972.0,984.0
+9,order completed,972.0,973.0
+71,pick from stock C,973.0,1015.0
+30,attempt delivery B,976.0,2730.0
+31,attempt delivery B,977.0,2557.0
+73,place order,980.0,982.0
+42,pack C,982.0,1020.0
+66,manufacture B,982.0,1457.0
+67,attempt delivery C,982.0,3363.0
+73,arrange custom order,982.0,1009.0
+74,place order,990.0,992.0
+43,pack C,992.0,1041.0
+70,manufacture B,992.0,1352.0
+68,pack A,992.0,1003.0
+69,pack A,992.0,1009.0
+72,pick from stock C,992.0,1025.0
+74,arrange standard order,992.0,1006.0
+75,place order,1000.0,1002.0
+75,arrange standard order,1002.0,1012.0
+68,attempt delivery A,1003.0,2114.0
+74,pick from stock A,1006.0,1040.0
+69,attempt delivery C,1009.0,3096.0
+76,place order,1010.0,1012.0
+75,pick from stock B,1012.0,1066.0
+76,arrange custom order,1012.0,1042.0
+71,pack A,1015.0,1030.0
+77,place order,1020.0,1022.0
+42,attempt delivery C,1022.0,3785.0
+77,arrange custom order,1022.0,1048.0
+72,pack B,1025.0,1050.0
+78,place order,1030.0,1032.0
+71,attempt delivery A,1032.0,2107.0
+78,arrange standard order,1032.0,1043.0
+79,place order,1040.0,1042.0
+74,pack B,1042.0,1067.0
+43,attempt delivery A,1042.0,2450.0
+79,arrange custom order,1042.0,1068.0
+78,pick from stock B,1043.0,1094.0
+80,place order,1050.0,1052.0
+72,attempt delivery A,1052.0,1820.0
+80,arrange custom order,1052.0,1082.0
+75,pack B,1066.0,1095.0
+74,attempt delivery C,1067.0,2637.0
+48,pack C,1080.0,1124.0
+76,manufacture B,1080.0,1486.0
+44,pack C,1090.0,1126.0
+77,manufacture B,1090.0,1524.0
+78,pack B,1094.0,1120.0
+75,attempt delivery A,1095.0,2320.0
+55,pack A,1111.0,1129.0
+80,manufacture B,1111.0,1484.0
+78,attempt delivery A,1120.0,2184.0
+50,pack A,1122.0,1136.0
+48,attempt delivery C,1124.0,2700.0
+44,attempt delivery A,1126.0,2232.0
+55,attempt delivery A,1129.0,2418.0
+50,attempt delivery C,1136.0,2842.0
+81,place order,1150.0,1152.0
+81,arrange standard order,1152.0,1163.0
+82,place order,1160.0,1162.0
+82,arrange standard order,1162.0,1174.0
+81,pick from stock A,1163.0,1177.0
+83,place order,1170.0,1172.0
+83,arrange standard order,1172.0,1182.0
+82,pick from stock C,1174.0,1213.0
+81,pack A,1177.0,1196.0
+84,place order,1180.0,1182.0
+83,pick from stock A,1182.0,1205.0
+84,arrange standard order,1182.0,1197.0
+6,order completed,1182.0,1183.0
+85,place order,1190.0,1192.0
+85,arrange standard order,1192.0,1203.0
+81,attempt delivery B,1196.0,3092.0
+56,pack B,1197.0,1218.0
+84,pick from stock B,1197.0,1235.0
+86,place order,1200.0,1202.0
+86,arrange custom order,1202.0,1229.0
+85,pick from stock A,1203.0,1215.0
+83,pack B,1205.0,1225.0
+87,place order,1210.0,1212.0
+87,arrange standard order,1212.0,1226.0
+82,pack A,1213.0,1229.0
+85,pack C,1215.0,1257.0
+56,attempt delivery C,1218.0,3196.0
+88,place order,1220.0,1222.0
+88,arrange standard order,1222.0,1234.0
+83,attempt delivery C,1225.0,2885.0
+87,pick from stock C,1226.0,1279.0
+86,manufacture B,1229.0,1644.0
+82,attempt delivery A,1229.0,2178.0
+89,place order,1230.0,1232.0
+89,arrange custom order,1232.0,1262.0
+88,pick from stock B,1234.0,1264.0
+84,pack C,1235.0,1275.0
+90,place order,1240.0,1242.0
+90,arrange custom order,1242.0,1267.0
+91,place order,1250.0,1252.0
+91,arrange standard order,1252.0,1262.0
+46,pack C,1255.0,1303.0
+73,manufacture A,1255.0,1504.0
+85,attempt delivery A,1257.0,2164.0
+92,place order,1260.0,1262.0
+52,pack A,1262.0,1272.0
+79,manufacture A,1262.0,1616.0
+91,pick from stock C,1262.0,1302.0
+92,arrange standard order,1262.0,1272.0
+88,pack B,1264.0,1285.0
+93,place order,1270.0,1272.0
+54,pack C,1272.0,1307.0
+89,manufacture A,1272.0,1575.0
+52,attempt delivery A,1272.0,2503.0
+92,pick from stock A,1272.0,1282.0
+93,arrange custom order,1272.0,1300.0
+84,attempt delivery B,1275.0,3274.0
+87,pack B,1279.0,1303.0
+94,place order,1280.0,1282.0
+92,pack C,1282.0,1313.0
+94,arrange custom order,1282.0,1307.0
+88,attempt delivery C,1285.0,2947.0
+95,place order,1290.0,1292.0
+95,arrange standard order,1292.0,1306.0
+4,order completed,1295.0,1296.0
+96,place order,1300.0,1302.0
+91,pack B,1302.0,1324.0
+96,arrange custom order,1302.0,1327.0
+46,attempt delivery B,1303.0,3131.0
+87,attempt delivery C,1303.0,3520.0
+95,pick from stock B,1306.0,1331.0
+54,attempt delivery B,1307.0,3248.0
+97,place order,1310.0,1312.0
+97,arrange standard order,1312.0,1326.0
+59,pack B,1313.0,1338.0
+90,manufacture A,1313.0,1608.0
+92,attempt delivery B,1313.0,3429.0
+98,place order,1320.0,1322.0
+98,arrange standard order,1322.0,1332.0
+91,attempt delivery A,1324.0,2228.0
+97,pick from stock A,1326.0,1340.0
+96,manufacture B,1327.0,1800.0
+99,place order,1330.0,1332.0
+95,pack A,1332.0,1346.0
+98,pick from stock B,1332.0,1377.0
+99,arrange custom order,1332.0,1360.0
+59,attempt delivery C,1338.0,4055.0
+100,place order,1340.0,1342.0
+97,pack C,1342.0,1375.0
+100,arrange standard order,1342.0,1356.0
+95,attempt delivery B,1346.0,3106.0
+70,pack C,1352.0,1391.0
+100,pick from stock B,1356.0,1411.0
+61,pack A,1362.0,1379.0
+97,attempt delivery C,1375.0,2957.0
+63,pack A,1376.0,1389.0
+98,pack B,1377.0,1404.0
+61,attempt delivery B,1379.0,3474.0
+63,attempt delivery C,1389.0,3795.0
+70,attempt delivery A,1391.0,2757.0
+24,order completed,1402.0,1403.0
+64,pack B,1403.0,1429.0
+98,attempt delivery A,1404.0,2763.0
+100,pack B,1411.0,1440.0
+39,order completed,1419.0,1420.0
+64,attempt delivery A,1429.0,2503.0
+101,place order,1440.0,1442.0
+100,attempt delivery A,1442.0,2778.0
+101,arrange standard order,1442.0,1452.0
+102,place order,1450.0,1452.0
+101,pick from stock A,1452.0,1484.0
+102,arrange standard order,1452.0,1465.0
+66,pack C,1457.0,1493.0
+103,place order,1460.0,1462.0
+103,arrange standard order,1462.0,1477.0
+102,pick from stock B,1465.0,1492.0
+104,place order,1470.0,1472.0
+104,arrange custom order,1472.0,1496.0
+103,pick from stock C,1477.0,1535.0
+105,place order,1480.0,1482.0
+105,arrange custom order,1482.0,1508.0
+80,pack B,1484.0,1504.0
+101,pack C,1484.0,1533.0
+76,pack A,1486.0,1503.0
+8,order completed,1486.0,1487.0
+106,place order,1490.0,1492.0
+102,pack B,1492.0,1515.0
+106,arrange standard order,1492.0,1507.0
+66,attempt delivery A,1493.0,2616.0
+107,place order,1500.0,1502.0
+107,arrange custom order,1502.0,1524.0
+76,attempt delivery A,1503.0,2574.0
+73,pack A,1504.0,1518.0
+93,manufacture A,1504.0,1785.0
+80,attempt delivery C,1504.0,3730.0
+106,pick from stock C,1507.0,1557.0
+108,place order,1510.0,1512.0
+108,arrange custom order,1512.0,1542.0
+102,attempt delivery A,1515.0,2810.0
+73,attempt delivery C,1518.0,3583.0
+109,place order,1520.0,1522.0
+109,arrange standard order,1522.0,1533.0
+77,pack A,1524.0,1537.0
+110,place order,1530.0,1532.0
+110,arrange standard order,1532.0,1547.0
+101,attempt delivery C,1533.0,3246.0
+103,pack B,1535.0,1564.0
+109,pick from stock C,1535.0,1615.0
+111,place order,1540.0,1542.0
+108,manufacture B,1542.0,2000.0
+111,arrange custom order,1542.0,1568.0
+112,place order,1550.0,1552.0
+112,arrange standard order,1552.0,1564.0
+106,pack C,1557.0,1583.0
+110,pick from stock C,1557.0,1634.0
+113,place order,1560.0,1562.0
+113,arrange standard order,1562.0,1575.0
+103,attempt delivery C,1564.0,4411.0
+111,manufacture B,1568.0,1948.0
+114,place order,1570.0,1572.0
+114,arrange custom order,1572.0,1595.0
+89,pack A,1575.0,1593.0
+94,manufacture A,1575.0,1826.0
+113,pick from stock A,1575.0,1604.0
+115,place order,1580.0,1582.0
+115,arrange standard order,1582.0,1597.0
+116,place order,1590.0,1592.0
+116,arrange custom order,1592.0,1622.0
+114,manufacture B,1595.0,2032.0
+117,place order,1600.0,1602.0
+117,arrange standard order,1602.0,1616.0
+113,pack B,1604.0,1625.0
+90,pack B,1608.0,1631.0
+99,manufacture A,1608.0,1931.0
+118,place order,1610.0,1612.0
+118,arrange standard order,1612.0,1627.0
+49,order completed,1613.0,1614.0
+77,attempt delivery A,1613.0,2790.0
+109,pack B,1615.0,1639.0
+112,pick from stock C,1615.0,1666.0
+79,pack A,1616.0,1634.0
+104,manufacture A,1616.0,1940.0
+119,place order,1620.0,1622.0
+119,arrange standard order,1622.0,1633.0
+118,pick from stock A,1627.0,1649.0
+120,place order,1630.0,1632.0
+90,attempt delivery B,1632.0,3521.0
+120,arrange custom order,1632.0,1653.0
+110,pack A,1634.0,1653.0
+115,pick from stock C,1634.0,1708.0
+79,attempt delivery C,1634.0,3274.0
+109,attempt delivery B,1639.0,3671.0
+41,order completed,1640.0,1641.0
+106,attempt delivery A,1640.0,2599.0
+86,pack A,1644.0,1654.0
+118,pack B,1649.0,1672.0
+120,manufacture B,1653.0,2057.0
+110,attempt delivery C,1653.0,3433.0
+86,attempt delivery C,1654.0,3736.0
+112,pack B,1666.0,1682.0
+117,pick from stock C,1666.0,1714.0
+118,attempt delivery B,1672.0,3685.0
+112,attempt delivery C,1682.0,3582.0
+115,pack B,1708.0,1726.0
+119,pick from stock C,1708.0,1770.0
+117,pack B,1714.0,1744.0
+115,attempt delivery C,1726.0,4325.0
+121,place order,1730.0,1732.0
+121,arrange custom order,1732.0,1762.0
+122,place order,1740.0,1742.0
+122,arrange standard order,1742.0,1755.0
+117,attempt delivery C,1744.0,4555.0
+123,place order,1750.0,1752.0
+123,arrange custom order,1752.0,1773.0
+122,pick from stock A,1755.0,1774.0
+124,place order,1760.0,1762.0
+124,arrange standard order,1762.0,1774.0
+15,order completed,1764.0,1765.0
+125,place order,1770.0,1772.0
+119,pack B,1772.0,1801.0
+125,arrange standard order,1772.0,1783.0
+3,order completed,1772.0,1773.0
+123,manufacture B,1773.0,2216.0
+122,pack A,1774.0,1784.0
+124,pick from stock B,1774.0,1823.0
+126,place order,1780.0,1782.0
+126,arrange standard order,1782.0,1793.0
+125,pick from stock C,1783.0,1830.0
+122,attempt delivery C,1784.0,3646.0
+93,pack C,1785.0,1824.0
+105,manufacture A,1785.0,2106.0
+127,place order,1790.0,1792.0
+127,arrange custom order,1792.0,1815.0
+126,pick from stock C,1793.0,1844.0
+128,place order,1800.0,1802.0
+96,pack B,1802.0,1821.0
+128,arrange custom order,1802.0,1824.0
+129,place order,1810.0,1812.0
+129,arrange standard order,1812.0,1826.0
+127,manufacture B,1815.0,2211.0
+130,place order,1820.0,1822.0
+89,attempt delivery A,1822.0,3152.0
+130,arrange standard order,1822.0,1836.0
+72,order completed,1822.0,1823.0
+124,pack A,1823.0,1834.0
+93,attempt delivery B,1824.0,3344.0
+128,manufacture B,1824.0,2281.0
+94,pack B,1826.0,1853.0
+107,manufacture A,1826.0,2129.0
+129,pick from stock B,1826.0,1862.0
+131,place order,1830.0,1832.0
+125,pack C,1832.0,1873.0
+131,arrange standard order,1832.0,1843.0
+124,attempt delivery B,1834.0,3420.0
+130,pick from stock C,1836.0,1894.0
+132,place order,1840.0,1842.0
+132,arrange custom order,1842.0,1870.0
+131,pick from stock A,1843.0,1868.0
+126,pack B,1844.0,1869.0
+18,order completed,1846.0,1847.0
+133,place order,1850.0,1852.0
+133,arrange custom order,1852.0,1876.0
+94,attempt delivery B,1853.0,3546.0
+134,place order,1860.0,1862.0
+129,pack A,1862.0,1872.0
+134,arrange standard order,1862.0,1872.0
+13,order completed,1867.0,1868.0
+131,pack B,1868.0,1895.0
+126,attempt delivery C,1869.0,4351.0
+135,place order,1870.0,1872.0
+129,attempt delivery B,1872.0,3920.0
+134,pick from stock B,1872.0,1916.0
+135,arrange standard order,1872.0,1886.0
+125,attempt delivery C,1873.0,3802.0
+113,attempt delivery A,1876.0,3064.0
+133,manufacture B,1876.0,2300.0
+38,order completed,1876.0,1877.0
+136,place order,1880.0,1882.0
+136,arrange standard order,1882.0,1892.0
+135,pick from stock A,1886.0,1914.0
+137,place order,1890.0,1892.0
+136,pick from stock A,1892.0,1932.0
+137,arrange custom order,1892.0,1915.0
+130,pack C,1894.0,1936.0
+131,attempt delivery B,1895.0,3851.0
+138,place order,1900.0,1902.0
+138,arrange standard order,1902.0,1916.0
+139,place order,1910.0,1912.0
+139,arrange custom order,1912.0,1942.0
+135,pack C,1914.0,1963.0
+134,pack C,1916.0,1949.0
+138,pick from stock C,1916.0,1975.0
+140,place order,1920.0,1922.0
+140,arrange custom order,1922.0,1946.0
+116,manufacture A,1931.0,2229.0
+136,pack A,1932.0,1943.0
+130,attempt delivery C,1936.0,3833.0
+99,pack C,1936.0,1970.0
+104,pack A,1940.0,1955.0
+121,manufacture A,1940.0,2257.0
+119,attempt delivery A,1943.0,2809.0
+136,attempt delivery B,1943.0,3473.0
+17,order completed,1943.0,1944.0
+28,order completed,1944.0,1945.0
+140,manufacture B,1946.0,2346.0
+111,pack A,1948.0,1962.0
+134,attempt delivery C,1949.0,3499.0
+111,attempt delivery C,1962.0,4608.0
+138,pack B,1975.0,2003.0
+60,order completed,1979.0,1980.0
+96,attempt delivery A,1979.0,2887.0
+108,pack B,2000.0,2028.0
+138,attempt delivery C,2003.0,4017.0
+37,order completed,2018.0,2019.0
+104,attempt delivery B,2018.0,3616.0
+141,place order,2020.0,2022.0
+141,arrange custom order,2022.0,2048.0
+108,attempt delivery C,2028.0,4220.0
+142,place order,2030.0,2032.0
+114,pack C,2032.0,2062.0
+142,arrange custom order,2032.0,2059.0
+143,place order,2040.0,2042.0
+143,arrange custom order,2042.0,2065.0
+144,place order,2050.0,2052.0
+144,arrange standard order,2052.0,2065.0
+120,pack C,2057.0,2089.0
+145,place order,2060.0,2062.0
+145,arrange custom order,2062.0,2085.0
+143,manufacture B,2065.0,2522.0
+144,pick from stock B,2065.0,2103.0
+20,order completed,2068.0,2069.0
+146,place order,2070.0,2072.0
+146,arrange standard order,2072.0,2082.0
+14,order completed,2077.0,2078.0
+147,place order,2080.0,2082.0
+146,pick from stock C,2082.0,2159.0
+147,arrange custom order,2082.0,2111.0
+21,order completed,2084.0,2085.0
+120,attempt delivery C,2089.0,4167.0
+148,place order,2090.0,2092.0
+148,arrange standard order,2092.0,2105.0
+149,place order,2100.0,2102.0
+149,arrange custom order,2102.0,2122.0
+144,pack C,2103.0,2137.0
+148,pick from stock B,2105.0,2162.0
+105,pack B,2106.0,2129.0
+132,manufacture A,2106.0,2453.0
+71,order completed,2107.0,2108.0
+135,attempt delivery A,2107.0,2951.0
+150,place order,2110.0,2112.0
+150,arrange custom order,2112.0,2137.0
+68,order completed,2114.0,2115.0
+99,attempt delivery A,2114.0,3514.0
+151,place order,2120.0,2122.0
+151,arrange standard order,2122.0,2134.0
+10,order completed,2122.0,2123.0
+107,pack B,2129.0,2150.0
+137,manufacture A,2129.0,2403.0
+105,attempt delivery C,2129.0,4921.0
+152,place order,2130.0,2132.0
+152,arrange standard order,2132.0,2144.0
+151,pick from stock A,2134.0,2161.0
+150,manufacture B,2137.0,2504.0
+153,place order,2140.0,2142.0
+153,arrange custom order,2142.0,2165.0
+152,pick from stock B,2144.0,2191.0
+154,place order,2150.0,2152.0
+154,arrange standard order,2152.0,2162.0
+146,pack C,2159.0,2208.0
+155,place order,2160.0,2162.0
+151,pack C,2162.0,2206.0
+148,pack B,2162.0,2181.0
+154,pick from stock B,2162.0,2205.0
+155,arrange custom order,2162.0,2191.0
+85,order completed,2164.0,2165.0
+114,attempt delivery A,2164.0,3363.0
+153,manufacture B,2165.0,2554.0
+29,order completed,2167.0,2168.0
+156,place order,2170.0,2172.0
+156,arrange standard order,2172.0,2186.0
+7,order completed,2172.0,2173.0
+82,order completed,2178.0,2179.0
+144,attempt delivery A,2178.0,3059.0
+157,place order,2180.0,2182.0
+148,attempt delivery C,2182.0,4011.0
+157,arrange custom order,2182.0,2211.0
+78,order completed,2184.0,2185.0
+107,attempt delivery A,2184.0,3266.0
+1,order completed,2187.0,2188.0
+158,place order,2190.0,2192.0
+152,pack A,2192.0,2211.0
+156,pick from stock B,2192.0,2245.0
+155,manufacture B,2192.0,2635.0
+158,arrange custom order,2192.0,2216.0
+159,place order,2200.0,2202.0
+159,arrange standard order,2202.0,2216.0
+154,pack B,2205.0,2228.0
+151,attempt delivery A,2208.0,2958.0
+146,attempt delivery B,2208.0,4321.0
+36,order completed,2208.0,2209.0
+160,place order,2210.0,2212.0
+127,pack C,2212.0,2252.0
+157,manufacture B,2212.0,2651.0
+152,attempt delivery B,2212.0,3688.0
+160,arrange standard order,2212.0,2226.0
+123,pack A,2216.0,2231.0
+158,manufacture B,2216.0,2604.0
+159,pick from stock B,2216.0,2248.0
+19,order completed,2227.0,2228.0
+154,attempt delivery B,2228.0,4258.0
+91,order completed,2228.0,2229.0
+116,pack B,2229.0,2258.0
+139,manufacture A,2229.0,2578.0
+123,attempt delivery A,2231.0,3569.0
+44,order completed,2232.0,2233.0
+156,pack A,2245.0,2260.0
+160,pick from stock B,2245.0,2296.0
+159,pack B,2248.0,2268.0
+34,order completed,2249.0,2250.0
+127,attempt delivery C,2252.0,4614.0
+121,pack A,2257.0,2268.0
+141,manufacture A,2257.0,2603.0
+156,attempt delivery B,2260.0,4197.0
+159,attempt delivery A,2268.0,3528.0
+35,order completed,2272.0,2273.0
+128,pack B,2281.0,2308.0
+11,order completed,2291.0,2292.0
+51,order completed,2293.0,2294.0
+160,pack B,2296.0,2312.0
+133,pack C,2300.0,2350.0
+161,place order,2310.0,2312.0
+161,arrange standard order,2312.0,2324.0
+162,place order,2320.0,2322.0
+121,attempt delivery A,2322.0,3256.0
+162,arrange standard order,2322.0,2333.0
+75,order completed,2322.0,2323.0
+161,pick from stock B,2324.0,2375.0
+163,place order,2330.0,2332.0
+163,arrange custom order,2332.0,2353.0
+162,pick from stock B,2333.0,2371.0
+164,place order,2340.0,2342.0
+164,arrange custom order,2342.0,2366.0
+140,pack C,2346.0,2384.0
+165,place order,2350.0,2352.0
+165,arrange standard order,2352.0,2366.0
+163,manufacture B,2353.0,2825.0
+166,place order,2360.0,2362.0
+166,arrange custom order,2362.0,2391.0
+164,manufacture B,2366.0,2789.0
+167,place order,2370.0,2372.0
+162,pack C,2372.0,2406.0
+165,pick from stock B,2372.0,2412.0
+167,arrange custom order,2372.0,2395.0
+161,pack A,2375.0,2394.0
+168,place order,2380.0,2382.0
+168,arrange custom order,2382.0,2405.0
+27,order completed,2386.0,2387.0
+116,attempt delivery C,2386.0,4839.0
+169,place order,2390.0,2392.0
+166,manufacture B,2392.0,2870.0
+169,arrange standard order,2392.0,2407.0
+160,attempt delivery C,2394.0,4513.0
+47,order completed,2394.0,2395.0
+167,manufacture B,2395.0,2829.0
+170,place order,2400.0,2402.0
+170,arrange standard order,2402.0,2415.0
+137,pack B,2403.0,2420.0
+142,manufacture A,2403.0,2645.0
+169,pick from stock C,2407.0,2457.0
+25,order completed,2408.0,2409.0
+33,order completed,2409.0,2410.0
+171,place order,2410.0,2412.0
+165,pack A,2412.0,2431.0
+171,arrange custom order,2412.0,2438.0
+170,pick from stock A,2415.0,2426.0
+55,order completed,2418.0,2419.0
+128,attempt delivery A,2418.0,3218.0
+172,place order,2420.0,2422.0
+137,attempt delivery B,2422.0,4201.0
+172,arrange custom order,2422.0,2448.0
+170,pack C,2426.0,2458.0
+173,place order,2430.0,2432.0
+165,attempt delivery B,2432.0,4355.0
+173,arrange custom order,2432.0,2457.0
+174,place order,2440.0,2442.0
+140,attempt delivery C,2442.0,4145.0
+174,arrange custom order,2442.0,2466.0
+22,order completed,2442.0,2443.0
+175,place order,2450.0,2452.0
+133,attempt delivery A,2452.0,3354.0
+175,arrange custom order,2452.0,2477.0
+43,order completed,2452.0,2453.0
+132,pack B,2453.0,2469.0
+145,manufacture A,2453.0,2807.0
+169,pack A,2457.0,2472.0
+176,place order,2460.0,2462.0
+176,arrange custom order,2462.0,2485.0
+12,order completed,2465.0,2466.0
+161,attempt delivery C,2465.0,4199.0
+177,place order,2470.0,2472.0
+169,attempt delivery B,2472.0,4145.0
+177,arrange standard order,2472.0,2486.0
+178,place order,2480.0,2482.0
+178,arrange custom order,2482.0,2511.0
+177,pick from stock C,2486.0,2523.0
+179,place order,2490.0,2492.0
+179,arrange custom order,2492.0,2518.0
+40,order completed,2492.0,2493.0
+16,order completed,2498.0,2499.0
+132,attempt delivery C,2498.0,4323.0
+180,place order,2500.0,2502.0
+180,arrange standard order,2502.0,2512.0
+162,attempt delivery A,2503.0,3387.0
+52,order completed,2503.0,2504.0
+170,attempt delivery A,2503.0,3706.0
+64,order completed,2504.0,2505.0
+150,pack B,2505.0,2533.0
+174,manufacture B,2505.0,2915.0
+2,order completed,2507.0,2508.0
+180,pick from stock A,2512.0,2526.0
+143,pack C,2522.0,2559.0
+175,manufacture B,2522.0,2920.0
+177,pack B,2523.0,2549.0
+180,pack B,2526.0,2542.0
+23,order completed,2526.0,2527.0
+180,attempt delivery B,2542.0,4661.0
+177,attempt delivery B,2549.0,4316.0
+153,pack A,2554.0,2571.0
+31,order completed,2557.0,2558.0
+143,attempt delivery C,2559.0,4889.0
+153,attempt delivery B,2571.0,4240.0
+76,order completed,2574.0,2575.0
+150,attempt delivery A,2574.0,3544.0
+57,order completed,2576.0,2577.0
+139,pack B,2578.0,2600.0
+147,manufacture A,2578.0,2864.0
+26,order completed,2599.0,2600.0
+106,order completed,2600.0,2601.0
+181,place order,2601.0,2603.0
+139,attempt delivery B,2603.0,4043.0
+141,pack B,2603.0,2629.0
+149,manufacture A,2603.0,2956.0
+181,arrange standard order,2603.0,2613.0
+158,pack B,2604.0,2628.0
+182,place order,2610.0,2612.0
+182,arrange custom order,2612.0,2638.0
+181,pick from stock A,2613.0,2652.0
+66,order completed,2616.0,2617.0
+183,place order,2620.0,2622.0
+183,arrange custom order,2622.0,2643.0
+158,attempt delivery B,2628.0,4586.0
+141,attempt delivery A,2629.0,3652.0
+184,place order,2630.0,2632.0
+184,arrange custom order,2632.0,2656.0
+155,pack A,2635.0,2646.0
+74,order completed,2637.0,2638.0
+182,manufacture B,2638.0,3035.0
+185,place order,2640.0,2642.0
+185,arrange custom order,2642.0,2666.0
+183,manufacture B,2643.0,3079.0
+142,pack C,2645.0,2691.0
+168,manufacture A,2645.0,2916.0
+155,attempt delivery B,2646.0,4086.0
+186,place order,2650.0,2652.0
+157,pack C,2652.0,2697.0
+181,pack C,2652.0,2700.0
+186,arrange standard order,2652.0,2663.0
+187,place order,2660.0,2662.0
+187,arrange standard order,2662.0,2675.0
+186,pick from stock C,2663.0,2706.0
+185,manufacture B,2666.0,3137.0
+188,place order,2670.0,2672.0
+188,arrange custom order,2672.0,2699.0
+187,pick from stock A,2675.0,2713.0
+189,place order,2680.0,2682.0
+189,arrange standard order,2682.0,2695.0
+190,place order,2690.0,2692.0
+142,attempt delivery B,2692.0,4379.0
+190,arrange custom order,2692.0,2721.0
+189,pick from stock C,2695.0,2737.0
+157,attempt delivery A,2697.0,3699.0
+191,place order,2700.0,2702.0
+181,attempt delivery B,2702.0,4604.0
+191,arrange custom order,2702.0,2723.0
+48,order completed,2702.0,2703.0
+186,pack B,2706.0,2726.0
+192,place order,2710.0,2712.0
+192,arrange custom order,2712.0,2732.0
+187,pack A,2713.0,2726.0
+193,place order,2720.0,2722.0
+190,manufacture B,2722.0,3198.0
+193,arrange custom order,2722.0,2743.0
+186,attempt delivery C,2726.0,4730.0
+187,attempt delivery C,2726.0,5568.0
+194,place order,2730.0,2732.0
+194,arrange custom order,2732.0,2753.0
+30,order completed,2732.0,2733.0
+189,pack C,2737.0,2768.0
+195,place order,2740.0,2742.0
+195,arrange standard order,2742.0,2755.0
+196,place order,2750.0,2752.0
+196,arrange custom order,2752.0,2776.0
+195,pick from stock B,2755.0,2784.0
+70,order completed,2757.0,2758.0
+197,place order,2760.0,2762.0
+197,arrange standard order,2762.0,2775.0
+98,order completed,2763.0,2764.0
+189,attempt delivery A,2768.0,3541.0
+198,place order,2770.0,2772.0
+198,arrange custom order,2772.0,2797.0
+197,pick from stock C,2775.0,2823.0
+100,order completed,2778.0,2779.0
+199,place order,2780.0,2782.0
+199,arrange standard order,2782.0,2792.0
+45,order completed,2783.0,2784.0
+195,pack B,2784.0,2813.0
+164,pack A,2789.0,2801.0
+191,manufacture B,2789.0,3239.0
+200,place order,2790.0,2792.0
+199,pick from stock C,2792.0,2869.0
+200,arrange custom order,2792.0,2816.0
+77,order completed,2792.0,2793.0
+62,order completed,2793.0,2794.0
+58,order completed,2796.0,2797.0
+164,attempt delivery B,2801.0,4764.0
+145,pack A,2807.0,2817.0
+171,manufacture A,2807.0,3049.0
+119,order completed,2809.0,2810.0
+102,order completed,2810.0,2811.0
+32,order completed,2811.0,2812.0
+195,attempt delivery C,2813.0,4681.0
+145,attempt delivery B,2817.0,4507.0
+197,pack A,2823.0,2835.0
+163,pack A,2825.0,2840.0
+194,manufacture B,2825.0,3300.0
+196,manufacture B,2829.0,3262.0
+197,attempt delivery A,2835.0,4093.0
+167,pack A,2835.0,2852.0
+163,attempt delivery A,2840.0,4080.0
+50,order completed,2842.0,2843.0
+167,attempt delivery A,2852.0,3716.0
+147,pack B,2864.0,2883.0
+53,order completed,2864.0,2865.0
+172,manufacture A,2864.0,3208.0
+199,pack A,2869.0,2879.0
+166,pack C,2870.0,2917.0
+198,manufacture B,2870.0,3271.0
+199,attempt delivery A,2879.0,4096.0
+147,attempt delivery C,2883.0,5407.0
+83,order completed,2885.0,2886.0
+96,order completed,2887.0,2888.0
+201,place order,2890.0,2892.0
+201,arrange custom order,2892.0,2914.0
+202,place order,2900.0,2902.0
+202,arrange standard order,2902.0,2912.0
+5,order completed,2908.0,2909.0
+203,place order,2910.0,2912.0
+202,pick from stock A,2912.0,2923.0
+203,arrange standard order,2912.0,2926.0
+174,pack A,2915.0,2927.0
+200,manufacture B,2915.0,3307.0
+168,pack A,2916.0,2926.0
+173,manufacture A,2916.0,3247.0
+166,attempt delivery B,2917.0,4780.0
+204,place order,2920.0,2922.0
+175,pack B,2922.0,2940.0
+201,manufacture B,2922.0,3344.0
+204,arrange custom order,2922.0,2946.0
+203,pick from stock A,2926.0,2958.0
+168,attempt delivery A,2926.0,4028.0
+202,pack A,2926.0,2939.0
+174,attempt delivery C,2927.0,4906.0
+205,place order,2930.0,2932.0
+205,arrange custom order,2932.0,2961.0
+202,attempt delivery C,2939.0,4636.0
+206,place order,2940.0,2942.0
+175,attempt delivery B,2942.0,5036.0
+206,arrange custom order,2942.0,2968.0
+88,order completed,2947.0,2948.0
+207,place order,2950.0,2952.0
+207,arrange custom order,2952.0,2975.0
+135,order completed,2952.0,2953.0
+149,pack A,2956.0,2967.0
+176,manufacture A,2956.0,3297.0
+97,order completed,2957.0,2958.0
+203,pack C,2958.0,2995.0
+151,order completed,2958.0,2959.0
+208,place order,2960.0,2962.0
+208,arrange standard order,2962.0,2976.0
+149,attempt delivery B,2967.0,4631.0
+209,place order,2970.0,2972.0
+209,arrange custom order,2972.0,2992.0
+208,pick from stock B,2976.0,3036.0
+210,place order,2980.0,2982.0
+210,arrange standard order,2982.0,2992.0
+211,place order,2990.0,2992.0
+210,pick from stock B,2992.0,3035.0
+211,arrange custom order,2992.0,3020.0
+203,attempt delivery A,2995.0,4405.0
+212,place order,3000.0,3002.0
+212,arrange standard order,3002.0,3017.0
+213,place order,3010.0,3012.0
+213,arrange standard order,3012.0,3027.0
+212,pick from stock C,3017.0,3093.0
+214,place order,3020.0,3022.0
+214,arrange standard order,3022.0,3037.0
+213,pick from stock C,3027.0,3104.0
+215,place order,3030.0,3032.0
+215,arrange standard order,3032.0,3044.0
+182,pack B,3035.0,3051.0
+204,manufacture B,3035.0,3483.0
+210,pack C,3035.0,3083.0
+208,pack C,3036.0,3081.0
+216,place order,3040.0,3042.0
+216,arrange custom order,3042.0,3064.0
+215,pick from stock A,3044.0,3059.0
+171,pack A,3049.0,3060.0
+178,manufacture A,3049.0,3409.0
+217,place order,3050.0,3052.0
+182,attempt delivery C,3052.0,5742.0
+217,arrange custom order,3052.0,3079.0
+215,pack A,3059.0,3078.0
+144,order completed,3059.0,3060.0
+218,place order,3060.0,3062.0
+171,attempt delivery B,3062.0,4561.0
+218,arrange standard order,3062.0,3077.0
+113,order completed,3064.0,3065.0
+219,place order,3070.0,3072.0
+219,arrange standard order,3072.0,3086.0
+215,attempt delivery B,3078.0,4928.0
+183,pack A,3079.0,3097.0
+205,manufacture B,3079.0,3525.0
+220,place order,3080.0,3082.0
+208,attempt delivery B,3082.0,4634.0
+220,arrange custom order,3082.0,3105.0
+210,attempt delivery A,3083.0,4421.0
+219,pick from stock B,3086.0,3131.0
+81,order completed,3092.0,3093.0
+212,pack A,3093.0,3112.0
+214,pick from stock C,3093.0,3170.0
+69,order completed,3096.0,3097.0
+183,attempt delivery B,3097.0,5109.0
+213,pack C,3104.0,3137.0
+218,pick from stock C,3104.0,3152.0
+95,order completed,3106.0,3107.0
+65,order completed,3111.0,3112.0
+212,attempt delivery B,3112.0,4934.0
+219,pack A,3131.0,3145.0
+46,order completed,3131.0,3132.0
+185,pack C,3137.0,3163.0
+206,manufacture B,3137.0,3607.0
+213,attempt delivery B,3137.0,5063.0
+219,attempt delivery A,3145.0,4046.0
+218,pack A,3152.0,3169.0
+89,order completed,3152.0,3153.0
+185,attempt delivery A,3163.0,4074.0
+218,attempt delivery A,3169.0,4028.0
+214,pack C,3170.0,3204.0
+221,place order,3180.0,3182.0
+221,arrange custom order,3182.0,3211.0
+222,place order,3190.0,3192.0
+222,arrange custom order,3192.0,3213.0
+56,order completed,3196.0,3197.0
+190,pack B,3198.0,3214.0
+209,manufacture B,3198.0,3578.0
+223,place order,3200.0,3202.0
+223,arrange custom order,3202.0,3232.0
+172,pack A,3208.0,3221.0
+179,manufacture A,3208.0,3562.0
+224,place order,3210.0,3212.0
+224,arrange custom order,3212.0,3240.0
+190,attempt delivery C,3214.0,5134.0
+128,order completed,3218.0,3219.0
+225,place order,3220.0,3222.0
+172,attempt delivery A,3222.0,3950.0
+225,arrange standard order,3222.0,3234.0
+226,place order,3230.0,3232.0
+226,arrange standard order,3232.0,3246.0
+225,pick from stock C,3234.0,3313.0
+191,pack A,3239.0,3251.0
+211,manufacture B,3239.0,3682.0
+227,place order,3240.0,3242.0
+227,arrange standard order,3242.0,3252.0
+226,pick from stock B,3246.0,3273.0
+101,order completed,3246.0,3247.0
+173,pack C,3247.0,3273.0
+184,manufacture A,3247.0,3491.0
+54,order completed,3248.0,3249.0
+214,attempt delivery B,3248.0,4773.0
+228,place order,3250.0,3252.0
+191,attempt delivery C,3252.0,6024.0
+227,pick from stock C,3252.0,3309.0
+228,arrange standard order,3252.0,3266.0
+121,order completed,3256.0,3257.0
+229,place order,3260.0,3262.0
+196,pack B,3262.0,3278.0
+221,manufacture B,3262.0,3730.0
+229,arrange standard order,3262.0,3272.0
+107,order completed,3266.0,3267.0
+230,place order,3270.0,3272.0
+198,pack B,3272.0,3290.0
+223,manufacture B,3272.0,3700.0
+230,arrange custom order,3272.0,3301.0
+226,pack B,3273.0,3302.0
+173,attempt delivery C,3273.0,5287.0
+84,order completed,3274.0,3275.0
+79,order completed,3275.0,3276.0
+196,attempt delivery A,3278.0,4609.0
+231,place order,3280.0,3282.0
+231,arrange standard order,3282.0,3294.0
+232,place order,3290.0,3292.0
+198,attempt delivery B,3292.0,5300.0
+232,arrange standard order,3292.0,3302.0
+231,pick from stock A,3294.0,3309.0
+176,pack C,3297.0,3323.0
+188,manufacture A,3297.0,3645.0
+233,place order,3300.0,3302.0
+194,pack C,3302.0,3349.0
+226,attempt delivery A,3302.0,4560.0
+233,arrange standard order,3302.0,3314.0
+200,pack C,3307.0,3347.0
+228,pick from stock C,3309.0,3350.0
+231,pack A,3309.0,3322.0
+234,place order,3310.0,3312.0
+234,arrange custom order,3312.0,3339.0
+225,pack A,3313.0,3323.0
+229,pick from stock C,3313.0,3355.0
+233,pick from stock A,3314.0,3351.0
+235,place order,3320.0,3322.0
+235,arrange custom order,3322.0,3346.0
+176,attempt delivery C,3323.0,5176.0
+227,pack C,3323.0,3369.0
+236,place order,3330.0,3332.0
+236,arrange standard order,3332.0,3345.0
+234,manufacture B,3339.0,3786.0
+237,place order,3340.0,3342.0
+237,arrange custom order,3342.0,3367.0
+231,attempt delivery B,3344.0,5092.0
+201,pack B,3344.0,3365.0
+93,order completed,3344.0,3345.0
+238,place order,3350.0,3352.0
+228,pack A,3352.0,3364.0
+232,pick from stock C,3352.0,3387.0
+233,pack B,3352.0,3376.0
+238,arrange standard order,3352.0,3367.0
+133,order completed,3354.0,3355.0
+229,pack B,3355.0,3373.0
+236,pick from stock C,3355.0,3399.0
+239,place order,3360.0,3362.0
+239,arrange standard order,3362.0,3372.0
+67,order completed,3363.0,3364.0
+114,order completed,3364.0,3365.0
+228,attempt delivery C,3365.0,5528.0
+237,manufacture B,3367.0,3833.0
+227,attempt delivery C,3369.0,5335.0
+240,place order,3370.0,3372.0
+239,pick from stock A,3372.0,3396.0
+240,arrange custom order,3372.0,3393.0
+233,attempt delivery C,3376.0,4901.0
+232,pack C,3387.0,3422.0
+162,order completed,3387.0,3388.0
+238,pick from stock C,3387.0,3432.0
+239,pack C,3396.0,3437.0
+236,pack C,3399.0,3425.0
+178,pack B,3409.0,3427.0
+192,manufacture A,3409.0,3718.0
+124,order completed,3420.0,3421.0
+225,attempt delivery B,3420.0,5359.0
+236,attempt delivery A,3425.0,4497.0
+92,order completed,3429.0,3430.0
+200,attempt delivery B,3429.0,4979.0
+238,pack A,3432.0,3445.0
+110,order completed,3433.0,3434.0
+239,attempt delivery C,3437.0,6236.0
+238,attempt delivery A,3445.0,4477.0
+241,place order,3470.0,3472.0
+241,arrange custom order,3472.0,3499.0
+136,order completed,3473.0,3474.0
+194,attempt delivery B,3473.0,5583.0
+61,order completed,3474.0,3475.0
+201,attempt delivery B,3474.0,5367.0
+242,place order,3480.0,3482.0
+242,arrange standard order,3482.0,3497.0
+204,pack C,3483.0,3513.0
+243,place order,3490.0,3492.0
+184,pack B,3492.0,3513.0
+193,manufacture A,3492.0,3771.0
+243,arrange custom order,3492.0,3513.0
+242,pick from stock A,3497.0,3518.0
+241,manufacture B,3499.0,3916.0
+134,order completed,3499.0,3500.0
+244,place order,3500.0,3502.0
+244,arrange custom order,3502.0,3527.0
+245,place order,3510.0,3512.0
+245,arrange custom order,3512.0,3539.0
+99,order completed,3514.0,3515.0
+242,pack C,3518.0,3554.0
+246,place order,3520.0,3522.0
+229,attempt delivery B,3522.0,5103.0
+246,arrange custom order,3522.0,3551.0
+87,order completed,3522.0,3523.0
+90,order completed,3523.0,3524.0
+205,pack C,3525.0,3570.0
+244,manufacture B,3527.0,3979.0
+159,order completed,3528.0,3529.0
+247,place order,3530.0,3532.0
+247,arrange standard order,3532.0,3545.0
+245,manufacture B,3539.0,4015.0
+248,place order,3540.0,3542.0
+248,arrange standard order,3542.0,3556.0
+189,order completed,3542.0,3543.0
+150,order completed,3544.0,3545.0
+247,pick from stock B,3545.0,3591.0
+94,order completed,3546.0,3547.0
+232,attempt delivery B,3546.0,5515.0
+249,place order,3550.0,3552.0
+249,arrange custom order,3552.0,3580.0
+242,attempt delivery A,3554.0,4416.0
+248,pick from stock A,3556.0,3591.0
+250,place order,3560.0,3562.0
+179,pack B,3562.0,3588.0
+207,manufacture A,3562.0,3849.0
+250,arrange custom order,3562.0,3583.0
+123,order completed,3569.0,3570.0
+251,place order,3570.0,3572.0
+205,attempt delivery A,3572.0,4685.0
+251,arrange standard order,3572.0,3587.0
+209,pack A,3578.0,3591.0
+252,place order,3580.0,3582.0
+252,arrange custom order,3582.0,3602.0
+112,order completed,3582.0,3583.0
+250,manufacture B,3583.0,3958.0
+73,order completed,3583.0,3584.0
+251,pick from stock B,3587.0,3607.0
+253,place order,3590.0,3592.0
+247,pack A,3592.0,3611.0
+248,pack B,3592.0,3617.0
+253,arrange standard order,3592.0,3604.0
+254,place order,3600.0,3602.0
+254,arrange custom order,3602.0,3625.0
+253,pick from stock C,3604.0,3655.0
+206,pack A,3607.0,3626.0
+251,pack B,3607.0,3629.0
+255,place order,3610.0,3612.0
+255,arrange custom order,3612.0,3635.0
+104,order completed,3616.0,3617.0
+178,attempt delivery B,3616.0,5527.0
+248,attempt delivery C,3617.0,5700.0
+256,place order,3620.0,3622.0
+256,arrange standard order,3622.0,3637.0
+257,place order,3630.0,3632.0
+257,arrange standard order,3632.0,3642.0
+256,pick from stock C,3637.0,3694.0
+258,place order,3640.0,3642.0
+257,pick from stock B,3642.0,3680.0
+258,arrange custom order,3642.0,3666.0
+188,pack C,3645.0,3683.0
+216,manufacture A,3645.0,3970.0
+122,order completed,3646.0,3647.0
+259,place order,3650.0,3652.0
+259,arrange standard order,3652.0,3662.0
+141,order completed,3652.0,3653.0
+253,pack A,3655.0,3669.0
+260,place order,3660.0,3662.0
+259,pick from stock A,3662.0,3680.0
+260,arrange custom order,3662.0,3692.0
+258,manufacture B,3666.0,4029.0
+253,attempt delivery C,3669.0,5565.0
+109,order completed,3671.0,3672.0
+204,attempt delivery B,3671.0,5553.0
+257,pack C,3680.0,3722.0
+259,pack A,3680.0,3692.0
+211,pack B,3682.0,3706.0
+188,attempt delivery A,3683.0,4807.0
+118,order completed,3685.0,3686.0
+184,attempt delivery B,3685.0,5447.0
+152,order completed,3688.0,3689.0
+179,attempt delivery B,3688.0,5201.0
+259,attempt delivery A,3692.0,5055.0
+256,pack B,3694.0,3724.0
+157,order completed,3699.0,3700.0
+223,pack B,3700.0,3717.0
+211,attempt delivery C,3706.0,5582.0
+170,order completed,3706.0,3707.0
+167,order completed,3716.0,3717.0
+192,pack A,3718.0,3730.0
+217,manufacture A,3718.0,4067.0
+257,attempt delivery C,3722.0,6561.0
+256,attempt delivery C,3724.0,5554.0
+221,pack A,3730.0,3744.0
+192,attempt delivery A,3730.0,4729.0
+80,order completed,3730.0,3731.0
+86,order completed,3736.0,3737.0
+221,attempt delivery A,3744.0,4628.0
+261,place order,3760.0,3762.0
+261,arrange standard order,3762.0,3777.0
+262,place order,3770.0,3772.0
+193,pack A,3772.0,3790.0
+220,manufacture A,3772.0,4092.0
+262,arrange custom order,3772.0,3795.0
+261,pick from stock C,3777.0,3831.0
+263,place order,3780.0,3782.0
+263,arrange custom order,3782.0,3802.0
+42,order completed,3785.0,3786.0
+234,pack C,3786.0,3823.0
+264,place order,3790.0,3792.0
+193,attempt delivery C,3792.0,6644.0
+264,arrange custom order,3792.0,3813.0
+262,manufacture B,3795.0,4262.0
+63,order completed,3795.0,3796.0
+265,place order,3800.0,3802.0
+263,manufacture B,3802.0,4211.0
+265,arrange standard order,3802.0,3812.0
+125,order completed,3802.0,3803.0
+266,place order,3810.0,3812.0
+265,pick from stock A,3812.0,3843.0
+266,arrange custom order,3812.0,3838.0
+264,manufacture B,3813.0,4219.0
+267,place order,3820.0,3822.0
+267,arrange standard order,3822.0,3835.0
+268,place order,3830.0,3832.0
+261,pack B,3832.0,3847.0
+268,arrange standard order,3832.0,3843.0
+237,pack A,3833.0,3847.0
+130,order completed,3833.0,3834.0
+267,pick from stock A,3835.0,3869.0
+269,place order,3840.0,3842.0
+269,arrange standard order,3842.0,3855.0
+265,pack C,3843.0,3887.0
+268,pick from stock C,3843.0,3922.0
+237,attempt delivery C,3847.0,6682.0
+207,pack A,3849.0,3865.0
+222,manufacture A,3849.0,4190.0
+270,place order,3850.0,3852.0
+209,attempt delivery B,3852.0,5397.0
+270,arrange standard order,3852.0,3867.0
+131,order completed,3852.0,3853.0
+269,pick from stock B,3855.0,3897.0
+271,place order,3860.0,3862.0
+271,arrange custom order,3862.0,3886.0
+207,attempt delivery C,3865.0,5773.0
+270,pick from stock A,3867.0,3885.0
+267,pack B,3869.0,3899.0
+272,place order,3870.0,3872.0
+272,arrange standard order,3872.0,3887.0
+273,place order,3880.0,3882.0
+273,arrange standard order,3882.0,3897.0
+270,pack C,3885.0,3916.0
+271,manufacture B,3886.0,4363.0
+265,attempt delivery A,3887.0,5268.0
+272,pick from stock A,3887.0,3925.0
+274,place order,3890.0,3892.0
+274,arrange standard order,3892.0,3904.0
+269,pack A,3897.0,3910.0
+273,pick from stock C,3897.0,3944.0
+275,place order,3900.0,3902.0
+275,arrange standard order,3902.0,3915.0
+274,pick from stock B,3904.0,3932.0
+276,place order,3910.0,3912.0
+269,attempt delivery A,3912.0,5175.0
+276,arrange standard order,3912.0,3925.0
+241,pack A,3916.0,3932.0
+270,attempt delivery A,3916.0,5085.0
+277,place order,3920.0,3922.0
+247,attempt delivery B,3922.0,5949.0
+268,pack B,3922.0,3952.0
+275,pick from stock C,3922.0,3990.0
+277,arrange standard order,3922.0,3932.0
+129,order completed,3922.0,3923.0
+272,pack A,3925.0,3939.0
+276,pick from stock B,3925.0,3957.0
+278,place order,3930.0,3932.0
+274,pack C,3932.0,3980.0
+241,attempt delivery C,3932.0,6083.0
+277,pick from stock A,3932.0,3970.0
+278,arrange custom order,3932.0,3956.0
+272,attempt delivery A,3939.0,5002.0
+279,place order,3940.0,3942.0
+279,arrange standard order,3942.0,3952.0
+273,pack C,3944.0,3983.0
+280,place order,3950.0,3952.0
+268,attempt delivery C,3952.0,5814.0
+279,pick from stock B,3952.0,3997.0
+280,arrange standard order,3952.0,3963.0
+172,order completed,3952.0,3953.0
+278,manufacture B,3956.0,4408.0
+276,pack B,3957.0,3975.0
+250,pack A,3958.0,3968.0
+280,pick from stock B,3963.0,4000.0
+250,attempt delivery A,3968.0,4944.0
+216,pack B,3970.0,3993.0
+224,manufacture A,3970.0,4240.0
+277,pack C,3970.0,4012.0
+276,attempt delivery C,3975.0,6588.0
+244,pack B,3979.0,4000.0
+274,attempt delivery A,3980.0,5169.0
+273,attempt delivery C,3983.0,6191.0
+275,pack A,3990.0,4008.0
+279,pack A,3997.0,4013.0
+280,pack A,4008.0,4019.0
+148,order completed,4011.0,4012.0
+216,attempt delivery C,4011.0,5928.0
+245,pack B,4015.0,4040.0
+138,order completed,4017.0,4018.0
+275,attempt delivery C,4017.0,6812.0
+279,attempt delivery A,4028.0,5187.0
+168,order completed,4028.0,4029.0
+280,attempt delivery A,4028.0,4984.0
+218,order completed,4029.0,4030.0
+258,pack B,4030.0,4055.0
+139,order completed,4043.0,4044.0
+206,attempt delivery B,4043.0,6194.0
+219,order completed,4046.0,4047.0
+281,place order,4050.0,4052.0
+281,arrange standard order,4052.0,4066.0
+258,attempt delivery A,4055.0,5267.0
+59,order completed,4055.0,4056.0
+282,place order,4060.0,4062.0
+282,arrange standard order,4062.0,4073.0
+281,pick from stock C,4066.0,4109.0
+217,pack B,4067.0,4097.0
+230,manufacture A,4067.0,4373.0
+283,place order,4070.0,4072.0
+283,arrange custom order,4072.0,4102.0
+282,pick from stock B,4073.0,4093.0
+185,order completed,4074.0,4075.0
+284,place order,4080.0,4082.0
+284,arrange custom order,4082.0,4111.0
+163,order completed,4082.0,4083.0
+155,order completed,4086.0,4087.0
+251,attempt delivery B,4086.0,5894.0
+285,place order,4090.0,4092.0
+220,pack A,4092.0,4108.0
+235,manufacture A,4092.0,4425.0
+285,arrange custom order,4092.0,4122.0
+282,pack B,4093.0,4120.0
+197,order completed,4093.0,4094.0
+199,order completed,4096.0,4097.0
+217,attempt delivery C,4097.0,6731.0
+286,place order,4100.0,4102.0
+283,manufacture B,4102.0,4466.0
+286,arrange custom order,4102.0,4128.0
+281,pack B,4109.0,4129.0
+287,place order,4110.0,4112.0
+284,manufacture B,4112.0,4589.0
+287,arrange standard order,4112.0,4127.0
+288,place order,4120.0,4122.0
+282,attempt delivery A,4122.0,5218.0
+288,arrange standard order,4122.0,4134.0
+287,pick from stock C,4127.0,4207.0
+286,manufacture B,4128.0,4549.0
+289,place order,4130.0,4132.0
+289,arrange standard order,4132.0,4146.0
+288,pick from stock B,4134.0,4177.0
+290,place order,4140.0,4142.0
+290,arrange custom order,4142.0,4169.0
+220,attempt delivery C,4145.0,6406.0
+140,order completed,4145.0,4146.0
+223,attempt delivery B,4145.0,6008.0
+169,order completed,4146.0,4147.0
+289,pick from stock C,4147.0,4184.0
+291,place order,4150.0,4152.0
+291,arrange standard order,4152.0,4166.0
+292,place order,4160.0,4162.0
+292,arrange custom order,4162.0,4184.0
+291,pick from stock B,4166.0,4214.0
+120,order completed,4167.0,4168.0
+281,attempt delivery C,4167.0,5759.0
+290,manufacture B,4169.0,4584.0
+293,place order,4170.0,4172.0
+293,arrange custom order,4172.0,4199.0
+288,pack C,4177.0,4209.0
+294,place order,4180.0,4182.0
+294,arrange standard order,4182.0,4197.0
+289,pack A,4184.0,4199.0
+295,place order,4190.0,4192.0
+222,pack C,4192.0,4232.0
+240,manufacture A,4192.0,4479.0
+295,arrange standard order,4192.0,4205.0
+234,attempt delivery B,4197.0,6161.0
+294,pick from stock B,4197.0,4241.0
+156,order completed,4197.0,4198.0
+293,manufacture B,4199.0,4631.0
+161,order completed,4199.0,4200.0
+296,place order,4200.0,4202.0
+261,attempt delivery B,4202.0,6162.0
+296,arrange custom order,4202.0,4230.0
+137,order completed,4202.0,4203.0
+287,pack B,4207.0,4228.0
+288,attempt delivery C,4209.0,6841.0
+297,place order,4210.0,4212.0
+263,pack C,4212.0,4255.0
+297,arrange standard order,4212.0,4223.0
+291,pack A,4214.0,4228.0
+295,pick from stock B,4214.0,4263.0
+264,pack A,4219.0,4239.0
+298,place order,4220.0,4222.0
+298,arrange standard order,4222.0,4236.0
+108,order completed,4222.0,4223.0
+297,pick from stock A,4223.0,4260.0
+287,attempt delivery A,4228.0,5359.0
+291,attempt delivery C,4228.0,6420.0
+299,place order,4230.0,4232.0
+299,arrange standard order,4232.0,4244.0
+298,pick from stock C,4236.0,4316.0
+264,attempt delivery A,4239.0,5532.0
+300,place order,4240.0,4242.0
+267,attempt delivery B,4242.0,5720.0
+224,pack A,4242.0,4252.0
+243,manufacture A,4242.0,4502.0
+294,pack A,4242.0,4253.0
+300,arrange standard order,4242.0,4257.0
+153,order completed,4242.0,4243.0
+299,pick from stock B,4244.0,4302.0
+294,attempt delivery A,4253.0,5627.0
+154,order completed,4258.0,4259.0
+244,attempt delivery B,4258.0,6389.0
+297,pack C,4260.0,4286.0
+262,pack B,4262.0,4291.0
+295,pack A,4263.0,4282.0
+300,pick from stock B,4263.0,4292.0
+300,pack A,4292.0,4306.0
+299,pack B,4302.0,4317.0
+277,attempt delivery B,4316.0,6001.0
+298,pack A,4316.0,4329.0
+177,order completed,4316.0,4317.0
+146,order completed,4321.0,4322.0
+245,attempt delivery B,4321.0,6063.0
+132,order completed,4323.0,4324.0
+263,attempt delivery C,4323.0,6329.0
+115,order completed,4325.0,4326.0
+299,attempt delivery C,4325.0,6083.0
+301,place order,4340.0,4342.0
+301,arrange standard order,4342.0,4354.0
+302,place order,4350.0,4352.0
+298,attempt delivery C,4352.0,6176.0
+302,arrange custom order,4352.0,4382.0
+126,order completed,4352.0,4353.0
+301,pick from stock A,4354.0,4377.0
+165,order completed,4355.0,4356.0
+289,attempt delivery B,4355.0,6002.0
+303,place order,4360.0,4362.0
+303,arrange standard order,4362.0,4376.0
+271,pack B,4363.0,4381.0
+304,place order,4370.0,4372.0
+304,arrange custom order,4372.0,4400.0
+230,pack A,4373.0,4388.0
+246,manufacture A,4373.0,4710.0
+303,pick from stock A,4376.0,4414.0
+301,pack B,4377.0,4402.0
+142,order completed,4379.0,4380.0
+222,attempt delivery B,4379.0,6015.0
+305,place order,4380.0,4382.0
+302,manufacture B,4382.0,4822.0
+305,arrange standard order,4382.0,4397.0
+306,place order,4390.0,4392.0
+306,arrange standard order,4392.0,4407.0
+305,pick from stock C,4397.0,4457.0
+307,place order,4400.0,4402.0
+304,manufacture B,4402.0,4794.0
+307,arrange standard order,4402.0,4415.0
+203,order completed,4405.0,4406.0
+295,attempt delivery A,4405.0,5126.0
+306,pick from stock B,4407.0,4430.0
+278,pack A,4408.0,4425.0
+308,place order,4410.0,4412.0
+271,attempt delivery C,4412.0,6046.0
+308,arrange standard order,4412.0,4427.0
+103,order completed,4412.0,4413.0
+303,pack B,4414.0,4433.0
+307,pick from stock C,4415.0,4452.0
+242,order completed,4416.0,4417.0
+262,attempt delivery A,4416.0,5275.0
+309,place order,4420.0,4422.0
+300,attempt delivery A,4422.0,5512.0
+309,arrange custom order,4422.0,4444.0
+210,order completed,4422.0,4423.0
+235,pack C,4425.0,4474.0
+249,manufacture A,4425.0,4687.0
+308,pick from stock B,4427.0,4478.0
+310,place order,4430.0,4432.0
+306,pack A,4432.0,4447.0
+310,arrange standard order,4432.0,4446.0
+311,place order,4440.0,4442.0
+311,arrange standard order,4442.0,4456.0
+310,pick from stock A,4446.0,4459.0
+312,place order,4450.0,4452.0
+307,pack A,4452.0,4470.0
+312,arrange standard order,4452.0,4465.0
+311,pick from stock A,4456.0,4486.0
+305,pack A,4457.0,4475.0
+313,place order,4460.0,4462.0
+313,arrange standard order,4462.0,4473.0
+312,pick from stock C,4465.0,4528.0
+283,pack C,4466.0,4498.0
+314,place order,4470.0,4472.0
+310,pack A,4472.0,4489.0
+314,arrange custom order,4472.0,4495.0
+313,pick from stock C,4473.0,4550.0
+238,order completed,4477.0,4478.0
+307,attempt delivery A,4477.0,5509.0
+308,pack A,4478.0,4492.0
+240,pack B,4479.0,4509.0
+252,manufacture A,4479.0,4819.0
+315,place order,4480.0,4482.0
+315,arrange standard order,4482.0,4493.0
+311,pack A,4489.0,4508.0
+316,place order,4490.0,4492.0
+316,arrange standard order,4492.0,4502.0
+314,manufacture B,4495.0,4934.0
+236,order completed,4497.0,4498.0
+317,place order,4500.0,4502.0
+243,pack A,4502.0,4522.0
+254,manufacture A,4502.0,4825.0
+316,pick from stock A,4502.0,4534.0
+317,arrange custom order,4502.0,4529.0
+145,order completed,4507.0,4508.0
+224,attempt delivery B,4507.0,6282.0
+240,attempt delivery A,4509.0,5847.0
+318,place order,4510.0,4512.0
+318,arrange custom order,4512.0,4539.0
+160,order completed,4513.0,4514.0
+301,attempt delivery C,4513.0,6951.0
+319,place order,4520.0,4522.0
+319,arrange custom order,4522.0,4549.0
+312,pack C,4528.0,4563.0
+315,pick from stock C,4528.0,4558.0
+320,place order,4530.0,4532.0
+320,arrange custom order,4532.0,4555.0
+316,pack C,4534.0,4561.0
+286,pack A,4549.0,4559.0
+313,pack B,4550.0,4575.0
+306,attempt delivery C,4555.0,7085.0
+117,order completed,4555.0,4556.0
+315,pack A,4558.0,4570.0
+226,order completed,4560.0,4561.0
+297,attempt delivery B,4561.0,6218.0
+171,order completed,4561.0,4562.0
+312,attempt delivery A,4563.0,5444.0
+290,pack A,4584.0,4601.0
+158,order completed,4586.0,4587.0
+230,attempt delivery B,4586.0,6388.0
+284,pack C,4589.0,4616.0
+181,order completed,4604.0,4605.0
+278,attempt delivery B,4604.0,6461.0
+111,order completed,4608.0,4609.0
+305,attempt delivery C,4608.0,7485.0
+196,order completed,4609.0,4610.0
+127,order completed,4614.0,4615.0
+310,attempt delivery C,4614.0,6304.0
+284,attempt delivery A,4616.0,5443.0
+221,order completed,4628.0,4629.0
+321,place order,4630.0,4632.0
+303,attempt delivery B,4632.0,6441.0
+293,pack B,4632.0,4653.0
+321,arrange custom order,4632.0,4661.0
+149,order completed,4632.0,4633.0
+208,order completed,4634.0,4635.0
+235,attempt delivery B,4634.0,6531.0
+202,order completed,4636.0,4637.0
+308,attempt delivery C,4636.0,6117.0
+322,place order,4640.0,4642.0
+322,arrange custom order,4642.0,4670.0
+323,place order,4650.0,4652.0
+323,arrange custom order,4652.0,4679.0
+293,attempt delivery A,4653.0,5958.0
+324,place order,4660.0,4662.0
+283,attempt delivery B,4662.0,6624.0
+321,manufacture B,4662.0,5081.0
+324,arrange standard order,4662.0,4677.0
+180,order completed,4662.0,4663.0
+325,place order,4670.0,4672.0
+325,arrange custom order,4672.0,4694.0
+324,pick from stock C,4677.0,4732.0
+323,manufacture B,4679.0,5118.0
+326,place order,4680.0,4682.0
+311,attempt delivery C,4682.0,7117.0
+326,arrange standard order,4682.0,4693.0
+195,order completed,4682.0,4683.0
+205,order completed,4685.0,4686.0
+249,pack C,4687.0,4722.0
+255,manufacture A,4687.0,4958.0
+327,place order,4690.0,4692.0
+327,arrange custom order,4692.0,4717.0
+326,pick from stock B,4693.0,4738.0
+325,manufacture B,4694.0,5118.0
+328,place order,4700.0,4702.0
+328,arrange custom order,4702.0,4726.0
+329,place order,4710.0,4712.0
+246,pack A,4712.0,4724.0
+260,manufacture A,4712.0,4969.0
+329,arrange standard order,4712.0,4724.0
+327,manufacture B,4717.0,5116.0
+330,place order,4720.0,4722.0
+330,arrange custom order,4722.0,4743.0
+329,pick from stock B,4724.0,4752.0
+328,manufacture B,4726.0,5170.0
+192,order completed,4729.0,4730.0
+331,place order,4730.0,4732.0
+286,attempt delivery C,4732.0,6830.0
+324,pack C,4732.0,4761.0
+331,arrange standard order,4732.0,4744.0
+186,order completed,4732.0,4733.0
+326,pack A,4738.0,4756.0
+332,place order,4740.0,4742.0
+332,arrange standard order,4742.0,4757.0
+330,manufacture B,4743.0,5198.0
+331,pick from stock C,4744.0,4804.0
+333,place order,4750.0,4752.0
+329,pack A,4752.0,4762.0
+333,arrange standard order,4752.0,4767.0
+332,pick from stock B,4757.0,4782.0
+334,place order,4760.0,4762.0
+329,attempt delivery A,4762.0,5758.0
+334,arrange standard order,4762.0,4772.0
+164,order completed,4764.0,4765.0
+243,attempt delivery B,4764.0,6905.0
+333,pick from stock A,4767.0,4781.0
+335,place order,4770.0,4772.0
+334,pick from stock A,4772.0,4801.0
+335,arrange custom order,4772.0,4796.0
+214,order completed,4773.0,4774.0
+316,attempt delivery B,4773.0,6483.0
+336,place order,4780.0,4782.0
+246,attempt delivery B,4782.0,6550.0
+333,pack C,4782.0,4822.0
+332,pack A,4782.0,4794.0
+336,arrange custom order,4782.0,4809.0
+166,order completed,4782.0,4783.0
+337,place order,4790.0,4792.0
+337,arrange custom order,4792.0,4817.0
+304,pack B,4794.0,4816.0
+335,manufacture B,4796.0,5258.0
+338,place order,4800.0,4802.0
+334,pack A,4802.0,4819.0
+338,arrange custom order,4802.0,4832.0
+331,pack A,4804.0,4819.0
+188,order completed,4807.0,4808.0
+339,place order,4810.0,4812.0
+339,arrange custom order,4812.0,4835.0
+337,manufacture B,4817.0,5260.0
+266,manufacture A,4819.0,5124.0
+252,pack A,4819.0,4838.0
+340,place order,4820.0,4822.0
+302,pack A,4822.0,4835.0
+333,attempt delivery A,4822.0,6206.0
+340,arrange standard order,4822.0,4833.0
+254,pack B,4825.0,4853.0
+285,manufacture A,4825.0,5176.0
+338,manufacture B,4832.0,5193.0
+340,pick from stock C,4833.0,4870.0
+302,attempt delivery A,4835.0,5797.0
+116,order completed,4839.0,4840.0
+315,attempt delivery C,4839.0,6956.0
+340,pack C,4870.0,4906.0
+143,order completed,4889.0,4890.0
+313,attempt delivery C,4889.0,7205.0
+233,order completed,4901.0,4902.0
+290,attempt delivery C,4901.0,7417.0
+249,attempt delivery C,4906.0,7354.0
+174,order completed,4906.0,4907.0
+341,place order,4920.0,4922.0
+334,attempt delivery C,4922.0,7282.0
+341,arrange standard order,4922.0,4935.0
+105,order completed,4922.0,4923.0
+215,order completed,4928.0,4929.0
+326,attempt delivery B,4928.0,6506.0
+342,place order,4930.0,4932.0
+342,arrange custom order,4932.0,4961.0
+324,attempt delivery B,4934.0,6764.0
+314,pack A,4934.0,4949.0
+212,order completed,4934.0,4935.0
+339,manufacture B,4934.0,5333.0
+341,pick from stock A,4935.0,4973.0
+343,place order,4940.0,4942.0
+343,arrange custom order,4942.0,4966.0
+250,order completed,4944.0,4945.0
+254,attempt delivery A,4944.0,6155.0
+344,place order,4950.0,4952.0
+344,arrange standard order,4952.0,4963.0
+255,pack A,4958.0,4976.0
+292,manufacture A,4958.0,5231.0
+345,place order,4960.0,4962.0
+345,arrange standard order,4962.0,4973.0
+344,pick from stock A,4963.0,5001.0
+260,pack C,4969.0,5007.0
+296,manufacture A,4969.0,5237.0
+346,place order,4970.0,4972.0
+346,arrange standard order,4972.0,4986.0
+341,pack A,4973.0,4991.0
+345,pick from stock B,4973.0,5022.0
+200,order completed,4979.0,4980.0
+332,attempt delivery B,4979.0,6618.0
+347,place order,4980.0,4982.0
+347,arrange standard order,4982.0,4997.0
+280,order completed,4984.0,4985.0
+340,attempt delivery A,4984.0,5943.0
+346,pick from stock C,4986.0,5050.0
+348,place order,4990.0,4992.0
+348,arrange standard order,4992.0,5006.0
+347,pick from stock A,4997.0,5031.0
+349,place order,5000.0,5002.0
+344,pack B,5002.0,5027.0
+314,attempt delivery A,5002.0,5918.0
+349,arrange custom order,5002.0,5025.0
+272,order completed,5002.0,5003.0
+348,pick from stock C,5006.0,5043.0
+350,place order,5010.0,5012.0
+350,arrange custom order,5012.0,5040.0
+351,place order,5020.0,5022.0
+345,pack B,5022.0,5047.0
+351,arrange standard order,5022.0,5033.0
+352,place order,5030.0,5032.0
+347,pack A,5032.0,5049.0
+352,arrange custom order,5032.0,5054.0
+175,order completed,5036.0,5037.0
+304,attempt delivery B,5036.0,6830.0
+353,place order,5040.0,5042.0
+353,arrange standard order,5042.0,5056.0
+348,pack B,5043.0,5068.0
+351,pick from stock C,5043.0,5076.0
+354,place order,5050.0,5052.0
+346,pack C,5052.0,5099.0
+354,arrange custom order,5052.0,5073.0
+259,order completed,5055.0,5056.0
+345,attempt delivery A,5055.0,5849.0
+353,pick from stock A,5056.0,5079.0
+355,place order,5060.0,5062.0
+355,arrange custom order,5062.0,5085.0
+213,order completed,5063.0,5064.0
+341,attempt delivery B,5063.0,6513.0
+356,place order,5070.0,5072.0
+356,arrange custom order,5072.0,5100.0
+351,pack A,5076.0,5087.0
+353,pack A,5079.0,5090.0
+357,place order,5080.0,5082.0
+342,manufacture B,5082.0,5536.0
+357,arrange custom order,5082.0,5109.0
+348,attempt delivery A,5085.0,6299.0
+270,order completed,5085.0,5086.0
+321,pack A,5087.0,5104.0
+358,place order,5090.0,5092.0
+344,attempt delivery B,5092.0,7079.0
+358,arrange standard order,5092.0,5103.0
+231,order completed,5092.0,5093.0
+359,place order,5100.0,5102.0
+359,arrange standard order,5102.0,5116.0
+347,attempt delivery B,5103.0,6949.0
+358,pick from stock C,5103.0,5178.0
+229,order completed,5103.0,5104.0
+351,attempt delivery B,5109.0,6682.0
+183,order completed,5109.0,5110.0
+360,place order,5110.0,5112.0
+360,arrange standard order,5112.0,5126.0
+327,pack A,5116.0,5135.0
+343,manufacture B,5116.0,5581.0
+359,pick from stock C,5116.0,5164.0
+323,pack B,5118.0,5139.0
+349,manufacture B,5118.0,5481.0
+325,pack A,5118.0,5134.0
+354,manufacture B,5118.0,5584.0
+266,pack C,5124.0,5159.0
+309,manufacture A,5124.0,5371.0
+353,attempt delivery A,5126.0,6458.0
+360,pick from stock A,5126.0,5152.0
+295,order completed,5126.0,5127.0
+331,attempt delivery C,5134.0,6907.0
+190,order completed,5134.0,5135.0
+360,pack A,5152.0,5168.0
+359,pack B,5164.0,5190.0
+274,order completed,5169.0,5170.0
+346,attempt delivery A,5169.0,5998.0
+328,pack A,5170.0,5182.0
+356,manufacture B,5170.0,5563.0
+269,order completed,5175.0,5176.0
+321,attempt delivery A,5175.0,6539.0
+252,attempt delivery C,5176.0,7160.0
+285,pack B,5176.0,5206.0
+176,order completed,5176.0,5177.0
+317,manufacture A,5176.0,5416.0
+358,pack A,5178.0,5190.0
+279,order completed,5187.0,5188.0
+323,attempt delivery A,5187.0,6472.0
+338,pack C,5193.0,5241.0
+330,pack A,5198.0,5211.0
+179,order completed,5201.0,5202.0
+327,attempt delivery B,5201.0,7344.0
+361,place order,5210.0,5212.0
+361,arrange standard order,5212.0,5224.0
+282,order completed,5218.0,5219.0
+360,attempt delivery A,5218.0,6516.0
+362,place order,5220.0,5222.0
+362,arrange custom order,5222.0,5246.0
+361,pick from stock A,5224.0,5245.0
+363,place order,5230.0,5232.0
+292,pack A,5232.0,5248.0
+318,manufacture A,5232.0,5544.0
+363,arrange standard order,5232.0,5243.0
+296,pack B,5237.0,5267.0
+319,manufacture A,5237.0,5526.0
+364,place order,5240.0,5242.0
+364,arrange custom order,5242.0,5270.0
+363,pick from stock C,5243.0,5287.0
+361,pack A,5245.0,5264.0
+362,manufacture B,5246.0,5639.0
+365,place order,5250.0,5252.0
+365,arrange custom order,5252.0,5276.0
+335,pack B,5258.0,5274.0
+366,place order,5260.0,5262.0
+337,pack B,5262.0,5287.0
+366,arrange standard order,5262.0,5272.0
+359,attempt delivery A,5267.0,6174.0
+258,order completed,5267.0,5268.0
+265,order completed,5268.0,5269.0
+285,attempt delivery A,5268.0,6304.0
+367,place order,5270.0,5272.0
+364,manufacture B,5272.0,5672.0
+366,pick from stock C,5272.0,5314.0
+367,arrange standard order,5272.0,5284.0
+262,order completed,5275.0,5276.0
+338,attempt delivery A,5275.0,6462.0
+365,manufacture B,5276.0,5695.0
+368,place order,5280.0,5282.0
+368,arrange custom order,5282.0,5308.0
+255,attempt delivery C,5287.0,6851.0
+363,pack A,5287.0,5298.0
+367,pick from stock C,5287.0,5328.0
+173,order completed,5287.0,5288.0
+369,place order,5290.0,5292.0
+369,arrange custom order,5292.0,5319.0
+370,place order,5300.0,5302.0
+330,attempt delivery B,5302.0,7256.0
+370,arrange standard order,5302.0,5312.0
+198,order completed,5302.0,5303.0
+368,manufacture B,5308.0,5681.0
+371,place order,5310.0,5312.0
+371,arrange custom order,5312.0,5341.0
+366,pack B,5314.0,5337.0
+370,pick from stock C,5314.0,5390.0
+372,place order,5320.0,5322.0
+372,arrange standard order,5322.0,5334.0
+367,pack A,5328.0,5340.0
+373,place order,5330.0,5332.0
+373,arrange standard order,5332.0,5347.0
+339,pack A,5333.0,5346.0
+369,manufacture B,5333.0,5806.0
+372,pick from stock A,5334.0,5368.0
+227,order completed,5335.0,5336.0
+260,attempt delivery C,5335.0,7519.0
+374,place order,5340.0,5342.0
+374,arrange standard order,5342.0,5357.0
+373,pick from stock A,5347.0,5379.0
+375,place order,5350.0,5352.0
+375,arrange custom order,5352.0,5377.0
+335,attempt delivery B,5359.0,7484.0
+225,order completed,5359.0,5360.0
+292,attempt delivery A,5359.0,6218.0
+287,order completed,5360.0,5361.0
+376,place order,5361.0,5363.0
+376,arrange standard order,5363.0,5377.0
+201,order completed,5367.0,5368.0
+367,attempt delivery B,5367.0,7190.0
+372,pack A,5368.0,5387.0
+374,pick from stock A,5368.0,5403.0
+377,place order,5370.0,5372.0
+309,pack B,5372.0,5389.0
+320,manufacture A,5372.0,5674.0
+377,arrange standard order,5372.0,5387.0
+373,pack A,5379.0,5393.0
+376,pick from stock A,5379.0,5391.0
+378,place order,5380.0,5382.0
+378,arrange standard order,5382.0,5394.0
+379,place order,5390.0,5392.0
+370,pack A,5392.0,5411.0
+377,pick from stock A,5392.0,5415.0
+379,arrange standard order,5392.0,5406.0
+376,pack A,5393.0,5412.0
+378,pick from stock B,5394.0,5447.0
+209,order completed,5397.0,5398.0
+372,attempt delivery B,5397.0,7185.0
+380,place order,5400.0,5402.0
+380,arrange custom order,5402.0,5422.0
+374,pack B,5403.0,5420.0
+379,pick from stock C,5406.0,5485.0
+147,order completed,5407.0,5408.0
+325,attempt delivery C,5407.0,7026.0
+377,pack A,5415.0,5425.0
+317,pack B,5416.0,5434.0
+322,manufacture A,5416.0,5747.0
+284,order completed,5443.0,5444.0
+296,attempt delivery A,5443.0,6497.0
+312,order completed,5444.0,5445.0
+363,attempt delivery A,5444.0,6464.0
+373,attempt delivery B,5447.0,7158.0
+378,pack B,5447.0,5472.0
+184,order completed,5447.0,5448.0
+349,pack C,5481.0,5511.0
+371,manufacture B,5481.0,5913.0
+379,pack C,5485.0,5532.0
+381,place order,5500.0,5502.0
+381,arrange custom order,5502.0,5530.0
+307,order completed,5509.0,5510.0
+366,attempt delivery A,5509.0,6599.0
+382,place order,5510.0,5512.0
+339,attempt delivery A,5512.0,6489.0
+382,arrange standard order,5512.0,5524.0
+300,order completed,5512.0,5513.0
+232,order completed,5515.0,5516.0
+370,attempt delivery B,5515.0,7096.0
+383,place order,5520.0,5522.0
+383,arrange custom order,5522.0,5548.0
+382,pick from stock A,5524.0,5544.0
+319,pack A,5526.0,5543.0
+336,manufacture A,5526.0,5816.0
+178,order completed,5527.0,5528.0
+374,attempt delivery B,5527.0,7579.0
+228,order completed,5528.0,5529.0
+266,attempt delivery C,5528.0,7426.0
+384,place order,5530.0,5532.0
+376,attempt delivery A,5532.0,6742.0
+384,arrange custom order,5532.0,5560.0
+264,order completed,5532.0,5533.0
+342,pack A,5536.0,5547.0
+380,manufacture B,5536.0,5952.0
+385,place order,5540.0,5542.0
+385,arrange custom order,5542.0,5566.0
+318,pack B,5544.0,5566.0
+350,manufacture A,5544.0,5886.0
+382,pack B,5544.0,5564.0
+386,place order,5550.0,5552.0
+386,arrange custom order,5552.0,5576.0
+204,order completed,5553.0,5554.0
+378,attempt delivery B,5553.0,7215.0
+256,order completed,5554.0,5555.0
+328,attempt delivery C,5554.0,7435.0
+387,place order,5560.0,5562.0
+387,arrange custom order,5562.0,5583.0
+356,pack B,5563.0,5584.0
+381,manufacture B,5563.0,5966.0
+253,order completed,5565.0,5566.0
+358,attempt delivery C,5565.0,7009.0
+187,order completed,5568.0,5569.0
+361,attempt delivery C,5568.0,7853.0
+388,place order,5570.0,5572.0
+388,arrange custom order,5572.0,5600.0
+389,place order,5580.0,5582.0
+343,pack A,5582.0,5592.0
+384,manufacture B,5582.0,6034.0
+337,attempt delivery C,5582.0,7976.0
+389,arrange standard order,5582.0,5597.0
+211,order completed,5582.0,5583.0
+379,attempt delivery B,5583.0,7084.0
+194,order completed,5583.0,5584.0
+354,pack C,5584.0,5621.0
+385,manufacture B,5584.0,5979.0
+390,place order,5590.0,5592.0
+390,arrange custom order,5592.0,5622.0
+389,pick from stock A,5597.0,5614.0
+391,place order,5600.0,5602.0
+391,arrange standard order,5602.0,5614.0
+392,place order,5610.0,5612.0
+392,arrange custom order,5612.0,5633.0
+389,pack B,5614.0,5639.0
+391,pick from stock A,5614.0,5630.0
+393,place order,5620.0,5622.0
+393,arrange standard order,5622.0,5632.0
+294,order completed,5627.0,5628.0
+349,attempt delivery A,5627.0,6562.0
+394,place order,5630.0,5632.0
+391,pack A,5632.0,5644.0
+393,pick from stock B,5632.0,5664.0
+394,arrange custom order,5632.0,5659.0
+362,pack B,5639.0,5654.0
+386,manufacture B,5639.0,6117.0
+395,place order,5640.0,5642.0
+395,arrange standard order,5642.0,5653.0
+396,place order,5650.0,5652.0
+396,arrange custom order,5652.0,5678.0
+395,pick from stock C,5653.0,5725.0
+397,place order,5660.0,5662.0
+397,arrange standard order,5662.0,5672.0
+393,pack A,5664.0,5675.0
+398,place order,5670.0,5672.0
+364,pack A,5672.0,5683.0
+387,manufacture B,5672.0,6143.0
+397,pick from stock C,5672.0,5710.0
+398,arrange custom order,5672.0,5700.0
+320,pack B,5674.0,5704.0
+352,manufacture A,5674.0,5964.0
+399,place order,5680.0,5682.0
+368,pack A,5682.0,5692.0
+388,manufacture B,5682.0,6157.0
+399,arrange custom order,5682.0,5709.0
+400,place order,5690.0,5692.0
+400,arrange custom order,5692.0,5715.0
+365,pack C,5695.0,5734.0
+309,attempt delivery C,5700.0,7622.0
+398,manufacture B,5700.0,6122.0
+248,order completed,5700.0,5701.0
+397,pack A,5710.0,5727.0
+267,order completed,5720.0,5721.0
+319,attempt delivery B,5720.0,7477.0
+395,pack A,5725.0,5740.0
+182,order completed,5742.0,5743.0
+377,attempt delivery C,5742.0,7519.0
+322,pack C,5747.0,5797.0
+355,manufacture A,5747.0,6028.0
+329,order completed,5758.0,5759.0
+356,attempt delivery A,5758.0,6775.0
+281,order completed,5759.0,5760.0
+317,attempt delivery C,5759.0,7611.0
+207,order completed,5773.0,5774.0
+382,attempt delivery C,5773.0,8480.0
+401,place order,5790.0,5792.0
+401,arrange standard order,5792.0,5806.0
+343,attempt delivery A,5797.0,6690.0
+302,order completed,5797.0,5798.0
+402,place order,5800.0,5802.0
+402,arrange custom order,5802.0,5827.0
+369,pack A,5806.0,5825.0
+401,pick from stock B,5806.0,5838.0
+403,place order,5810.0,5812.0
+403,arrange standard order,5812.0,5826.0
+268,order completed,5814.0,5815.0
+362,attempt delivery C,5814.0,7879.0
+336,pack C,5816.0,5851.0
+357,manufacture A,5816.0,6065.0
+404,place order,5820.0,5822.0
+404,arrange standard order,5822.0,5835.0
+403,pick from stock C,5826.0,5875.0
+402,manufacture B,5827.0,6189.0
+405,place order,5830.0,5832.0
+405,arrange custom order,5832.0,5852.0
+404,pick from stock C,5835.0,5914.0
+401,pack B,5838.0,5855.0
+406,place order,5840.0,5842.0
+406,arrange standard order,5842.0,5853.0
+240,order completed,5847.0,5848.0
+354,attempt delivery A,5847.0,6742.0
+345,order completed,5849.0,5850.0
+389,attempt delivery A,5849.0,7026.0
+407,place order,5850.0,5852.0
+407,arrange standard order,5852.0,5866.0
+406,pick from stock B,5853.0,5875.0
+408,place order,5860.0,5862.0
+408,arrange standard order,5862.0,5872.0
+409,place order,5870.0,5872.0
+408,pick from stock B,5872.0,5927.0
+409,arrange standard order,5872.0,5883.0
+403,pack B,5875.0,5897.0
+407,pick from stock C,5875.0,5938.0
+406,pack A,5875.0,5895.0
+410,place order,5880.0,5882.0
+410,arrange custom order,5882.0,5904.0
+409,pick from stock A,5883.0,5895.0
+350,pack B,5886.0,5912.0
+375,manufacture A,5886.0,6165.0
+411,place order,5890.0,5892.0
+411,arrange custom order,5892.0,5917.0
+251,order completed,5894.0,5895.0
+342,attempt delivery B,5894.0,7921.0
+409,pack B,5895.0,5923.0
+412,place order,5900.0,5902.0
+412,arrange custom order,5902.0,5928.0
+413,place order,5910.0,5912.0
+413,arrange custom order,5912.0,5941.0
+371,pack A,5913.0,5930.0
+405,manufacture B,5913.0,6288.0
+404,pack B,5914.0,5939.0
+314,order completed,5918.0,5919.0
+391,attempt delivery A,5918.0,7236.0
+414,place order,5920.0,5922.0
+414,arrange custom order,5922.0,5949.0
+408,pack B,5927.0,5954.0
+395,attempt delivery C,5928.0,7970.0
+216,order completed,5928.0,5929.0
+415,place order,5930.0,5932.0
+415,arrange standard order,5932.0,5945.0
+407,pack A,5938.0,5952.0
+416,place order,5940.0,5942.0
+416,arrange custom order,5942.0,5965.0
+340,order completed,5943.0,5944.0
+393,attempt delivery A,5943.0,6725.0
+415,pick from stock A,5945.0,5962.0
+318,attempt delivery B,5949.0,8061.0
+247,order completed,5949.0,5950.0
+417,place order,5950.0,5952.0
+380,pack A,5952.0,5964.0
+414,manufacture B,5952.0,6385.0
+417,arrange standard order,5952.0,5967.0
+293,order completed,5958.0,5959.0
+320,attempt delivery A,5958.0,7131.0
+418,place order,5960.0,5962.0
+415,pack A,5962.0,5980.0
+418,arrange custom order,5962.0,5987.0
+352,pack C,5964.0,6012.0
+383,manufacture A,5964.0,6208.0
+381,pack B,5966.0,5996.0
+417,pick from stock C,5967.0,6026.0
+419,place order,5970.0,5972.0
+419,arrange custom order,5972.0,5998.0
+385,pack C,5979.0,6004.0
+420,place order,5980.0,5982.0
+420,arrange custom order,5982.0,6010.0
+418,manufacture B,5987.0,6401.0
+397,attempt delivery A,5998.0,6884.0
+419,manufacture B,5998.0,6370.0
+346,order completed,5998.0,5999.0
+277,order completed,6001.0,6002.0
+364,attempt delivery B,6001.0,8099.0
+289,order completed,6002.0,6003.0
+368,attempt delivery B,6002.0,7846.0
+223,order completed,6008.0,6009.0
+365,attempt delivery B,6008.0,7493.0
+222,order completed,6015.0,6016.0
+369,attempt delivery B,6015.0,7492.0
+191,order completed,6024.0,6025.0
+322,attempt delivery C,6024.0,8721.0
+417,pack A,6026.0,6039.0
+355,pack A,6028.0,6038.0
+390,manufacture A,6028.0,6281.0
+384,pack C,6034.0,6075.0
+271,order completed,6046.0,6047.0
+401,attempt delivery C,6046.0,8141.0
+245,order completed,6063.0,6064.0
+403,attempt delivery B,6063.0,7674.0
+357,pack C,6065.0,6113.0
+392,manufacture A,6065.0,6414.0
+421,place order,6080.0,6082.0
+421,arrange custom order,6082.0,6111.0
+406,attempt delivery C,6083.0,8234.0
+241,order completed,6083.0,6084.0
+350,attempt delivery C,6083.0,8405.0
+299,order completed,6084.0,6085.0
+422,place order,6090.0,6092.0
+422,arrange custom order,6092.0,6121.0
+423,place order,6100.0,6102.0
+423,arrange custom order,6102.0,6131.0
+424,place order,6110.0,6112.0
+421,manufacture B,6112.0,6547.0
+424,arrange custom order,6112.0,6137.0
+409,attempt delivery C,6117.0,8789.0
+386,pack A,6117.0,6133.0
+308,order completed,6117.0,6118.0
+425,place order,6120.0,6122.0
+398,pack A,6122.0,6139.0
+425,arrange standard order,6122.0,6137.0
+426,place order,6130.0,6132.0
+426,arrange custom order,6132.0,6160.0
+424,manufacture B,6137.0,6556.0
+425,pick from stock C,6137.0,6191.0
+427,place order,6140.0,6142.0
+427,arrange custom order,6142.0,6167.0
+387,pack B,6143.0,6171.0
+428,place order,6150.0,6152.0
+428,arrange standard order,6152.0,6167.0
+254,order completed,6155.0,6156.0
+336,attempt delivery A,6155.0,6878.0
+388,pack C,6157.0,6207.0
+429,place order,6160.0,6162.0
+380,attempt delivery B,6162.0,8123.0
+415,attempt delivery B,6162.0,8098.0
+429,arrange standard order,6162.0,6175.0
+234,order completed,6162.0,6163.0
+261,order completed,6163.0,6164.0
+375,pack B,6165.0,6187.0
+394,manufacture A,6165.0,6450.0
+427,manufacture B,6167.0,6591.0
+428,pick from stock B,6167.0,6213.0
+430,place order,6170.0,6172.0
+430,arrange standard order,6172.0,6182.0
+359,order completed,6174.0,6175.0
+408,attempt delivery A,6174.0,7271.0
+429,pick from stock C,6175.0,6221.0
+298,order completed,6176.0,6177.0
+371,attempt delivery C,6176.0,8698.0
+431,place order,6180.0,6182.0
+431,arrange custom order,6182.0,6205.0
+402,pack A,6189.0,6200.0
+432,place order,6190.0,6192.0
+404,attempt delivery C,6192.0,9038.0
+425,pack A,6192.0,6204.0
+430,pick from stock C,6192.0,6260.0
+432,arrange custom order,6192.0,6215.0
+273,order completed,6192.0,6193.0
+206,order completed,6194.0,6195.0
+386,attempt delivery B,6194.0,8316.0
+433,place order,6200.0,6202.0
+433,arrange standard order,6202.0,6212.0
+431,manufacture B,6205.0,6675.0
+333,order completed,6206.0,6207.0
+385,attempt delivery A,6206.0,6966.0
+383,pack B,6208.0,6227.0
+396,manufacture A,6208.0,6468.0
+434,place order,6210.0,6212.0
+433,pick from stock B,6212.0,6272.0
+434,arrange custom order,6212.0,6237.0
+428,pack B,6213.0,6228.0
+432,manufacture B,6215.0,6623.0
+398,attempt delivery B,6218.0,8009.0
+297,order completed,6218.0,6219.0
+355,attempt delivery A,6218.0,7649.0
+292,order completed,6219.0,6220.0
+435,place order,6220.0,6222.0
+429,pack A,6222.0,6232.0
+435,arrange standard order,6222.0,6233.0
+436,place order,6230.0,6232.0
+436,arrange standard order,6232.0,6242.0
+435,pick from stock A,6233.0,6262.0
+239,order completed,6236.0,6237.0
+407,attempt delivery C,6236.0,8039.0
+437,place order,6240.0,6242.0
+436,pick from stock A,6242.0,6274.0
+437,arrange standard order,6242.0,6256.0
+438,place order,6250.0,6252.0
+438,arrange standard order,6252.0,6265.0
+437,pick from stock B,6256.0,6286.0
+439,place order,6260.0,6262.0
+430,pack C,6262.0,6308.0
+435,pack A,6262.0,6277.0
+439,arrange standard order,6262.0,6277.0
+438,pick from stock C,6265.0,6325.0
+440,place order,6270.0,6272.0
+433,pack C,6272.0,6319.0
+440,arrange custom order,6272.0,6301.0
+436,pack A,6274.0,6288.0
+439,pick from stock B,6277.0,6314.0
+390,pack A,6281.0,6301.0
+399,manufacture A,6281.0,6624.0
+224,order completed,6282.0,6283.0
+428,attempt delivery B,6282.0,8331.0
+437,pack B,6286.0,6313.0
+405,pack B,6288.0,6317.0
+348,order completed,6299.0,6300.0
+429,attempt delivery A,6299.0,7409.0
+381,attempt delivery C,6304.0,8762.0
+310,order completed,6304.0,6305.0
+285,order completed,6305.0,6306.0
+437,attempt delivery A,6313.0,7147.0
+439,pack B,6314.0,6344.0
+438,pack B,6325.0,6340.0
+263,order completed,6329.0,6330.0
+352,attempt delivery C,6329.0,9039.0
+441,place order,6370.0,6372.0
+419,pack A,6372.0,6383.0
+441,arrange standard order,6372.0,6383.0
+442,place order,6380.0,6382.0
+442,arrange custom order,6382.0,6411.0
+441,pick from stock C,6383.0,6433.0
+414,pack A,6385.0,6395.0
+230,order completed,6388.0,6389.0
+435,attempt delivery B,6388.0,8344.0
+244,order completed,6389.0,6390.0
+390,attempt delivery B,6389.0,7907.0
+443,place order,6390.0,6392.0
+443,arrange standard order,6392.0,6405.0
+444,place order,6400.0,6402.0
+418,pack A,6402.0,6414.0
+444,arrange standard order,6402.0,6417.0
+443,pick from stock C,6405.0,6458.0
+220,order completed,6406.0,6407.0
+417,attempt delivery C,6406.0,9117.0
+445,place order,6410.0,6412.0
+445,arrange standard order,6412.0,6427.0
+392,pack A,6414.0,6433.0
+400,manufacture A,6414.0,6710.0
+444,pick from stock B,6417.0,6475.0
+446,place order,6420.0,6422.0
+384,attempt delivery C,6422.0,8177.0
+446,arrange standard order,6422.0,6432.0
+291,order completed,6422.0,6423.0
+445,pick from stock A,6427.0,6466.0
+447,place order,6430.0,6432.0
+446,pick from stock B,6432.0,6467.0
+447,arrange custom order,6432.0,6452.0
+441,pack B,6433.0,6458.0
+448,place order,6440.0,6442.0
+438,attempt delivery B,6442.0,7966.0
+448,arrange custom order,6442.0,6472.0
+303,order completed,6442.0,6443.0
+449,place order,6450.0,6452.0
+394,pack B,6452.0,6472.0
+410,manufacture A,6452.0,6696.0
+449,arrange standard order,6452.0,6465.0
+405,attempt delivery A,6458.0,7542.0
+443,pack A,6458.0,6472.0
+353,order completed,6458.0,6459.0
+450,place order,6460.0,6462.0
+419,attempt delivery B,6462.0,8415.0
+418,attempt delivery A,6462.0,7478.0
+450,arrange standard order,6462.0,6475.0
+278,order completed,6462.0,6463.0
+338,order completed,6463.0,6464.0
+363,order completed,6464.0,6465.0
+441,attempt delivery A,6464.0,7456.0
+449,pick from stock A,6465.0,6504.0
+445,pack C,6466.0,6494.0
+446,pack B,6467.0,6492.0
+396,pack C,6468.0,6505.0
+411,manufacture A,6468.0,6752.0
+451,place order,6470.0,6472.0
+448,manufacture B,6472.0,6923.0
+451,arrange custom order,6472.0,6493.0
+323,order completed,6472.0,6473.0
+444,pack B,6475.0,6494.0
+450,pick from stock A,6475.0,6501.0
+452,place order,6480.0,6482.0
+452,arrange standard order,6482.0,6495.0
+316,order completed,6483.0,6484.0
+414,attempt delivery B,6483.0,8497.0
+339,order completed,6489.0,6490.0
+453,place order,6490.0,6492.0
+453,arrange custom order,6492.0,6514.0
+451,manufacture B,6493.0,6921.0
+296,order completed,6497.0,6498.0
+454,place order,6500.0,6502.0
+450,pack C,6502.0,6528.0
+452,pick from stock A,6502.0,6513.0
+454,arrange custom order,6502.0,6527.0
+449,pack B,6504.0,6529.0
+326,order completed,6506.0,6507.0
+392,attempt delivery B,6506.0,8144.0
+455,place order,6510.0,6512.0
+455,arrange standard order,6512.0,6523.0
+394,attempt delivery B,6513.0,8313.0
+452,pack A,6513.0,6530.0
+341,order completed,6513.0,6514.0
+453,manufacture B,6514.0,6964.0
+360,order completed,6516.0,6517.0
+456,place order,6520.0,6522.0
+456,arrange standard order,6522.0,6535.0
+455,pick from stock B,6523.0,6546.0
+457,place order,6530.0,6532.0
+452,attempt delivery A,6532.0,7657.0
+396,attempt delivery B,6532.0,8064.0
+457,arrange standard order,6532.0,6545.0
+235,order completed,6532.0,6533.0
+456,pick from stock A,6535.0,6551.0
+321,order completed,6539.0,6540.0
+458,place order,6540.0,6542.0
+458,arrange standard order,6542.0,6555.0
+457,pick from stock B,6545.0,6573.0
+455,pack C,6546.0,6571.0
+421,pack B,6547.0,6565.0
+459,place order,6550.0,6552.0
+456,pack C,6552.0,6602.0
+459,arrange standard order,6552.0,6566.0
+246,order completed,6552.0,6553.0
+458,pick from stock C,6555.0,6599.0
+424,pack C,6556.0,6601.0
+460,place order,6560.0,6562.0
+357,attempt delivery C,6562.0,8429.0
+460,arrange standard order,6562.0,6575.0
+257,order completed,6562.0,6563.0
+349,order completed,6563.0,6564.0
+421,attempt delivery A,6565.0,7558.0
+459,pick from stock A,6566.0,6587.0
+455,attempt delivery B,6571.0,8196.0
+457,pack A,6573.0,6589.0
+460,pick from stock C,6575.0,6606.0
+459,pack C,6587.0,6618.0
+276,order completed,6588.0,6589.0
+387,attempt delivery C,6588.0,8965.0
+458,pack A,6599.0,6615.0
+366,order completed,6599.0,6600.0
+427,pack C,6601.0,6642.0
+456,attempt delivery A,6602.0,8010.0
+460,pack C,6606.0,6631.0
+458,attempt delivery A,6615.0,7585.0
+457,attempt delivery B,6618.0,8530.0
+332,order completed,6618.0,6619.0
+432,pack B,6623.0,6653.0
+424,attempt delivery B,6624.0,8069.0
+399,pack B,6624.0,6640.0
+283,order completed,6624.0,6625.0
+412,manufacture A,6624.0,6980.0
+460,attempt delivery A,6631.0,7617.0
+193,order completed,6644.0,6645.0
+375,attempt delivery C,6644.0,8503.0
+461,place order,6660.0,6662.0
+461,arrange standard order,6662.0,6675.0
+462,place order,6670.0,6672.0
+462,arrange custom order,6672.0,6702.0
+431,pack B,6675.0,6702.0
+461,pick from stock B,6675.0,6713.0
+463,place order,6680.0,6682.0
+402,attempt delivery C,6682.0,8173.0
+399,attempt delivery B,6682.0,8278.0
+463,arrange custom order,6682.0,6712.0
+237,order completed,6682.0,6683.0
+351,order completed,6683.0,6684.0
+464,place order,6690.0,6692.0
+464,arrange custom order,6692.0,6722.0
+343,order completed,6692.0,6693.0
+410,pack B,6696.0,6726.0
+413,manufacture A,6696.0,6942.0
+465,place order,6700.0,6702.0
+462,manufacture B,6702.0,7149.0
+431,attempt delivery A,6702.0,8122.0
+465,arrange standard order,6702.0,6716.0
+466,place order,6710.0,6712.0
+400,pack A,6712.0,6729.0
+416,manufacture A,6712.0,6954.0
+463,manufacture B,6712.0,7179.0
+466,arrange standard order,6712.0,6722.0
+461,pack A,6713.0,6732.0
+465,pick from stock B,6716.0,6773.0
+467,place order,6720.0,6722.0
+464,manufacture B,6722.0,7196.0
+466,pick from stock C,6722.0,6774.0
+467,arrange custom order,6722.0,6747.0
+393,order completed,6725.0,6726.0
+410,attempt delivery A,6726.0,7594.0
+468,place order,6730.0,6732.0
+425,attempt delivery C,6732.0,8841.0
+468,arrange standard order,6732.0,6746.0
+217,order completed,6732.0,6733.0
+469,place order,6740.0,6742.0
+469,arrange custom order,6742.0,6763.0
+376,order completed,6742.0,6743.0
+354,order completed,6743.0,6744.0
+468,pick from stock C,6746.0,6799.0
+470,place order,6750.0,6752.0
+411,pack A,6752.0,6772.0
+420,manufacture A,6752.0,7027.0
+470,arrange standard order,6752.0,6764.0
+471,place order,6760.0,6762.0
+471,arrange standard order,6762.0,6775.0
+432,attempt delivery B,6764.0,8441.0
+470,pick from stock B,6764.0,6805.0
+324,order completed,6764.0,6765.0
+472,place order,6770.0,6772.0
+472,arrange standard order,6772.0,6785.0
+465,pack C,6773.0,6812.0
+466,pack B,6774.0,6792.0
+471,pick from stock C,6775.0,6823.0
+356,order completed,6775.0,6776.0
+473,place order,6780.0,6782.0
+473,arrange standard order,6782.0,6796.0
+472,pick from stock A,6785.0,6806.0
+474,place order,6790.0,6792.0
+466,attempt delivery A,6792.0,7725.0
+474,arrange custom order,6792.0,6820.0
+468,pack C,6799.0,6844.0
+473,pick from stock C,6799.0,6865.0
+475,place order,6800.0,6802.0
+475,arrange custom order,6802.0,6823.0
+470,pack B,6805.0,6831.0
+472,pack C,6806.0,6831.0
+476,place order,6810.0,6812.0
+388,attempt delivery C,6812.0,8281.0
+465,attempt delivery A,6812.0,7555.0
+476,arrange custom order,6812.0,6839.0
+275,order completed,6812.0,6813.0
+477,place order,6820.0,6822.0
+477,arrange custom order,6822.0,6849.0
+471,pack B,6823.0,6848.0
+475,manufacture B,6823.0,7187.0
+478,place order,6830.0,6832.0
+383,attempt delivery C,6832.0,8888.0
+400,attempt delivery B,6832.0,8904.0
+478,arrange custom order,6832.0,6853.0
+286,order completed,6832.0,6833.0
+304,order completed,6833.0,6834.0
+479,place order,6840.0,6842.0
+436,attempt delivery C,6842.0,9312.0
+479,arrange standard order,6842.0,6855.0
+288,order completed,6842.0,6843.0
+471,attempt delivery A,6848.0,8096.0
+480,place order,6850.0,6852.0
+430,attempt delivery C,6852.0,8688.0
+480,arrange custom order,6852.0,6878.0
+255,order completed,6852.0,6853.0
+478,manufacture B,6853.0,7253.0
+479,pick from stock A,6855.0,6876.0
+473,pack C,6865.0,6912.0
+479,pack B,6876.0,6900.0
+480,manufacture B,6878.0,7283.0
+336,order completed,6878.0,6879.0
+397,order completed,6884.0,6885.0
+243,order completed,6905.0,6906.0
+461,attempt delivery B,6905.0,8940.0
+331,order completed,6907.0,6908.0
+433,attempt delivery C,6907.0,8747.0
+451,pack B,6921.0,6945.0
+448,pack B,6923.0,6952.0
+413,pack C,6942.0,6969.0
+422,manufacture A,6942.0,7186.0
+347,order completed,6949.0,6950.0
+470,attempt delivery B,6949.0,8983.0
+481,place order,6950.0,6952.0
+439,attempt delivery C,6952.0,8968.0
+481,arrange standard order,6952.0,6966.0
+301,order completed,6952.0,6953.0
+416,pack B,6954.0,6969.0
+423,manufacture A,6954.0,7227.0
+315,order completed,6956.0,6957.0
+443,attempt delivery C,6956.0,8889.0
+482,place order,6960.0,6962.0
+482,arrange custom order,6962.0,6989.0
+453,pack B,6964.0,6987.0
+481,pick from stock A,6966.0,6999.0
+385,order completed,6966.0,6967.0
+413,attempt delivery A,6969.0,8120.0
+483,place order,6970.0,6972.0
+483,arrange standard order,6972.0,6987.0
+484,place order,6980.0,6982.0
+412,pack B,6982.0,7011.0
+426,manufacture A,6982.0,7226.0
+484,arrange custom order,6982.0,7005.0
+483,pick from stock A,6987.0,7017.0
+485,place order,6990.0,6992.0
+485,arrange custom order,6992.0,7014.0
+481,pack A,6999.0,7015.0
+486,place order,7000.0,7002.0
+486,arrange custom order,7002.0,7025.0
+358,order completed,7009.0,7010.0
+446,attempt delivery C,7009.0,9612.0
+487,place order,7010.0,7012.0
+487,arrange custom order,7012.0,7037.0
+481,attempt delivery A,7015.0,8143.0
+483,pack C,7017.0,7058.0
+488,place order,7020.0,7022.0
+488,arrange custom order,7022.0,7042.0
+445,attempt delivery C,7026.0,9808.0
+325,order completed,7026.0,7027.0
+389,order completed,7027.0,7028.0
+420,pack C,7028.0,7066.0
+434,manufacture A,7028.0,7284.0
+489,place order,7030.0,7032.0
+489,arrange custom order,7032.0,7058.0
+490,place order,7040.0,7042.0
+490,arrange custom order,7042.0,7071.0
+491,place order,7050.0,7052.0
+491,arrange standard order,7052.0,7063.0
+483,attempt delivery A,7058.0,7912.0
+492,place order,7060.0,7062.0
+492,arrange custom order,7062.0,7083.0
+491,pick from stock B,7063.0,7117.0
+493,place order,7070.0,7072.0
+493,arrange custom order,7072.0,7093.0
+344,order completed,7079.0,7080.0
+468,attempt delivery B,7079.0,9134.0
+494,place order,7080.0,7082.0
+494,arrange custom order,7082.0,7105.0
+492,manufacture B,7083.0,7513.0
+379,order completed,7084.0,7085.0
+479,attempt delivery B,7084.0,8649.0
+306,order completed,7085.0,7086.0
+444,attempt delivery C,7085.0,8969.0
+495,place order,7090.0,7092.0
+495,arrange custom order,7092.0,7119.0
+493,manufacture B,7093.0,7545.0
+370,order completed,7096.0,7097.0
+473,attempt delivery B,7096.0,9055.0
+496,place order,7100.0,7102.0
+496,arrange custom order,7102.0,7130.0
+494,manufacture B,7105.0,7560.0
+497,place order,7110.0,7112.0
+497,arrange standard order,7112.0,7124.0
+450,attempt delivery C,7117.0,9889.0
+491,pack C,7117.0,7155.0
+311,order completed,7117.0,7118.0
+498,place order,7120.0,7122.0
+498,arrange standard order,7122.0,7132.0
+497,pick from stock A,7124.0,7136.0
+499,place order,7130.0,7132.0
+498,pick from stock C,7132.0,7178.0
+499,arrange standard order,7132.0,7145.0
+320,order completed,7132.0,7133.0
+497,pack A,7136.0,7155.0
+500,place order,7140.0,7142.0
+500,arrange custom order,7142.0,7164.0
+499,pick from stock C,7145.0,7215.0
+437,order completed,7147.0,7148.0
+462,pack C,7149.0,7199.0
+497,attempt delivery A,7155.0,8032.0
+373,order completed,7158.0,7159.0
+451,attempt delivery B,7158.0,8983.0
+252,order completed,7160.0,7161.0
+449,attempt delivery C,7160.0,9509.0
+500,manufacture B,7164.0,7573.0
+498,pack C,7178.0,7210.0
+463,pack A,7179.0,7195.0
+372,order completed,7185.0,7186.0
+416,attempt delivery B,7185.0,9276.0
+422,pack C,7186.0,7218.0
+440,manufacture A,7186.0,7511.0
+475,pack A,7187.0,7206.0
+367,order completed,7190.0,7191.0
+453,attempt delivery B,7190.0,8791.0
+464,pack A,7196.0,7215.0
+313,order completed,7205.0,7206.0
+459,attempt delivery C,7205.0,8940.0
+463,attempt delivery B,7215.0,8947.0
+499,pack B,7215.0,7236.0
+378,order completed,7215.0,7216.0
+426,pack C,7226.0,7271.0
+442,manufacture A,7226.0,7505.0
+423,pack C,7227.0,7272.0
+447,manufacture A,7227.0,7481.0
+499,attempt delivery A,7236.0,8502.0
+391,order completed,7236.0,7237.0
+501,place order,7240.0,7242.0
+501,arrange standard order,7242.0,7252.0
+502,place order,7250.0,7252.0
+501,pick from stock B,7252.0,7272.0
+502,arrange standard order,7252.0,7263.0
+478,pack B,7253.0,7277.0
+330,order completed,7256.0,7257.0
+475,attempt delivery B,7256.0,9274.0
+503,place order,7260.0,7262.0
+503,arrange custom order,7262.0,7292.0
+502,pick from stock A,7263.0,7284.0
+504,place order,7270.0,7272.0
+426,attempt delivery A,7272.0,8001.0
+501,pack B,7272.0,7293.0
+504,arrange standard order,7272.0,7286.0
+408,order completed,7272.0,7273.0
+505,place order,7280.0,7282.0
+427,attempt delivery C,7282.0,9964.0
+505,arrange custom order,7282.0,7302.0
+334,order completed,7282.0,7283.0
+480,pack A,7283.0,7298.0
+434,pack C,7284.0,7334.0
+454,manufacture A,7284.0,7597.0
+502,pack C,7284.0,7324.0
+504,pick from stock B,7286.0,7306.0
+506,place order,7290.0,7292.0
+506,arrange standard order,7292.0,7304.0
+480,attempt delivery A,7298.0,8061.0
+507,place order,7300.0,7302.0
+505,manufacture B,7302.0,7718.0
+507,arrange custom order,7302.0,7323.0
+506,pick from stock A,7304.0,7339.0
+504,pack B,7306.0,7328.0
+508,place order,7310.0,7312.0
+508,arrange custom order,7312.0,7339.0
+509,place order,7320.0,7322.0
+509,arrange custom order,7322.0,7350.0
+507,manufacture B,7323.0,7787.0
+510,place order,7330.0,7332.0
+510,arrange custom order,7332.0,7362.0
+434,attempt delivery A,7334.0,8186.0
+506,pack C,7339.0,7374.0
+508,manufacture B,7339.0,7753.0
+511,place order,7340.0,7342.0
+511,arrange standard order,7342.0,7355.0
+327,order completed,7344.0,7345.0
+464,attempt delivery B,7344.0,9247.0
+512,place order,7350.0,7352.0
+512,arrange custom order,7352.0,7379.0
+249,order completed,7354.0,7355.0
+411,attempt delivery C,7354.0,9387.0
+511,pick from stock B,7355.0,7398.0
+513,place order,7360.0,7362.0
+510,manufacture B,7362.0,7804.0
+513,arrange custom order,7362.0,7392.0
+514,place order,7370.0,7372.0
+514,arrange custom order,7372.0,7393.0
+512,manufacture B,7379.0,7853.0
+515,place order,7380.0,7382.0
+515,arrange standard order,7382.0,7394.0
+516,place order,7390.0,7392.0
+513,manufacture B,7392.0,7867.0
+516,arrange standard order,7392.0,7405.0
+515,pick from stock C,7394.0,7426.0
+511,pack A,7398.0,7414.0
+517,place order,7400.0,7402.0
+517,arrange custom order,7402.0,7428.0
+516,pick from stock B,7405.0,7443.0
+429,order completed,7409.0,7410.0
+518,place order,7410.0,7412.0
+518,arrange standard order,7412.0,7424.0
+290,order completed,7417.0,7418.0
+472,attempt delivery C,7417.0,8929.0
+519,place order,7420.0,7422.0
+519,arrange standard order,7422.0,7434.0
+518,pick from stock C,7424.0,7472.0
+448,attempt delivery C,7426.0,9942.0
+515,pack B,7426.0,7441.0
+266,order completed,7426.0,7427.0
+520,place order,7430.0,7432.0
+520,arrange custom order,7432.0,7455.0
+519,pick from stock C,7434.0,7464.0
+328,order completed,7435.0,7436.0
+412,attempt delivery C,7435.0,9771.0
+516,pack C,7443.0,7491.0
+441,order completed,7456.0,7457.0
+519,pack A,7464.0,7482.0
+518,pack A,7472.0,7482.0
+319,order completed,7477.0,7478.0
+478,attempt delivery B,7477.0,9174.0
+418,order completed,7478.0,7479.0
+447,pack B,7481.0,7498.0
+467,manufacture A,7481.0,7817.0
+518,attempt delivery A,7482.0,8468.0
+335,order completed,7484.0,7485.0
+501,attempt delivery B,7484.0,9615.0
+305,order completed,7485.0,7486.0
+420,attempt delivery C,7485.0,
+369,order completed,7492.0,7493.0
+504,attempt delivery B,7492.0,9582.0
+365,order completed,7493.0,7494.0
+506,attempt delivery B,7493.0,9025.0
+447,attempt delivery A,7498.0,8586.0
+442,pack A,7505.0,7518.0
+469,manufacture A,7505.0,7825.0
+440,pack B,7511.0,7528.0
+474,manufacture A,7511.0,7751.0
+492,pack A,7513.0,7525.0
+517,manufacture B,7513.0,7887.0
+442,attempt delivery A,7518.0,8900.0
+491,attempt delivery C,7519.0,9465.0
+260,order completed,7519.0,7520.0
+462,attempt delivery C,7519.0,
+377,order completed,7520.0,7521.0
+521,place order,7530.0,7532.0
+521,arrange custom order,7532.0,7561.0
+522,place order,7540.0,7542.0
+522,arrange standard order,7542.0,7556.0
+405,order completed,7542.0,7543.0
+493,pack C,7545.0,7578.0
+520,manufacture B,7545.0,7912.0
+523,place order,7550.0,7552.0
+523,arrange standard order,7552.0,7567.0
+465,order completed,7555.0,7556.0
+522,pick from stock C,7556.0,7626.0
+421,order completed,7558.0,7559.0
+524,place order,7560.0,7562.0
+494,pack C,7562.0,7602.0
+524,arrange custom order,7562.0,7583.0
+523,pick from stock B,7567.0,7611.0
+525,place order,7570.0,7572.0
+525,arrange custom order,7572.0,7595.0
+500,pack A,7573.0,7588.0
+374,order completed,7579.0,7580.0
+511,attempt delivery B,7579.0,9655.0
+526,place order,7580.0,7582.0
+526,arrange standard order,7582.0,7594.0
+524,manufacture B,7583.0,8056.0
+458,order completed,7585.0,7586.0
+527,place order,7590.0,7592.0
+527,arrange standard order,7592.0,7605.0
+526,pick from stock C,7594.0,7672.0
+410,order completed,7594.0,7595.0
+525,manufacture B,7595.0,7993.0
+454,pack B,7597.0,7624.0
+476,manufacture A,7597.0,7878.0
+528,place order,7600.0,7602.0
+528,arrange custom order,7602.0,7626.0
+527,pick from stock B,7605.0,7648.0
+529,place order,7610.0,7612.0
+498,attempt delivery C,7612.0,
+523,pack C,7612.0,7645.0
+529,arrange custom order,7612.0,7633.0
+317,order completed,7612.0,7613.0
+460,order completed,7617.0,7618.0
+530,place order,7620.0,7622.0
+422,attempt delivery C,7622.0,9173.0
+530,arrange standard order,7622.0,7634.0
+309,order completed,7622.0,7623.0
+522,pack C,7626.0,7664.0
+531,place order,7630.0,7632.0
+531,arrange custom order,7632.0,7662.0
+530,pick from stock B,7634.0,7670.0
+532,place order,7640.0,7642.0
+532,arrange standard order,7642.0,7653.0
+523,attempt delivery A,7645.0,8726.0
+527,pack C,7648.0,7687.0
+355,order completed,7649.0,7650.0
+533,place order,7650.0,7652.0
+533,arrange custom order,7652.0,7673.0
+532,pick from stock B,7653.0,7713.0
+452,order completed,7657.0,7658.0
+534,place order,7660.0,7662.0
+534,arrange standard order,7662.0,7673.0
+522,attempt delivery A,7664.0,9000.0
+535,place order,7670.0,7672.0
+530,pack C,7672.0,7720.0
+526,pack A,7672.0,7685.0
+535,arrange custom order,7672.0,7693.0
+534,pick from stock B,7673.0,7722.0
+403,order completed,7674.0,7675.0
+515,attempt delivery B,7674.0,9744.0
+536,place order,7680.0,7682.0
+536,arrange standard order,7682.0,7693.0
+537,place order,7690.0,7692.0
+537,arrange standard order,7692.0,7702.0
+538,place order,7700.0,7702.0
+537,pick from stock C,7702.0,7775.0
+538,arrange custom order,7702.0,7724.0
+539,place order,7710.0,7712.0
+539,arrange standard order,7712.0,7722.0
+532,pack A,7713.0,7731.0
+536,pick from stock B,7713.0,7744.0
+505,pack B,7718.0,7747.0
+528,manufacture B,7718.0,8122.0
+540,place order,7720.0,7722.0
+530,attempt delivery A,7722.0,8832.0
+534,pack C,7722.0,7764.0
+539,pick from stock C,7722.0,7791.0
+540,arrange custom order,7722.0,7752.0
+466,order completed,7725.0,7726.0
+536,pack A,7744.0,7755.0
+474,pack C,7751.0,7789.0
+477,manufacture A,7751.0,8074.0
+508,pack B,7753.0,7772.0
+529,manufacture B,7753.0,8154.0
+534,attempt delivery A,7764.0,8747.0
+537,pack C,7775.0,7811.0
+507,pack B,7787.0,7812.0
+531,manufacture B,7787.0,8263.0
+539,pack B,7791.0,7816.0
+510,pack A,7804.0,7822.0
+533,manufacture B,7804.0,8222.0
+537,attempt delivery A,7811.0,8914.0
+539,attempt delivery A,7816.0,9161.0
+467,pack B,7817.0,7835.0
+482,manufacture A,7817.0,8106.0
+541,place order,7820.0,7822.0
+541,arrange custom order,7822.0,7848.0
+469,pack B,7825.0,7842.0
+484,manufacture A,7825.0,8156.0
+542,place order,7830.0,7832.0
+542,arrange standard order,7832.0,7847.0
+543,place order,7840.0,7842.0
+543,arrange custom order,7842.0,7864.0
+368,order completed,7846.0,7847.0
+492,attempt delivery B,7846.0,9743.0
+542,pick from stock B,7847.0,7907.0
+544,place order,7850.0,7852.0
+544,arrange custom order,7852.0,7876.0
+423,attempt delivery C,7853.0,9480.0
+512,pack C,7853.0,7898.0
+361,order completed,7853.0,7854.0
+538,manufacture B,7853.0,8282.0
+545,place order,7860.0,7862.0
+545,arrange standard order,7862.0,7872.0
+513,pack A,7867.0,7886.0
+540,manufacture B,7867.0,8313.0
+546,place order,7870.0,7872.0
+545,pick from stock C,7872.0,7950.0
+546,arrange standard order,7872.0,7885.0
+476,pack A,7878.0,7898.0
+485,manufacture A,7878.0,8217.0
+362,order completed,7879.0,7880.0
+502,attempt delivery C,7879.0,
+547,place order,7880.0,7882.0
+547,arrange custom order,7882.0,7911.0
+546,pick from stock B,7885.0,7917.0
+517,pack B,7887.0,7911.0
+541,manufacture B,7887.0,8324.0
+548,place order,7890.0,7892.0
+548,arrange custom order,7892.0,7917.0
+549,place order,7900.0,7902.0
+549,arrange custom order,7902.0,7925.0
+440,attempt delivery B,7907.0,9627.0
+542,pack B,7907.0,7934.0
+390,order completed,7907.0,7908.0
+550,place order,7910.0,7912.0
+520,pack B,7912.0,7940.0
+543,manufacture B,7912.0,8344.0
+550,arrange custom order,7912.0,7935.0
+483,order completed,7912.0,7913.0
+546,pack B,7917.0,7940.0
+551,place order,7920.0,7922.0
+500,attempt delivery B,7922.0,9770.0
+551,arrange standard order,7922.0,7934.0
+342,order completed,7922.0,7923.0
+552,place order,7930.0,7932.0
+552,arrange custom order,7932.0,7961.0
+542,attempt delivery A,7934.0,8911.0
+551,pick from stock C,7934.0,7982.0
+553,place order,7940.0,7942.0
+520,attempt delivery A,7942.0,8844.0
+546,attempt delivery A,7942.0,8981.0
+553,arrange custom order,7942.0,7967.0
+554,place order,7950.0,7952.0
+545,pack B,7952.0,7971.0
+554,arrange standard order,7952.0,7967.0
+555,place order,7960.0,7962.0
+555,arrange custom order,7962.0,7985.0
+438,order completed,7966.0,7967.0
+494,attempt delivery B,7966.0,9584.0
+554,pick from stock B,7967.0,8015.0
+556,place order,7970.0,7972.0
+519,attempt delivery C,7972.0,
+545,attempt delivery A,7972.0,9154.0
+556,arrange custom order,7972.0,7992.0
+395,order completed,7972.0,7973.0
+337,order completed,7976.0,7977.0
+516,attempt delivery C,7976.0,
+557,place order,7980.0,7982.0
+551,pack C,7982.0,8012.0
+557,arrange custom order,7982.0,8009.0
+558,place order,7990.0,7992.0
+558,arrange standard order,7992.0,8002.0
+525,pack C,7993.0,8040.0
+544,manufacture B,7993.0,8418.0
+559,place order,8000.0,8002.0
+558,pick from stock C,8002.0,8041.0
+559,arrange standard order,8002.0,8012.0
+426,order completed,8002.0,8003.0
+454,attempt delivery B,8009.0,9671.0
+398,order completed,8009.0,8010.0
+560,place order,8010.0,8012.0
+559,pick from stock B,8012.0,8065.0
+560,arrange custom order,8012.0,8042.0
+456,order completed,8012.0,8013.0
+554,pack C,8015.0,8055.0
+497,order completed,8032.0,8033.0
+407,order completed,8039.0,8040.0
+493,attempt delivery C,8039.0,
+558,pack A,8041.0,8056.0
+554,attempt delivery A,8055.0,9362.0
+524,pack A,8056.0,8069.0
+547,manufacture B,8056.0,8496.0
+526,attempt delivery B,8061.0,9921.0
+318,order completed,8061.0,8062.0
+480,order completed,8062.0,8063.0
+396,order completed,8064.0,8065.0
+527,attempt delivery B,8064.0,
+559,pack C,8065.0,8107.0
+536,attempt delivery B,8069.0,9525.0
+524,attempt delivery A,8069.0,8803.0
+424,order completed,8069.0,8070.0
+477,pack B,8074.0,8098.0
+486,manufacture A,8074.0,8426.0
+471,order completed,8096.0,8097.0
+474,attempt delivery B,8098.0,9577.0
+415,order completed,8098.0,8099.0
+364,order completed,8099.0,8100.0
+507,attempt delivery B,8099.0,9604.0
+482,pack B,8106.0,8125.0
+487,manufacture A,8106.0,8425.0
+561,place order,8110.0,8112.0
+561,arrange custom order,8112.0,8137.0
+562,place order,8120.0,8122.0
+528,pack B,8122.0,8147.0
+548,manufacture B,8122.0,8512.0
+562,arrange standard order,8122.0,8133.0
+413,order completed,8122.0,8123.0
+431,order completed,8123.0,8124.0
+380,order completed,8124.0,8125.0
+510,attempt delivery B,8124.0,9565.0
+563,place order,8130.0,8132.0
+563,arrange custom order,8132.0,8162.0
+562,pick from stock A,8133.0,8173.0
+564,place order,8140.0,8142.0
+532,attempt delivery C,8142.0,
+564,arrange custom order,8142.0,8167.0
+401,order completed,8142.0,8143.0
+481,order completed,8143.0,8144.0
+392,order completed,8144.0,8145.0
+467,attempt delivery B,8144.0,9626.0
+565,place order,8150.0,8152.0
+565,arrange custom order,8152.0,8179.0
+529,pack C,8154.0,8186.0
+550,manufacture B,8154.0,8600.0
+484,pack A,8156.0,8174.0
+488,manufacture A,8156.0,8503.0
+566,place order,8160.0,8162.0
+566,arrange standard order,8162.0,8174.0
+567,place order,8170.0,8172.0
+567,arrange custom order,8172.0,8195.0
+505,attempt delivery C,8173.0,
+562,pack C,8173.0,8211.0
+402,order completed,8173.0,8174.0
+566,pick from stock A,8174.0,8214.0
+384,order completed,8177.0,8178.0
+508,attempt delivery C,8177.0,
+568,place order,8180.0,8182.0
+568,arrange custom order,8182.0,8207.0
+434,order completed,8186.0,8187.0
+569,place order,8190.0,8192.0
+569,arrange custom order,8192.0,8218.0
+455,order completed,8196.0,8197.0
+513,attempt delivery B,8196.0,
+570,place order,8200.0,8202.0
+570,arrange standard order,8202.0,8216.0
+571,place order,8210.0,8212.0
+562,attempt delivery A,8212.0,9505.0
+571,arrange custom order,8212.0,8235.0
+566,pack A,8214.0,8233.0
+570,pick from stock C,8216.0,8252.0
+485,pack C,8217.0,8266.0
+489,manufacture A,8217.0,8485.0
+572,place order,8220.0,8222.0
+533,pack C,8222.0,8262.0
+552,manufacture B,8222.0,8606.0
+572,arrange standard order,8222.0,8237.0
+573,place order,8230.0,8232.0
+573,arrange custom order,8232.0,8257.0
+566,attempt delivery A,8233.0,9290.0
+406,order completed,8234.0,8235.0
+469,attempt delivery C,8234.0,
+572,pick from stock C,8237.0,8291.0
+574,place order,8240.0,8242.0
+574,arrange standard order,8242.0,8257.0
+575,place order,8250.0,8252.0
+570,pack A,8252.0,8263.0
+575,arrange custom order,8252.0,8274.0
+574,pick from stock B,8257.0,8308.0
+576,place order,8260.0,8262.0
+533,attempt delivery A,8262.0,9346.0
+576,arrange custom order,8262.0,8283.0
+531,pack B,8263.0,8278.0
+553,manufacture B,8263.0,8739.0
+577,place order,8270.0,8272.0
+577,arrange custom order,8272.0,8302.0
+512,attempt delivery B,8278.0,9848.0
+531,attempt delivery A,8278.0,9546.0
+399,order completed,8278.0,8279.0
+578,place order,8280.0,8282.0
+476,attempt delivery C,8282.0,
+538,pack C,8282.0,8325.0
+555,manufacture B,8282.0,8750.0
+578,arrange standard order,8282.0,8294.0
+388,order completed,8282.0,8283.0
+579,place order,8290.0,8292.0
+572,pack A,8292.0,8307.0
+579,arrange standard order,8292.0,8306.0
+578,pick from stock B,8294.0,8327.0
+580,place order,8300.0,8302.0
+580,arrange custom order,8302.0,8331.0
+579,pick from stock C,8306.0,8354.0
+574,pack C,8308.0,8339.0
+517,attempt delivery B,8313.0,
+540,pack C,8313.0,8338.0
+394,order completed,8313.0,8314.0
+556,manufacture B,8313.0,8772.0
+386,order completed,8316.0,8317.0
+525,attempt delivery B,8316.0,9948.0
+541,pack A,8324.0,8339.0
+560,manufacture B,8324.0,8784.0
+578,pack C,8327.0,8359.0
+558,attempt delivery B,8331.0,
+428,order completed,8331.0,8332.0
+482,attempt delivery B,8344.0,
+543,pack B,8344.0,8366.0
+435,order completed,8344.0,8345.0
+563,manufacture B,8344.0,8771.0
+579,pack B,8354.0,8376.0
+578,attempt delivery A,8359.0,9775.0
+581,place order,8400.0,8402.0
+581,arrange standard order,8402.0,8412.0
+350,order completed,8405.0,8406.0
+551,attempt delivery C,8405.0,
+582,place order,8410.0,8412.0
+581,pick from stock A,8412.0,8441.0
+582,arrange standard order,8412.0,8426.0
+419,order completed,8415.0,8416.0
+528,attempt delivery B,8415.0,9855.0
+544,pack C,8418.0,8443.0
+564,manufacture B,8418.0,8781.0
+583,place order,8420.0,8422.0
+583,arrange standard order,8422.0,8433.0
+487,pack A,8425.0,8436.0
+490,manufacture A,8425.0,8752.0
+486,pack A,8426.0,8438.0
+495,manufacture A,8426.0,8732.0
+582,pick from stock B,8426.0,8478.0
+357,order completed,8429.0,8430.0
+477,attempt delivery C,8429.0,
+584,place order,8430.0,8432.0
+584,arrange standard order,8432.0,8442.0
+583,pick from stock C,8433.0,8502.0
+486,attempt delivery A,8438.0,9751.0
+585,place order,8440.0,8442.0
+484,attempt delivery B,8442.0,9937.0
+581,pack C,8442.0,8471.0
+584,pick from stock A,8442.0,8456.0
+585,arrange standard order,8442.0,8454.0
+432,order completed,8442.0,8443.0
+586,place order,8450.0,8452.0
+586,arrange custom order,8452.0,8480.0
+585,pick from stock C,8454.0,8501.0
+584,pack C,8456.0,8483.0
+587,place order,8460.0,8462.0
+587,arrange custom order,8462.0,8486.0
+518,order completed,8468.0,8469.0
+588,place order,8470.0,8472.0
+588,arrange custom order,8472.0,8500.0
+582,pack A,8478.0,8488.0
+589,place order,8480.0,8482.0
+559,attempt delivery C,8482.0,
+589,arrange custom order,8482.0,8504.0
+382,order completed,8482.0,8483.0
+489,pack A,8485.0,8498.0
+496,manufacture A,8485.0,8743.0
+582,attempt delivery A,8488.0,9231.0
+590,place order,8490.0,8492.0
+590,arrange standard order,8492.0,8503.0
+547,pack C,8496.0,8541.0
+565,manufacture B,8496.0,8873.0
+414,order completed,8497.0,8498.0
+529,attempt delivery B,8497.0,
+489,attempt delivery A,8498.0,9354.0
+591,place order,8500.0,8502.0
+585,pack A,8502.0,8519.0
+583,pack B,8502.0,8517.0
+591,arrange standard order,8502.0,8516.0
+499,order completed,8502.0,8503.0
+540,attempt delivery C,8503.0,
+488,pack A,8503.0,8514.0
+503,manufacture A,8503.0,8815.0
+590,pick from stock B,8503.0,8558.0
+375,order completed,8503.0,8504.0
+592,place order,8510.0,8512.0
+575,manufacture B,8512.0,8872.0
+592,arrange custom order,8512.0,8533.0
+548,pack A,8514.0,8531.0
+591,pick from stock A,8516.0,8528.0
+583,attempt delivery A,8517.0,9830.0
+593,place order,8520.0,8522.0
+593,arrange standard order,8522.0,8533.0
+591,pack C,8528.0,8569.0
+594,place order,8530.0,8532.0
+570,attempt delivery B,8532.0,
+594,arrange standard order,8532.0,8547.0
+457,order completed,8532.0,8533.0
+593,pick from stock C,8533.0,8598.0
+595,place order,8540.0,8542.0
+595,arrange custom order,8542.0,8566.0
+594,pick from stock A,8547.0,8567.0
+596,place order,8550.0,8552.0
+596,arrange standard order,8552.0,8566.0
+590,pack A,8558.0,8572.0
+597,place order,8560.0,8562.0
+597,arrange custom order,8562.0,8583.0
+596,pick from stock A,8566.0,8590.0
+594,pack A,8567.0,8581.0
+598,place order,8570.0,8572.0
+598,arrange custom order,8572.0,8597.0
+599,place order,8580.0,8582.0
+599,arrange standard order,8582.0,8596.0
+447,order completed,8586.0,8587.0
+600,place order,8590.0,8592.0
+596,pack A,8592.0,8603.0
+600,arrange standard order,8592.0,8607.0
+599,pick from stock C,8596.0,8644.0
+593,pack C,8598.0,8637.0
+550,pack A,8600.0,8616.0
+576,manufacture B,8600.0,8980.0
+552,pack A,8606.0,8625.0
+577,manufacture B,8606.0,9023.0
+600,pick from stock B,8607.0,8633.0
+552,attempt delivery A,8625.0,
+600,pack C,8633.0,8666.0
+593,attempt delivery A,8637.0,
+599,pack A,8644.0,8657.0
+479,order completed,8649.0,8650.0
+485,attempt delivery B,8649.0,
+430,order completed,8688.0,8689.0
+543,attempt delivery C,8688.0,
+601,place order,8690.0,8692.0
+601,arrange standard order,8692.0,8704.0
+371,order completed,8698.0,8699.0
+487,attempt delivery C,8698.0,
+602,place order,8700.0,8702.0
+602,arrange standard order,8702.0,8715.0
+601,pick from stock C,8704.0,8772.0
+603,place order,8710.0,8712.0
+603,arrange standard order,8712.0,8723.0
+602,pick from stock B,8715.0,8737.0
+604,place order,8720.0,8722.0
+544,attempt delivery C,8722.0,
+604,arrange standard order,8722.0,8732.0
+322,order completed,8722.0,8723.0
+603,pick from stock C,8723.0,8756.0
+523,order completed,8726.0,8727.0
+605,place order,8730.0,8732.0
+495,pack B,8732.0,8756.0
+509,manufacture A,8732.0,9087.0
+604,pick from stock A,8732.0,8763.0
+605,arrange custom order,8732.0,8755.0
+602,pack C,8737.0,8765.0
+553,pack B,8739.0,8760.0
+580,manufacture B,8739.0,9195.0
+606,place order,8740.0,8742.0
+606,arrange custom order,8742.0,8765.0
+496,pack A,8743.0,8762.0
+514,manufacture A,8743.0,8998.0
+488,attempt delivery C,8747.0,
+433,order completed,8747.0,8748.0
+534,order completed,8748.0,8749.0
+607,place order,8750.0,8752.0
+555,pack C,8752.0,8798.0
+587,manufacture B,8752.0,9157.0
+490,pack C,8752.0,8793.0
+521,manufacture A,8752.0,9042.0
+607,arrange custom order,8752.0,8780.0
+603,pack B,8756.0,8776.0
+608,place order,8760.0,8762.0
+548,attempt delivery C,8762.0,
+608,arrange standard order,8762.0,8775.0
+381,order completed,8762.0,8763.0
+604,pack A,8763.0,8780.0
+609,place order,8770.0,8772.0
+563,pack C,8772.0,8821.0
+588,manufacture B,8772.0,9163.0
+556,pack A,8772.0,8791.0
+589,manufacture B,8772.0,9204.0
+601,pack B,8772.0,8800.0
+609,arrange custom order,8772.0,8793.0
+608,pick from stock C,8775.0,8824.0
+610,place order,8780.0,8782.0
+604,attempt delivery A,8782.0,
+597,manufacture B,8782.0,9162.0
+610,arrange standard order,8782.0,8795.0
+598,manufacture B,8784.0,9160.0
+409,order completed,8789.0,8790.0
+547,attempt delivery C,8789.0,
+611,place order,8790.0,8792.0
+572,attempt delivery B,8792.0,
+556,attempt delivery A,8792.0,
+611,arrange standard order,8792.0,8806.0
+453,order completed,8792.0,8793.0
+564,pack C,8793.0,8833.0
+610,pick from stock A,8795.0,8805.0
+560,pack C,8798.0,8833.0
+612,place order,8800.0,8802.0
+612,arrange standard order,8802.0,8817.0
+524,order completed,8803.0,8804.0
+610,pack A,8805.0,8821.0
+611,pick from stock A,8806.0,8846.0
+613,place order,8810.0,8812.0
+613,arrange custom order,8812.0,8834.0
+503,pack B,8815.0,8835.0
+535,manufacture A,8815.0,9089.0
+612,pick from stock C,8817.0,8855.0
+614,place order,8820.0,8822.0
+610,attempt delivery A,8822.0,9895.0
+614,arrange custom order,8822.0,8842.0
+608,pack A,8824.0,8835.0
+615,place order,8830.0,8832.0
+615,arrange standard order,8832.0,8845.0
+530,order completed,8832.0,8833.0
+564,attempt delivery A,8833.0,9943.0
+560,attempt delivery A,8833.0,9862.0
+616,place order,8840.0,8842.0
+596,attempt delivery C,8842.0,
+616,arrange standard order,8842.0,8855.0
+425,order completed,8842.0,8843.0
+520,order completed,8844.0,8845.0
+503,attempt delivery A,8844.0,9639.0
+615,pick from stock A,8845.0,8858.0
+611,pack C,8846.0,8887.0
+617,place order,8850.0,8852.0
+617,arrange standard order,8852.0,8863.0
+612,pack C,8855.0,8895.0
+616,pick from stock B,8855.0,8883.0
+615,pack A,8858.0,8874.0
+618,place order,8860.0,8862.0
+618,arrange standard order,8862.0,8876.0
+617,pick from stock C,8863.0,8897.0
+619,place order,8870.0,8872.0
+575,pack C,8872.0,8901.0
+609,manufacture B,8872.0,9302.0
+619,arrange custom order,8872.0,8894.0
+618,pick from stock C,8876.0,8907.0
+620,place order,8880.0,8882.0
+620,arrange custom order,8882.0,8903.0
+616,pack A,8883.0,8902.0
+565,pack C,8887.0,8930.0
+383,order completed,8888.0,8889.0
+550,attempt delivery C,8888.0,
+443,order completed,8889.0,8890.0
+495,attempt delivery C,8889.0,
+619,manufacture B,8894.0,9288.0
+617,pack B,8897.0,8915.0
+442,order completed,8900.0,8901.0
+575,attempt delivery A,8901.0,9882.0
+400,order completed,8904.0,8905.0
+538,attempt delivery B,8904.0,
+618,pack C,8907.0,8943.0
+542,order completed,8911.0,8912.0
+616,attempt delivery A,8911.0,9639.0
+537,order completed,8914.0,8915.0
+472,order completed,8929.0,8930.0
+553,attempt delivery C,8929.0,
+574,attempt delivery B,8940.0,
+461,order completed,8940.0,8941.0
+496,attempt delivery C,8940.0,
+459,order completed,8941.0,8942.0
+618,attempt delivery A,8943.0,
+463,order completed,8947.0,8948.0
+541,attempt delivery B,8947.0,
+387,order completed,8965.0,8966.0
+602,attempt delivery C,8965.0,
+439,order completed,8968.0,8969.0
+563,attempt delivery C,8968.0,
+444,order completed,8969.0,8970.0
+615,attempt delivery C,8969.0,
+621,place order,8980.0,8982.0
+576,pack B,8982.0,8999.0
+620,manufacture B,8982.0,9381.0
+621,arrange standard order,8982.0,8993.0
+546,order completed,8982.0,8983.0
+579,attempt delivery B,8983.0,
+470,order completed,8983.0,8984.0
+581,attempt delivery B,8983.0,
+451,order completed,8984.0,8985.0
+622,place order,8990.0,8992.0
+622,arrange standard order,8992.0,9004.0
+621,pick from stock B,8993.0,9017.0
+514,pack A,8998.0,9018.0
+549,manufacture A,8998.0,9305.0
+623,place order,9000.0,9002.0
+623,arrange standard order,9002.0,9013.0
+522,order completed,9002.0,9003.0
+622,pick from stock A,9004.0,9026.0
+624,place order,9010.0,9012.0
+624,arrange custom order,9012.0,9041.0
+623,pick from stock A,9013.0,9048.0
+621,pack B,9017.0,9038.0
+625,place order,9020.0,9022.0
+625,arrange custom order,9022.0,9046.0
+577,pack A,9023.0,9038.0
+506,order completed,9025.0,9026.0
+584,attempt delivery B,9025.0,
+622,pack B,9026.0,9045.0
+626,place order,9030.0,9032.0
+626,arrange custom order,9032.0,9058.0
+611,attempt delivery C,9038.0,
+404,order completed,9038.0,9039.0
+352,order completed,9039.0,9040.0
+612,attempt delivery C,9039.0,
+627,place order,9040.0,9042.0
+521,pack A,9042.0,9053.0
+557,manufacture A,9042.0,9379.0
+627,arrange custom order,9042.0,9069.0
+622,attempt delivery A,9045.0,9977.0
+623,pack B,9048.0,9069.0
+628,place order,9050.0,9052.0
+628,arrange custom order,9052.0,9078.0
+473,order completed,9055.0,9056.0
+585,attempt delivery B,9055.0,
+626,manufacture B,9058.0,9499.0
+629,place order,9060.0,9062.0
+629,arrange standard order,9062.0,9076.0
+630,place order,9070.0,9072.0
+630,arrange standard order,9072.0,9085.0
+629,pick from stock C,9076.0,9144.0
+631,place order,9080.0,9082.0
+631,arrange standard order,9082.0,9096.0
+630,pick from stock B,9085.0,9115.0
+509,pack A,9087.0,9103.0
+561,manufacture A,9087.0,9435.0
+535,pack C,9089.0,9130.0
+567,manufacture A,9089.0,9382.0
+632,place order,9090.0,9092.0
+632,arrange custom order,9092.0,9114.0
+631,pick from stock C,9096.0,9158.0
+633,place order,9100.0,9102.0
+633,arrange custom order,9102.0,9131.0
+634,place order,9110.0,9112.0
+634,arrange standard order,9112.0,9123.0
+630,pack C,9115.0,9144.0
+417,order completed,9117.0,9118.0
+576,attempt delivery C,9117.0,
+635,place order,9120.0,9122.0
+635,arrange standard order,9122.0,9133.0
+634,pick from stock B,9123.0,9155.0
+636,place order,9130.0,9132.0
+636,arrange custom order,9132.0,9152.0
+635,pick from stock B,9133.0,9191.0
+468,order completed,9134.0,9135.0
+591,attempt delivery B,9134.0,
+637,place order,9140.0,9142.0
+637,arrange custom order,9142.0,9162.0
+629,pack A,9144.0,9159.0
+638,place order,9150.0,9152.0
+638,arrange standard order,9152.0,9164.0
+545,order completed,9154.0,9155.0
+634,pack A,9155.0,9171.0
+587,pack C,9157.0,9197.0
+632,manufacture B,9157.0,9564.0
+629,attempt delivery A,9159.0,
+631,pack A,9159.0,9177.0
+639,place order,9160.0,9162.0
+598,pack C,9162.0,9187.0
+633,manufacture B,9162.0,9603.0
+636,manufacture B,9162.0,9613.0
+639,arrange custom order,9162.0,9186.0
+539,order completed,9162.0,9163.0
+588,pack C,9163.0,9213.0
+638,pick from stock C,9164.0,9195.0
+640,place order,9170.0,9172.0
+597,pack A,9172.0,9190.0
+640,arrange standard order,9172.0,9182.0
+422,order completed,9173.0,9174.0
+514,attempt delivery C,9173.0,
+478,order completed,9174.0,9175.0
+590,attempt delivery B,9174.0,
+640,pick from stock B,9182.0,9226.0
+639,manufacture B,9186.0,9583.0
+598,attempt delivery A,9187.0,
+635,pack B,9191.0,9220.0
+580,pack A,9195.0,9214.0
+638,pack A,9195.0,9205.0
+589,pack A,9205.0,9219.0
+588,attempt delivery A,9213.0,
+640,pack C,9226.0,9266.0
+582,order completed,9231.0,9232.0
+580,attempt delivery A,9231.0,
+464,order completed,9247.0,9248.0
+594,attempt delivery B,9247.0,
+641,place order,9270.0,9272.0
+641,arrange custom order,9272.0,9294.0
+475,order completed,9274.0,9275.0
+599,attempt delivery B,9274.0,
+416,order completed,9276.0,9277.0
+600,attempt delivery B,9276.0,
+642,place order,9280.0,9282.0
+642,arrange custom order,9282.0,9310.0
+619,pack A,9288.0,9305.0
+643,place order,9290.0,9292.0
+589,attempt delivery A,9292.0,
+643,arrange standard order,9292.0,9303.0
+566,order completed,9292.0,9293.0
+641,manufacture B,9294.0,9741.0
+644,place order,9300.0,9302.0
+609,pack C,9302.0,9346.0
+644,arrange standard order,9302.0,9316.0
+643,pick from stock C,9303.0,9377.0
+549,pack A,9305.0,9318.0
+568,manufacture A,9305.0,9625.0
+645,place order,9310.0,9312.0
+642,manufacture B,9312.0,9749.0
+621,attempt delivery C,9312.0,
+645,arrange custom order,9312.0,9336.0
+436,order completed,9312.0,9313.0
+644,pick from stock B,9316.0,9363.0
+646,place order,9320.0,9322.0
+646,arrange standard order,9322.0,9337.0
+647,place order,9330.0,9332.0
+647,arrange custom order,9332.0,9357.0
+646,pick from stock C,9337.0,9404.0
+648,place order,9340.0,9342.0
+648,arrange custom order,9342.0,9364.0
+635,attempt delivery A,9346.0,
+533,order completed,9346.0,9347.0
+649,place order,9350.0,9352.0
+649,arrange standard order,9352.0,9366.0
+489,order completed,9354.0,9355.0
+619,attempt delivery A,9354.0,
+650,place order,9360.0,9362.0
+650,arrange custom order,9362.0,9384.0
+554,order completed,9362.0,9363.0
+644,pack C,9363.0,9406.0
+648,manufacture B,9364.0,9805.0
+651,place order,9370.0,9372.0
+651,arrange custom order,9372.0,9399.0
+643,pack A,9377.0,9394.0
+649,pick from stock C,9377.0,9439.0
+557,pack A,9379.0,9391.0
+569,manufacture A,9379.0,9713.0
+652,place order,9380.0,9382.0
+571,manufacture A,9382.0,9679.0
+652,arrange standard order,9382.0,9392.0
+411,order completed,9387.0,9388.0
+577,attempt delivery C,9387.0,
+653,place order,9390.0,9392.0
+620,pack A,9392.0,9405.0
+653,arrange custom order,9392.0,9422.0
+643,attempt delivery A,9394.0,
+567,pack A,9394.0,9414.0
+651,manufacture B,9399.0,9850.0
+654,place order,9400.0,9402.0
+654,arrange custom order,9402.0,9429.0
+646,pack C,9404.0,9431.0
+652,pick from stock C,9404.0,9453.0
+655,place order,9410.0,9412.0
+655,arrange custom order,9412.0,9437.0
+656,place order,9420.0,9422.0
+653,manufacture B,9422.0,9887.0
+656,arrange standard order,9422.0,9436.0
+657,place order,9430.0,9432.0
+657,arrange standard order,9432.0,9443.0
+561,pack A,9435.0,9445.0
+573,manufacture A,9435.0,9733.0
+649,pack C,9439.0,9489.0
+656,pick from stock C,9439.0,9474.0
+658,place order,9440.0,9442.0
+658,arrange custom order,9442.0,9468.0
+659,place order,9450.0,9452.0
+659,arrange standard order,9452.0,9464.0
+652,pack A,9453.0,9469.0
+657,pick from stock C,9453.0,9499.0
+660,place order,9460.0,9462.0
+660,arrange custom order,9462.0,9487.0
+659,pick from stock B,9464.0,9509.0
+491,order completed,9465.0,9466.0
+630,attempt delivery C,9465.0,
+656,pack C,9474.0,9512.0
+423,order completed,9480.0,9481.0
+597,attempt delivery C,9480.0,
+626,pack C,9499.0,9530.0
+654,manufacture B,9499.0,9875.0
+657,pack C,9499.0,9545.0
+562,order completed,9505.0,9506.0
+644,attempt delivery A,9505.0,
+557,attempt delivery C,9509.0,
+449,order completed,9509.0,9510.0
+659,pack C,9512.0,9552.0
+536,order completed,9525.0,9526.0
+603,attempt delivery B,9525.0,
+531,order completed,9546.0,9547.0
+567,attempt delivery A,9546.0,
+661,place order,9560.0,9562.0
+661,arrange custom order,9562.0,9582.0
+632,pack A,9564.0,9574.0
+660,manufacture B,9564.0,9982.0
+510,order completed,9565.0,9566.0
+490,attempt delivery B,9565.0,
+662,place order,9570.0,9572.0
+662,arrange standard order,9572.0,9582.0
+474,order completed,9577.0,9578.0
+555,attempt delivery B,9577.0,
+663,place order,9580.0,9582.0
+601,attempt delivery B,9582.0,
+662,pick from stock C,9582.0,9647.0
+663,arrange custom order,9582.0,9603.0
+504,order completed,9582.0,9583.0
+639,pack B,9583.0,9610.0
+661,manufacture B,9583.0,9963.0
+494,order completed,9584.0,9585.0
+608,attempt delivery B,9584.0,
+664,place order,9590.0,9592.0
+664,arrange custom order,9592.0,9614.0
+665,place order,9600.0,9602.0
+665,arrange standard order,9602.0,9612.0
+633,pack A,9603.0,9613.0
+663,manufacture B,9603.0,9970.0
+507,order completed,9604.0,9605.0
+617,attempt delivery B,9604.0,
+666,place order,9610.0,9612.0
+620,attempt delivery C,9612.0,
+665,pick from stock A,9612.0,9630.0
+666,arrange standard order,9612.0,9626.0
+446,order completed,9612.0,9613.0
+636,pack B,9613.0,9643.0
+501,order completed,9615.0,9616.0
+565,attempt delivery B,9615.0,
+667,place order,9620.0,9622.0
+667,arrange standard order,9622.0,9637.0
+568,pack B,9625.0,9650.0
+586,manufacture A,9625.0,9957.0
+521,attempt delivery B,9626.0,
+666,pick from stock C,9626.0,9683.0
+467,order completed,9626.0,9627.0
+440,order completed,9627.0,9628.0
+623,attempt delivery B,9627.0,
+668,place order,9630.0,9632.0
+665,pack C,9632.0,9677.0
+668,arrange standard order,9632.0,9646.0
+561,attempt delivery A,9639.0,
+503,order completed,9639.0,9640.0
+652,attempt delivery A,9639.0,
+616,order completed,9640.0,9641.0
+669,place order,9641.0,9643.0
+669,arrange standard order,9643.0,9656.0
+668,pick from stock A,9646.0,9663.0
+662,pack C,9647.0,9679.0
+667,pick from stock C,9647.0,9715.0
+670,place order,9650.0,9652.0
+670,arrange custom order,9652.0,9680.0
+511,order completed,9655.0,9656.0
+509,attempt delivery B,9655.0,
+669,pick from stock A,9656.0,9689.0
+671,place order,9660.0,9662.0
+671,arrange standard order,9662.0,9676.0
+668,pack A,9663.0,9681.0
+672,place order,9670.0,9672.0
+535,attempt delivery B,9672.0,
+672,arrange standard order,9672.0,9686.0
+454,order completed,9672.0,9673.0
+671,pick from stock B,9676.0,9717.0
+571,pack C,9679.0,9713.0
+592,manufacture A,9679.0,
+673,place order,9680.0,9682.0
+673,arrange standard order,9682.0,9697.0
+666,pack B,9683.0,9702.0
+672,pick from stock A,9686.0,9724.0
+669,pack B,9689.0,9716.0
+674,place order,9690.0,9692.0
+674,arrange custom order,9692.0,9719.0
+673,pick from stock B,9697.0,9740.0
+675,place order,9700.0,9702.0
+675,arrange custom order,9702.0,9726.0
+676,place order,9710.0,9712.0
+676,arrange custom order,9712.0,9740.0
+569,pack B,9713.0,9742.0
+595,manufacture A,9713.0,
+667,pack A,9715.0,9726.0
+671,pack C,9717.0,9745.0
+677,place order,9720.0,9722.0
+677,arrange custom order,9722.0,9752.0
+672,pack C,9724.0,9753.0
+678,place order,9730.0,9732.0
+678,arrange standard order,9732.0,9746.0
+573,pack C,9733.0,9774.0
+605,manufacture A,9733.0,
+679,place order,9740.0,9742.0
+673,pack A,9742.0,9753.0
+641,pack A,9742.0,9761.0
+679,arrange standard order,9742.0,9756.0
+492,order completed,9743.0,9744.0
+634,attempt delivery B,9743.0,
+515,order completed,9744.0,9745.0
+631,attempt delivery B,9744.0,
+678,pick from stock C,9746.0,9791.0
+642,pack C,9749.0,9794.0
+680,place order,9750.0,9752.0
+626,attempt delivery A,9752.0,
+680,arrange standard order,9752.0,9765.0
+486,order completed,9752.0,9753.0
+679,pick from stock C,9756.0,9802.0
+680,pick from stock B,9765.0,9825.0
+500,order completed,9770.0,9771.0
+587,attempt delivery B,9770.0,
+412,order completed,9771.0,9772.0
+656,attempt delivery C,9771.0,
+578,order completed,9775.0,9776.0
+657,attempt delivery A,9775.0,
+678,pack C,9791.0,9834.0
+679,pack A,9802.0,9822.0
+648,pack C,9805.0,9831.0
+445,order completed,9808.0,9809.0
+659,attempt delivery C,9808.0,
+680,pack B,9825.0,9848.0
+583,order completed,9830.0,9831.0
+639,attempt delivery A,9830.0,
+638,attempt delivery B,9848.0,
+512,order completed,9848.0,9849.0
+681,place order,9850.0,9852.0
+651,pack C,9852.0,9882.0
+681,arrange custom order,9852.0,9881.0
+528,order completed,9855.0,9856.0
+640,attempt delivery B,9855.0,
+682,place order,9860.0,9862.0
+668,attempt delivery A,9862.0,
+682,arrange standard order,9862.0,9876.0
+560,order completed,9862.0,9863.0
+683,place order,9870.0,9872.0
+683,arrange custom order,9872.0,9895.0
+654,pack C,9875.0,9919.0
+682,pick from stock B,9876.0,9933.0
+684,place order,9880.0,9882.0
+681,manufacture B,9882.0,
+571,attempt delivery A,9882.0,
+684,arrange standard order,9882.0,9892.0
+575,order completed,9882.0,9883.0
+653,pack B,9887.0,9904.0
+450,order completed,9889.0,9890.0
+632,attempt delivery C,9889.0,
+685,place order,9890.0,9892.0
+684,pick from stock C,9892.0,9944.0
+685,arrange custom order,9892.0,9912.0
+672,attempt delivery A,9895.0,
+683,manufacture B,9895.0,
+610,order completed,9895.0,9896.0
+686,place order,9900.0,9902.0
+686,arrange standard order,9902.0,9912.0
+687,place order,9910.0,9912.0
+686,pick from stock A,9912.0,9948.0
+687,arrange custom order,9912.0,9935.0
+688,place order,9920.0,9922.0
+549,attempt delivery B,9922.0,
+688,arrange custom order,9922.0,9943.0
+526,order completed,9922.0,9923.0
+689,place order,9930.0,9932.0
+689,arrange custom order,9932.0,9955.0
+682,pack A,9933.0,9951.0
+687,manufacture B,9935.0,
+484,order completed,9937.0,9938.0
+609,attempt delivery B,9937.0,
+690,place order,9940.0,9942.0
+633,attempt delivery C,9942.0,
+690,arrange custom order,9942.0,9970.0
+448,order completed,9942.0,9943.0
+641,attempt delivery A,9943.0,
+564,order completed,9943.0,9944.0
+684,pack C,9944.0,9972.0
+646,attempt delivery B,9948.0,
+686,pack A,9948.0,9962.0
+525,order completed,9948.0,9949.0
+691,place order,9950.0,9952.0
+691,arrange custom order,9952.0,9982.0
+689,manufacture B,9955.0,
+586,pack C,9957.0,9992.0
+606,manufacture A,9957.0,
+692,place order,9960.0,9962.0
+692,arrange custom order,9962.0,9982.0
+661,pack C,9963.0,
+427,order completed,9964.0,9965.0
+636,attempt delivery C,9964.0,
+693,place order,9970.0,9972.0
+663,pack A,9972.0,9987.0
+693,arrange custom order,9972.0,
+622,order completed,9977.0,9978.0
+642,attempt delivery A,9977.0,
+694,place order,9980.0,9982.0
+660,pack C,9982.0,
+692,manufacture B,9982.0,
+694,arrange custom order,9982.0,
+695,place order,9990.0,9992.0
+695,arrange custom order,9992.0,

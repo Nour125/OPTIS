@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>businessprocess &#8212; OPTIS 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for businessprocess</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">simpy</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="kn">from</span> <span class="nn">case</span> <span class="kn">import</span> <span class="n">Case</span>
+
+
+<div class="viewcode-block" id="BusinessProcess"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess">[docs]</a><span class="k">class</span> <span class="nc">BusinessProcess</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    A class used to represent a Business Process</span>
+
+<span class="sd">    ....</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    env : simpy.Environment</span>
+<span class="sd">        an environment for the simulation of the process</span>
+<span class="sd">    system = simpy.Resource</span>
+<span class="sd">        the number of the resources of this type the process has</span>
+<span class="sd">    order_taker : simpy.Resource</span>
+<span class="sd">        the number of the resources of this type the process has</span>
+<span class="sd">    stock_handler_a : simpy.Resource</span>
+<span class="sd">        the number of the resources of this type the process has</span>
+<span class="sd">    stock_handler_b : simpy.Resource</span>
+<span class="sd">        the number of the resources of this type the process has</span>
+<span class="sd">    stock_handler_c : simpy.Resource</span>
+<span class="sd">        the number of the resources of this type the process has</span>
+<span class="sd">    manufacturer_a : simpy.Resource</span>
+<span class="sd">        the number of the resources of this type the process has</span>
+<span class="sd">    manufacturer_b : simpy.Resource</span>
+<span class="sd">        the number of the resources of this type the process has</span>
+<span class="sd">    packer_a : simpy.Resource</span>
+<span class="sd">        the number of the resources of this type the process has</span>
+<span class="sd">    packer_b : simpy.Resource</span>
+<span class="sd">        the number of the resources of this type the process has</span>
+<span class="sd">    packer_c : simpy.Resource</span>
+<span class="sd">        the number of the resources of this type the process has</span>
+<span class="sd">    delivery_service_a : simpy.Resource</span>
+<span class="sd">        the number of the resources of this type the process has</span>
+<span class="sd">    delivery_service_b : simpy.Resource</span>
+<span class="sd">        the number of the resources of this type the process has</span>
+<span class="sd">    delivery_service_c : simpy.Resource</span>
+<span class="sd">        the number of the resources of this type the process has</span>
+<span class="sd">    active_cases : list of int</span>
+<span class="sd">        a list containing the case-ids of all the currently active cases</span>
+<span class="sd">    case_objects = list of case.Case</span>
+<span class="sd">        a list containing all the case objects created in the process</span>
+<span class="sd">    flag : bool</span>
+<span class="sd">        indicates whether the process is currently controlled by a RL-agent</span>
+<span class="sd">    case_id : int</span>
+<span class="sd">        if a RL-agent controls the process, this varable saves the case-id of the currently controlled case</span>
+<span class="sd">    next : int</span>
+<span class="sd">        if a RL-agent controls the process, this varaiable saves what the next action the agent chose is</span>
+<span class="sd">    done_cases : set of case.Case</span>
+<span class="sd">        if a RL-agent controls the process, this set saves all the done cases of the agent</span>
+<span class="sd">    event_log_flag : bool</span>
+<span class="sd">        if we&#39;re using the process to generate an event log by simulating it, this flag is set to true </span>
+<span class="sd">    event_log : dict of {int : dict of {str : int}, dict of {str : str}, dict of {str: float}, dict of {str, float}}</span>
+<span class="sd">        if the event_log_flag is set to true, we save the events of the process to this variable,</span>
+<span class="sd">        an event includes it&#39;s case-id, activity, start timestamp and end timestamp </span>
+<span class="sd">    event_counter : int</span>
+<span class="sd">        a counter for the number of events which happened (useful when adding a new event to the event_log)</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    place_order()</span>
+<span class="sd">        executes the activity by yielding a timeout with a certain duration</span>
+<span class="sd">    arrange_standard_order()</span>
+<span class="sd">        executes the activity by yielding a timeout with a certain duration</span>
+<span class="sd">    arrange_custom_order()</span>
+<span class="sd">        executes the activity by yielding a timeout with a certain duration</span>
+<span class="sd">    pick_from_stock_a()</span>
+<span class="sd">        executes the activity by yielding a timeout with a certain duration</span>
+<span class="sd">    pick_from_stock_b()</span>
+<span class="sd">        executes the activity by yielding a timeout with a certain duration</span>
+<span class="sd">    pick_from_stock_c()</span>
+<span class="sd">        executes the activity by yielding a timeout with a certain duration</span>
+<span class="sd">    manufacture_a()</span>
+<span class="sd">        executes the activity by yielding a timeout with a certain duration</span>
+<span class="sd">    manufacture_b()</span>
+<span class="sd">        executes the activity by yielding a timeout with a certain duration</span>
+<span class="sd">    pack_a()</span>
+<span class="sd">        executes the activity by yielding a timeout with a certain duration</span>
+<span class="sd">    pack_b()</span>
+<span class="sd">        executes the activity by yielding a timeout with a certain duration</span>
+<span class="sd">    pack_c()</span>
+<span class="sd">        executes the activity by yielding a timeout with a certain duration</span>
+<span class="sd">    attempt_delivery_a()</span>
+<span class="sd">        executes the activity by yielding a timeout with a certain duration</span>
+<span class="sd">    attempt_delivery_b()</span>
+<span class="sd">        executes the activity by yielding a timeout with a certain duration</span>
+<span class="sd">    attempt_delivery_c()</span>
+<span class="sd">        executes the activity by yielding a timeout with a certain duration</span>
+<span class="sd">    order_completed()</span>
+<span class="sd">        executes the activity by yielding a timeout with a certain duration</span>
+<span class="sd">    is_valid(event, action, case_obj)</span>
+<span class="sd">        checks whether the next action after a certain event in a case is valid </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">ressources</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        env : simpy.Environment</span>
+<span class="sd">            An environment for the simulation of the process</span>
+<span class="sd">        ressources : list of int</span>
+<span class="sd">            A list storing the number of the different resources available (13 types of resources)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># initialize simulation environment</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">env</span> <span class="o">=</span> <span class="n">env</span>
+
+        <span class="c1"># initialize ressources</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">system</span> <span class="o">=</span> <span class="n">simpy</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">ressources</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">order_taker</span> <span class="o">=</span> <span class="n">simpy</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">ressources</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stock_handler_a</span> <span class="o">=</span> <span class="n">simpy</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">ressources</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stock_handler_b</span> <span class="o">=</span> <span class="n">simpy</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">ressources</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stock_handler_c</span> <span class="o">=</span> <span class="n">simpy</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">ressources</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">manufacturer_a</span> <span class="o">=</span> <span class="n">simpy</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">ressources</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">manufacturer_b</span> <span class="o">=</span> <span class="n">simpy</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">ressources</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">packer_a</span> <span class="o">=</span> <span class="n">simpy</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">ressources</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">packer_b</span> <span class="o">=</span> <span class="n">simpy</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">ressources</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">packer_c</span> <span class="o">=</span> <span class="n">simpy</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">ressources</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="c1"># capacity of each delivery service instead of numbers of workers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delivery_service_a</span> <span class="o">=</span> <span class="n">simpy</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">ressources</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delivery_service_b</span> <span class="o">=</span> <span class="n">simpy</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">ressources</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delivery_service_c</span> <span class="o">=</span> <span class="n">simpy</span><span class="o">.</span><span class="n">Resource</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">ressources</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    
+        <span class="c1"># initialize lists with active cases and all case objects</span>
+        <span class="c1"># we decided that at the start of the process there are already 3 cases waiting </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">active_cases</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="c1"># saves case_ids</span>
+        <span class="n">case_0</span> <span class="o">=</span> <span class="n">Case</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">case_1</span> <span class="o">=</span> <span class="n">Case</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">case_2</span> <span class="o">=</span> <span class="n">Case</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">case_objects</span> <span class="o">=</span> <span class="p">[</span><span class="n">case_0</span><span class="p">,</span> <span class="n">case_1</span><span class="p">,</span> <span class="n">case_2</span><span class="p">]</span> <span class="c1"># saves case objects</span>
+
+        <span class="c1"># flag indicates whether the process is currently controlled by the agent and we set it on false every time the agent does an activity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">flag</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="c1"># if the agent controls a case, this varable saves the case_id of the controlled case</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">case_id</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># if the agent controls a case, this varaiable saves what the next action the agent chose is</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># initialize set containg all the done cases of the agent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">done_cases</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([])</span>
+
+        <span class="c1"># if we&#39;re using the simmodel to generate an event log this flag is set to true </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_log_flag</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="c1"># if the event_log_flag is true we save the events to this variable</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_log</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># a counter for the number of events which happened (useful for the event log generator)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+<div class="viewcode-block" id="BusinessProcess.place_order"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.place_order">[docs]</a>    <span class="k">def</span> <span class="nf">place_order</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes the activity &quot;place order&quot; by yielding a timeout of 2 time units. </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BusinessProcess.arrange_standard_order"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.arrange_standard_order">[docs]</a>    <span class="k">def</span> <span class="nf">arrange_standard_order</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes the activity &quot;arrange standard order&quot; by yielding a timeout in the interval of 10 to 15 time units.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="BusinessProcess.arrange_custom_order"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.arrange_custom_order">[docs]</a>    <span class="k">def</span> <span class="nf">arrange_custom_order</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes the activity &quot;arrange custom order&quot; by yielding a timeout in the interval of 20 to 30 time units.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="BusinessProcess.pick_from_stock_a"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.pick_from_stock_a">[docs]</a>    <span class="k">def</span> <span class="nf">pick_from_stock_a</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes the activity &quot;pick from stock A&quot; by yielding a timeout in the interval of 10 to 40 time units.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">40</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="BusinessProcess.pick_from_stock_b"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.pick_from_stock_b">[docs]</a>    <span class="k">def</span> <span class="nf">pick_from_stock_b</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes the activity &quot;pick from stock B&quot; by yielding a timeout in the interval of 20 to 60 time units.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">60</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="BusinessProcess.pick_from_stock_c"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.pick_from_stock_c">[docs]</a>    <span class="k">def</span> <span class="nf">pick_from_stock_c</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes the activity &quot;pick from stock C&quot; by yielding a timeout in the interval of 30 to 80 time units.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="BusinessProcess.manufacture_a"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.manufacture_a">[docs]</a>    <span class="k">def</span> <span class="nf">manufacture_a</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes the activity &quot;manufacture A&quot; by yielding a timeout in the interval of 240 to 360 time units.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">240</span><span class="p">,</span> <span class="mi">360</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="BusinessProcess.manufacture_b"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.manufacture_b">[docs]</a>    <span class="k">def</span> <span class="nf">manufacture_b</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes the activity &quot;manufacture B&quot; by yielding a timeout in the interval of 360 to 480 time units.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">360</span><span class="p">,</span> <span class="mi">480</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="BusinessProcess.pack_a"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.pack_a">[docs]</a>    <span class="k">def</span> <span class="nf">pack_a</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes the activity &quot;pack A&quot; by yielding a timeout in the interval of 10 to 20 time units.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="BusinessProcess.pack_b"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.pack_b">[docs]</a>    <span class="k">def</span> <span class="nf">pack_b</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes the activity &quot;pack B&quot; by yielding a timeout in the interval of 15 to 30 time units.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="BusinessProcess.pack_c"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.pack_c">[docs]</a>    <span class="k">def</span> <span class="nf">pack_c</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes the activity &quot;pack C&quot; by yielding a timeout in the interval of 25 to 50 time units.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="BusinessProcess.attempt_delivery_a"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.attempt_delivery_a">[docs]</a>    <span class="k">def</span> <span class="nf">attempt_delivery_a</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes the activity &quot;attempt delivery A&quot; by yielding a timeout in the interval of 720 to 1440 time units.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">720</span><span class="p">,</span> <span class="mi">1440</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="BusinessProcess.attempt_delivery_b"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.attempt_delivery_b">[docs]</a>    <span class="k">def</span> <span class="nf">attempt_delivery_b</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes the activity &quot;attempt delivery B&quot; by yielding a timeout in the interval of 1440 to 2160 time units.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1440</span><span class="p">,</span> <span class="mi">2160</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="BusinessProcess.attempt_delivery_c"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.attempt_delivery_c">[docs]</a>    <span class="k">def</span> <span class="nf">attempt_delivery_c</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes the activity &quot;attempt delivery C&quot; by yielding a timeout in the interval of 1440 to 2880 time units.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1440</span><span class="p">,</span> <span class="mi">2880</span><span class="p">))</span></div>
+    
+<div class="viewcode-block" id="BusinessProcess.order_completed"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.order_completed">[docs]</a>    <span class="k">def</span> <span class="nf">order_completed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Executes the activity &quot;order completed&quot; by yielding a timeout of 1 time unit.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">timeout</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BusinessProcess.is_valid"><a class="viewcode-back" href="../businessprocess.html#businessprocess.BusinessProcess.is_valid">[docs]</a>    <span class="k">def</span> <span class="nf">is_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">case_obj</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Checks whether the next action after a certain event in a case is valid based on the predefined process flow. </span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        event : int</span>
+<span class="sd">            the current event of the case</span>
+<span class="sd">        action : int</span>
+<span class="sd">            an encoded activity</span>
+<span class="sd">        case_obj: case.Case</span>
+<span class="sd">            the case for which we&#39;re doing the check</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            whether the action is valid or not</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">action</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">event</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="p">(</span><span class="n">action</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">action</span> <span class="o">==</span> <span class="mi">3</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">event</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">case_obj</span><span class="o">.</span><span class="n">standard_order</span> <span class="ow">and</span> <span class="p">(</span><span class="n">action</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">or</span> <span class="n">action</span> <span class="o">==</span> <span class="mi">5</span> <span class="ow">or</span> <span class="n">action</span> <span class="o">==</span> <span class="mi">6</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">event</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">case_obj</span><span class="o">.</span><span class="n">standard_order</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">action</span> <span class="o">==</span> <span class="mi">7</span> <span class="ow">or</span> <span class="n">action</span> <span class="o">==</span> <span class="mi">8</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="mi">4</span> <span class="o">&lt;=</span> <span class="n">event</span> <span class="o">&lt;=</span> <span class="mi">8</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">action</span> <span class="o">==</span> <span class="mi">9</span> <span class="ow">or</span> <span class="n">action</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">action</span> <span class="o">==</span> <span class="mi">11</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="mi">9</span> <span class="o">&lt;=</span> <span class="n">event</span> <span class="o">&lt;=</span> <span class="mi">11</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="mi">12</span> <span class="o">&lt;=</span> <span class="n">action</span> <span class="o">&lt;=</span><span class="mi">14</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="mi">12</span> <span class="o">&lt;=</span> <span class="n">event</span> <span class="o">&lt;=</span><span class="mi">14</span><span class="p">)</span> <span class="ow">and</span> <span class="n">action</span> <span class="o">==</span> <span class="mi">15</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span></div></div>
+    
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">OPTIS</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Backend</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, OPTIS Team.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

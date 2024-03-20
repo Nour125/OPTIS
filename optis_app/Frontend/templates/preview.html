@@ -1,0 +1,24 @@
+<!--Here is the Preview page. It shows a table containing the first 15 rows of the uploaded event log.-->
+{% extends 'base.html' %}
+
+{%block head%}
+<title>Preview</title>
+{%endblock%}
+
+{%block body%}
+<div class="contents" style="text-align: center;">
+    <h1>File Preview: {{ filename }}</h1>
+    <p>Preview the first {{ row_count }} rows of your uploaded event log to make sure you've uploaded the right file.</p>
+    <table>
+        {{ preview_data | safe }}
+    </table>
+
+    <form  id="gotoselection" method="post" name="gotoselection">
+        <div style = "text-align: center;">
+          <!--Submit button-->
+          <button type="submit" class="button" form="gotoselection"> Optimize now!</button>
+        </div>
+    </form>
+    
+</div>
+{%endblock%}

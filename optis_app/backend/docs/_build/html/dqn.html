@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dqn module &mdash; OPTIS 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="environment module" href="environment.html" />
+    <link rel="prev" title="case module" href="case.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            OPTIS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Backend</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="businessprocess.html">businessprocess module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="case.html">case module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">dqn module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dqn.deploy"><code class="docutils literal notranslate"><span class="pre">deploy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dqn.train"><code class="docutils literal notranslate"><span class="pre">train()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="environment.html">environment module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eventlog.html">eventlog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="petrinet.html">petrinet module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qagent.html">qagent module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simplesimmodel.html">simplesimmodel module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OPTIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Backend</a></li>
+      <li class="breadcrumb-item active">dqn module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dqn.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-dqn">
+<span id="dqn-module"></span><h1>dqn module<a class="headerlink" href="#module-dqn" title="Permalink to this heading"></a></h1>
+<p>DQN-Agent</p>
+<p>This module includes the training and deployment of a DQN, which uses a custom environment and simulation model of a process
+to learn to optimize that process by recommending the optimal next activity (in terms of saving time).</p>
+<p>It includes the following functions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>train(space, activities)</p></li>
+<li><p>deploy(state)</p></li>
+</ul>
+</div></blockquote>
+<dl class="py function">
+<dt class="sig sig-object py" id="dqn.deploy">
+<span class="sig-prename descclassname"><span class="pre">dqn.</span></span><span class="sig-name descname"><span class="pre">deploy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dqn.html#deploy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dqn.deploy" title="Permalink to this definition"></a></dt>
+<dd><p>Deploy a DQN-model by using it to recommend the best next activity for a certain state.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>state<span class="classifier">collections.OrderedDict of {str</span><span class="classifier">list of int, str</span><span class="classifier">int, str</span><span class="classifier">list of int}</span></dt><dd><p>the state of a case in a process (the trace of the case, the current event in the case, the available resources)</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>int</dt><dd><p>number of the encoded optimal action to take</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="dqn.train">
+<span class="sig-prename descclassname"><span class="pre">dqn.</span></span><span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">space</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activities</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dqn.html#train"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dqn.train" title="Permalink to this definition"></a></dt>
+<dd><p>Train a DQN on a simulation model of a process and save the model and its logs.</p>
+<section id="id1">
+<h2>Parameters<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>space<span class="classifier">list of list of int</span></dt><dd><p>contains the numbers of resources and indicates how the trace of a case looks like</p>
+</dd>
+<dt>activities<span class="classifier">int</span></dt><dd><p>the number of allowed activities in the process</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="case.html" class="btn btn-neutral float-left" title="case module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="environment.html" class="btn btn-neutral float-right" title="environment module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, OPTIS Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

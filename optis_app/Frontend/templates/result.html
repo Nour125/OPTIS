@@ -1,0 +1,22 @@
+<!--The result page. It shows a petri-net colored with the recommendation.-->
+{% extends 'base.html' %}
+
+{%block head%}
+<title>Your results</title>
+{%endblock%}
+
+{%block body%}
+<div class="contents" style="text-align: center;">
+    <h1>Here are the results of the optimization!</h1>
+        <h2>We recommend you to do the following activity for this specific case: {{name}}</h2>
+            <!--res is the result-->
+        <!-- currently a placeholder image to display result-->
+        <img src="\static\net.png" alt="Placeholder" style="max-width: 80%; border: solid 20px rgb(230,241,250)"> <br>
+        <!--button to go back to home page-->
+        <button onclick="window.location.href='/'" class="button"> Optimize your next case NOW!</button>
+</div>
+{%endblock%}
+
+<!--
+    {{url_for('export',filename='net.png')}}
+-->

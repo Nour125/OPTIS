@@ -1,0 +1,35 @@
+<!--Here is the info page. It contains information about the app.-->
+{% extends 'base.html' %}
+
+{% block head %}
+<title>OPTIS Info</title>
+{% endblock %}
+
+{% block body %}
+  <div class="contents" style="text-align: center; padding-top: 40 px;">
+    <h1 class="introductions" style="color: rgb(0,114,188);">What does OPTIS do?</h1>
+      <text class="desc">OPTIS is a standalone Python based web application which aims to minimize time requirements of busines processes. <br> 
+        It's customized to work on a single business process:
+      </text>
+      <img src="\static\process_net.png" alt="Placeholder" style="max-width: 80%; border: solid 20px rgb(230,241,250)"> <br>
+      <p style="margin-left: 10%; margin-right: 10%;">Assuming this is a real life business process, the user has event logs which follow different cases through their execution. 
+        The user will be interested in the so called "active" cases - the cases for which there are still decisions to be met.
+        For example whether to choose activity "manufacture A" or "manufacture B", when the customer chose a custom order. 
+        Since this decision requires careful analysis of the available resources, the state of the other active cases, the time activities normally take etc,
+        this decision is far more than trivial. Especially for bigger business processes, which can easily be modelled in the same way as this one. 
+      </p>
+      <p style="margin-left: 10%; margin-right: 10%;">OPTIS offers a solution to this problem by using reinforcement learning techniques to train a neural network, which recommends the optimal next activity for any active case in the event log. 
+        The network has been carefully trained using a simulation model based on the real business process (shown in the image above).
+      </p>
+      <p style="margin-left: 10%; margin-right: 10%;">If you want to try our app but you don't have an event log which matches the process, we also offer the option to generate your own event logs using the previously mentioned simulation model.
+        Just choose a duration period for the simulation and export your event log as .csv or .xes. Then you can upload it and start using our app.
+      </p>
+      <p style="margin-left: 10%; margin-right: 10%;"> After that you can preview the event log you uploaded and go to the case selection page if you're content with it.
+        In the case selection page you can preview any of the active cases and choose the one which you want to optimize. After you select it you get your personalized recommendation from our trained network.
+      </p>
+      <p style="margin-left: 10%; margin-right: 10%;"> Have fun optimizing your process!
+      </p>
+  </div>
+
+
+{% endblock %}

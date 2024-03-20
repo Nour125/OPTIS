@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>environment module &mdash; OPTIS 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="eventlog module" href="eventlog.html" />
+    <link rel="prev" title="dqn module" href="dqn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            OPTIS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Backend</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="businessprocess.html">businessprocess module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="case.html">case module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dqn.html">dqn module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">environment module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#environment.BusinessProcessEnv"><code class="docutils literal notranslate"><span class="pre">BusinessProcessEnv</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#environment.BusinessProcessEnv.flatten_observation"><code class="docutils literal notranslate"><span class="pre">BusinessProcessEnv.flatten_observation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#environment.BusinessProcessEnv.flatten_observation_to_int"><code class="docutils literal notranslate"><span class="pre">BusinessProcessEnv.flatten_observation_to_int()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#environment.BusinessProcessEnv.get_current_state"><code class="docutils literal notranslate"><span class="pre">BusinessProcessEnv.get_current_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#environment.BusinessProcessEnv.get_ressources"><code class="docutils literal notranslate"><span class="pre">BusinessProcessEnv.get_ressources()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#environment.BusinessProcessEnv.render"><code class="docutils literal notranslate"><span class="pre">BusinessProcessEnv.render()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#environment.BusinessProcessEnv.reset"><code class="docutils literal notranslate"><span class="pre">BusinessProcessEnv.reset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#environment.BusinessProcessEnv.step"><code class="docutils literal notranslate"><span class="pre">BusinessProcessEnv.step()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="eventlog.html">eventlog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="petrinet.html">petrinet module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qagent.html">qagent module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simplesimmodel.html">simplesimmodel module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OPTIS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Backend</a></li>
+      <li class="breadcrumb-item active">environment module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/environment.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-environment">
+<span id="environment-module"></span><h1>environment module<a class="headerlink" href="#module-environment" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="environment.BusinessProcessEnv">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">environment.</span></span><span class="sig-name descname"><span class="pre">BusinessProcessEnv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">space</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activities</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/environment.html#BusinessProcessEnv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#environment.BusinessProcessEnv" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Env</span></code></p>
+<p>A class representing an environment for a RL-agent.
+The environment is based on the simulation of a process which a RL-agent can use for its training.</p>
+<section id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>ressources<span class="classifier">list of int</span></dt><dd><p>numbers of resources</p>
+</dd>
+<dt>case<span class="classifier">list of int</span></dt><dd><p>indicates how the trace of a case looks like</p>
+</dd>
+<dt>activities<span class="classifier">int</span></dt><dd><p>number of actions possible</p>
+</dd>
+<dt>observation_space<span class="classifier">gym.spaces.Dict of {str</span><span class="classifier">gym.spaces.MultiDiscrete, str</span><span class="classifier">gym.spaces.MultiDiscrete, str</span><span class="classifier">gym.spaces.Discrete}</span></dt><dd><p>observation space which includes the information from ressources, case, activities</p>
+</dd>
+<dt>action_space<span class="classifier">gym.spaces.Discrete</span></dt><dd><p>action space which corresponds to the number of actions possible</p>
+</dd>
+<dt>current_state<span class="classifier">gym.spaces.Dict of {str</span><span class="classifier">gym.spaces.MultiDiscrete, str</span><span class="classifier">gym.spaces.MultiDiscrete, str</span><span class="classifier">gym.spaces.Discrete}</span></dt><dd><p>current state of the environment</p>
+</dd>
+<dt>model_env<span class="classifier">simpy.Environment</span></dt><dd><p>environment for the simulation model</p>
+</dd>
+<dt>process<span class="classifier">businessprocess.BusinessProcess</span></dt><dd><p>business process which is being simulated</p>
+</dd>
+<dt>reward<span class="classifier">int</span></dt><dd><p>the reward for the current episode in th environment</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="environment.BusinessProcessEnv.flatten_observation">
+<span class="sig-name descname"><span class="pre">flatten_observation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observation</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/environment.html#BusinessProcessEnv.flatten_observation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#environment.BusinessProcessEnv.flatten_observation" title="Permalink to this definition"></a></dt>
+<dd><p>Flatten an observation to a a one-dimensional list.</p>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>observation<span class="classifier">gym.spaces.Dict of {str</span><span class="classifier">gym.spaces.MultiDiscrete, str</span><span class="classifier">gym.spaces.MultiDiscrete, str</span><span class="classifier">gym.spaces.Discrete}</span></dt><dd><p>an observation in the environment</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>list of ints</dt><dd><p>the observation flattened to a one-dimensional list</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py" id="environment.BusinessProcessEnv.flatten_observation_to_int">
+<span class="sig-name descname"><span class="pre">flatten_observation_to_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">observation</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/environment.html#BusinessProcessEnv.flatten_observation_to_int"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#environment.BusinessProcessEnv.flatten_observation_to_int" title="Permalink to this definition"></a></dt>
+<dd><p>Flatten an observation to unique integer.
+Disclaimer: not functional for big observation space and not used in the final implementation</p>
+<section id="id1">
+<h3>Parameters<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>observation<span class="classifier">gym.spaces.Dict of {str</span><span class="classifier">gym.spaces.MultiDiscrete, str</span><span class="classifier">gym.spaces.MultiDiscrete, str</span><span class="classifier">gym.spaces.Discrete}</span></dt><dd><p>an observation in the environment</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h3>Returns<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>int</dt><dd><p>the observation flattened to an integer</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py method">
+<dt class="sig sig-object py" id="environment.BusinessProcessEnv.get_current_state">
+<span class="sig-name descname"><span class="pre">get_current_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caseid</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/environment.html#BusinessProcessEnv.get_current_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#environment.BusinessProcessEnv.get_current_state" title="Permalink to this definition"></a></dt>
+<dd><p>Get the current state of the case and process from the simulation model.</p>
+<section id="id3">
+<h3>Parameters<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>caseid<span class="classifier">int</span></dt><dd><p>case-id of a case in the process</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h3>Returns<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<p>collections.OrderedDict of {str : list of int, str : int, str : list of int}</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="environment.BusinessProcessEnv.get_ressources">
+<span class="sig-name descname"><span class="pre">get_ressources</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caseid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/environment.html#BusinessProcessEnv.get_ressources"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#environment.BusinessProcessEnv.get_ressources" title="Permalink to this definition"></a></dt>
+<dd><p>Get the number of resources for a certain action.</p>
+<section id="id5">
+<h3>Parameters<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>caseid<span class="classifier">int</span></dt><dd><p>case-id of a case in the process</p>
+</dd>
+<dt>action<span class="classifier">int</span></dt><dd><p>number of an action</p>
+</dd>
+</dl>
+</section>
+<section id="id6">
+<h3>Returns<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>int</dt><dd><p>the number of resources for the action</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="environment.BusinessProcessEnv.render">
+<span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'human'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/environment.html#BusinessProcessEnv.render"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#environment.BusinessProcessEnv.render" title="Permalink to this definition"></a></dt>
+<dd><p>Render the current state of the environment.
+Disclaimer: Not implemented.</p>
+<section id="id7">
+<h3>Parameters<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>mode<span class="classifier">str</span></dt><dd><p>default is human</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="environment.BusinessProcessEnv.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/environment.html#BusinessProcessEnv.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#environment.BusinessProcessEnv.reset" title="Permalink to this definition"></a></dt>
+<dd><p>Reset the environment to the initial state.</p>
+<section id="id8">
+<h3>Parameters<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>seed<span class="classifier">optional int</span></dt><dd><p>the seed that is used to initialize the environment/’s PRNG (default is None)</p>
+</dd>
+<dt>options<span class="classifier">optional dict</span></dt><dd><p>additional information to specify how the environment is reset (default is None)</p>
+</dd>
+</dl>
+</section>
+<section id="id9">
+<h3>Returns<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>collections.OrderedDict of {str<span class="classifier">list of int, str</span><span class="classifier">int, str</span><span class="classifier">list of int}</span></dt><dd><p>an element of the environment/’s observation_space as the next observation due to the agent actions</p>
+</dd>
+<dt>dict</dt><dd><p>contains auxiliary diagnostic information</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="environment.BusinessProcessEnv.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/environment.html#BusinessProcessEnv.step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#environment.BusinessProcessEnv.step" title="Permalink to this definition"></a></dt>
+<dd><p>The main function of the environment - agent executes an action there, getting a penalty or reward and moving to the next state.
+A step involves doing a ceratin action for a chosen case in the process.
+An episode is done when the agent has completed 10 cases.</p>
+<section id="id10">
+<h3>Parameters<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>action<span class="classifier">int</span></dt><dd><p>number of an action</p>
+</dd>
+</dl>
+</section>
+<section id="id11">
+<h3>Returns<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>collections.OrderedDict of {str<span class="classifier">list of int, str</span><span class="classifier">int, str</span><span class="classifier">list of int}</span></dt><dd><p>an element of the environment/’s observation_space as the next observation due to the agent actions</p>
+</dd>
+<dt>int</dt><dd><p>the reward as a result of taking the action</p>
+</dd>
+<dt>bool</dt><dd><p>whether the agent reaches the terminal state</p>
+</dd>
+<dt>bool</dt><dd><p>whether the truncation condition outside the scope of the MDP is satisfied</p>
+</dd>
+<dt>dict</dt><dd><p>contains auxiliary diagnostic information</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dqn.html" class="btn btn-neutral float-left" title="dqn module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="eventlog.html" class="btn btn-neutral float-right" title="eventlog module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, OPTIS Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

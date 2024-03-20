@@ -1,0 +1,31 @@
+<!--Here is the home page. It contains the file upload and download functionality-->
+{% extends 'base.html' %}
+
+{% block head %}
+<title>OPTIS Home</title>
+{% endblock %}
+
+{% block body %}
+  <div class="contents">
+    <header style="text-align: center;">
+      <img src="/static/OPTIS_logo3.png" alt="Logo" style="max-width: 50%; padding: 40px;">
+    </header>
+
+    <div style="text-align: center; padding-top: 40 px;">
+      <h1 class="introductions" style="color: rgb(0,114,188);">Introduction</h1>
+        <text class="desc">OPTIS is a standalone Python based web application which aims to minimize time requirements of busines processes. <br> It seeks to achieve this by using an intelligent agent that is trained using reinforcement learning techniques. <br> Learn more about the app <a href="info.html">here</a>! <br></text>
+    </div>
+
+    <div style="text-align: center; padding-top: 40 px; margin-top: 20px;">
+      <text class="desc">Make sure to read the <a href="{{ url_for('static', filename='user_manual.pdf') }}">user manual</a> and have fun optimizing your process!</text>
+    </div>
+
+    <form  id="gotoStart" method="post" name="gotoStart">
+      <div style = "text-align: center;">
+        <!--Submit button-->
+        <button type="submit" class="button" form="gotoStart"  style="margin-top: 50px;"> Optimize now!</button>
+      </div>
+    </form>
+  </div>
+
+{% endblock %}
