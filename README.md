@@ -2,6 +2,6 @@ OPTIS is a standalone Python based web application which aims to minimize time r
 
 To run the Docker image:
 
-docker pull registry.git-ce.rwth-aachen.de/optis/optis_app
+docker pull registry.github.com/Nour125/OPTIS
 
-docker run -p 5000:5000 -d registry.git-ce.rwth-aachen.de/optis/optis_app
+docker run -p 5000:5000 -d registry.github.com/Nour125/OPTIS
